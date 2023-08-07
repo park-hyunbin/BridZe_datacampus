@@ -44,7 +44,7 @@ class DiagnosisKid14Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Center(
-                  child: CameraExampleHome(),
+                  child: CameraHome(),
                 ),
               ),
               Expanded(

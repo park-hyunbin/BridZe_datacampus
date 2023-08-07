@@ -11,13 +11,13 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 /// Camera example home widget.
-class CameraExampleHome extends StatefulWidget {
+class CameraHome extends StatefulWidget {
   /// Default Constructor
-  const CameraExampleHome({super.key});
+  const CameraHome({super.key});
 
   @override
-  State<CameraExampleHome> createState() {
-    return _CameraExampleHomeState();
+  State<CameraHome> createState() {
+    return _CameraHomeState();
   }
 }
 
@@ -26,7 +26,7 @@ void _logError(String code, String? message) {
   print('Error: $code${message == null ? '' : '\nError Message: $message'}');
 }
 
-class _CameraExampleHomeState extends State<CameraExampleHome>
+class _CameraHomeState extends State<CameraHome>
     with WidgetsBindingObserver, TickerProviderStateMixin {
   CameraController? controller;
   XFile? imageFile;
@@ -34,7 +34,6 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   VideoPlayerController? videoController;
   VoidCallback? videoPlayerListener;
   bool enableAudio = true;
-  bool isCameraOn = false;
 
   List<CameraDescription> _cameras = <CameraDescription>[];
 
@@ -42,7 +41,6 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   void initState() {
     super.initState();
     initStateAsync();
-    isCameraOn = controller!.value.isInitialized;
   }
 
   void initStateAsync() async {
@@ -90,7 +88,12 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
       onStopButtonPressed(); // Stop recording before turning off the camera
     }
     controller!.dispose(); // Turn off the camera
-    setState(() {});
+    videoController?.dispose();
+    setState(() {
+      controller = null;
+      imageFile = null;
+      videoController = null;
+    });
   }
 
   @override
@@ -178,6 +181,14 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         IconButton(
+          icon: const Icon(Icons.camera_alt),
+          color: Colors.blue,
+          onPressed: cameraController.value.isInitialized &&
+                  !cameraController.value.isRecordingVideo
+              ? onTakePictureButtonPressed
+              : null,
+        ),
+        IconButton(
           icon: const Icon(Icons.videocam),
           color: Colors.blue,
           onPressed: cameraController.value.isInitialized &&
@@ -194,7 +205,7 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
               : null,
         ),
         IconButton(
-          icon: const Icon(Icons.camera_alt),
+          icon: const Icon(Icons.no_photography_outlined),
           color: Colors.black,
           onPressed: cameraController.value.isInitialized
               ? onCameraTogglePressed
@@ -243,9 +254,56 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
       }
     });
 
+    try {
+      await cameraController.initialize();
+    } on CameraException catch (e) {
+      switch (e.code) {
+        case 'CameraAccessDenied':
+          showInSnackBar('You have denied camera access.');
+          break;
+        case 'CameraAccessDeniedWithoutPrompt':
+          // iOS only
+          showInSnackBar('Please go to Settings app to enable camera access.');
+          break;
+        case 'CameraAccessRestricted':
+          // iOS only
+          showInSnackBar('Camera access is restricted.');
+          break;
+        case 'AudioAccessDenied':
+          showInSnackBar('You have denied audio access.');
+          break;
+        case 'AudioAccessDeniedWithoutPrompt':
+          // iOS only
+          showInSnackBar('Please go to Settings app to enable audio access.');
+          break;
+        case 'AudioAccessRestricted':
+          // iOS only
+          showInSnackBar('Audio access is restricted.');
+          break;
+        default:
+          _showCameraException(e);
+          break;
+      }
+    }
+
     if (mounted) {
       setState(() {});
     }
+  }
+
+  void onTakePictureButtonPressed() {
+    takePicture().then((XFile? file) {
+      if (mounted) {
+        setState(() {
+          imageFile = file;
+          videoController?.dispose();
+          videoController = null;
+        });
+        if (file != null) {
+          showInSnackBar('Picture saved to ${file.path}');
+        }
+      }
+    });
   }
 
   void onAudioModeButtonPressed() {
@@ -341,6 +399,27 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
     await vController.play();
   }
 
+  Future<XFile?> takePicture() async {
+    final CameraController? cameraController = controller;
+    if (cameraController == null || !cameraController.value.isInitialized) {
+      showInSnackBar('Error: select a camera first.');
+      return null;
+    }
+
+    if (cameraController.value.isTakingPicture) {
+      // A capture is already pending, do nothing.
+      return null;
+    }
+
+    try {
+      final XFile file = await cameraController.takePicture();
+      return file;
+    } on CameraException catch (e) {
+      _showCameraException(e);
+      return null;
+    }
+  }
+
   void _showCameraException(CameraException e) {
     _logError(e.code, e.description);
     showInSnackBar('Error: ${e.code}\n${e.description}');
@@ -355,7 +434,7 @@ class CameraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CameraExampleHome(),
+      home: CameraHome(),
     );
   }
 }
