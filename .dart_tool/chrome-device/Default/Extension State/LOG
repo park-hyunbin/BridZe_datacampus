@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2023/08/07-15:45:39.956 6c03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.58YRBl/flutter_tools_chrome_device.QNZmrR/Default/Extension State/MANIFEST-000001
 2023/08/07-15:45:39.956 6c03 Recovering log #3
 2023/08/07-15:45:39.956 6c03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.58YRBl/flutter_tools_chrome_device.QNZmrR/Default/Extension State/000003.log 
+=======
+2023/08/07-15:43:10.580 2c4 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.b16875ae\flutter_tools_chrome_device.88855147\Default\Extension State/MANIFEST-000001
+2023/08/07-15:43:10.580 2c4 Recovering log #3
+2023/08/07-15:43:10.581 2c4 Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.b16875ae\flutter_tools_chrome_device.88855147\Default\Extension State/000003.log 
+>>>>>>> main
