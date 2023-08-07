@@ -127,7 +127,6 @@ class _audio_recorderWidgetState extends State<audio_recorderWidget> {
 
     if (_recordState == RecordState.record) {
       icon = const Icon(Icons.pause, color: Colors.red, size: 30);
-      color = Colors.red.withOpacity(0.1);
     } else {
       final theme = Theme.of(context);
       icon = const Icon(Icons.play_arrow, color: Colors.red, size: 30);

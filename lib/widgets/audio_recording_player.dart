@@ -103,12 +103,10 @@ class AudioPlayerState extends State<AudioPlayer> {
 
     if (_audioPlayer.state == ap.PlayerState.playing) {
       icon = const Icon(Icons.pause, color: Colors.black, size: 30);
-      color = Colors.black.withOpacity(0.1);
       color = Colors.transparent;
     } else {
       final theme = Theme.of(context);
       icon = Icon(Icons.play_arrow, color: theme.primaryColor, size: 30);
-      color = theme.primaryColor.withOpacity(0.1);
       color = Colors.transparent;
     }
 

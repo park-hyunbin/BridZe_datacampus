@@ -49,28 +49,38 @@ class DiagnosisScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ImageButton(
-                          imageAsset: 'assets/images/kid.png',
-                          label: '아이진단용',
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/diagnosis_mother');
-                          }),
+                      Flexible(
+                        flex: 1,
+                        child: ImageButton(
+                            imageAsset: 'assets/images/kid.png',
+                            label: '아이진단용',
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/diagnosis_mother');
+                            }),
+                      ),
                       const SizedBox(width: 40),
-                      ContainerButton(
-                          labelText: '언어적진단 >',
-                          subLabelText: '한국어 수준을\n 알고 싶다면?',
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const DiagnosisKidPage(),
-                              ),
-                            );
-                          },
-                          isParentButton: false),
+                      Flexible(
+                        flex: 1,
+                        child: ContainerButton(
+                            labelText: '언어 능력 평가>',
+                            subLabelText: '한국어 수준을\n 알고 싶다면?',
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const DiagnosisKidPage(),
+                                ),
+                              );
+                            },
+                            isParentButton: false),
+                      ),
                       const SizedBox(width: 40),
-                      ContainerButton(
-                          labelText: '언어적 진단 >',
+                      Flexible(
+                        flex: 1,
+                        child: ContainerButton(
+                          labelText: '언어 능력 평가>',
+                          isParentButton: false,
                           subLabelText: '베트남어 수준을\n 알고 싶다면?',
                           onPressed: () {
                             Navigator.push(
@@ -80,21 +90,25 @@ class DiagnosisScreen extends StatelessWidget {
                               ),
                             );
                           },
-                          isParentButton: false),
+                        ),
+                      ),
                       const SizedBox(width: 40),
-                      ContainerButton(
-                          labelText: '비언어적 진단 >',
-                          subLabelText: '정서 상태를\n 확인합니다.',
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const DiagnosisKid11Page(),
-                              ),
-                            );
-                          },
-                          isParentButton: false),
+                      Flexible(
+                        flex: 1,
+                        child: ContainerButton(
+                            labelText: '정서적 진단>',
+                            subLabelText: '정서 상태를\n 확인합니다.',
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const DiagnosisKid11Page(),
+                                ),
+                              );
+                            },
+                            isParentButton: false),
+                      ),
                     ],
                   ),
                 ),
@@ -102,9 +116,10 @@ class DiagnosisScreen extends StatelessWidget {
                   height: 50,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 55),
+                    Flexible(
+                      flex: 1,
                       child: ImageButton(
                           imageAsset: ('assets/images/mother.png'),
                           label: '부모진단용',
@@ -113,19 +128,25 @@ class DiagnosisScreen extends StatelessWidget {
                           }),
                     ),
                     const SizedBox(width: 40),
-                    ContainerButton(
-                        labelText: '언어적진단 >',
-                        subLabelText: '아이와 함께\n부모님도 진단해요',
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const DiagnosisMother1Page()));
-                        },
-                        isParentButton: true),
-                    const SizedBox(width: 80),
-                    Image.asset('assets/images/info.png'),
+                    Flexible(
+                      flex: 1,
+                      child: ContainerButton(
+                          labelText: '언어적진단 >',
+                          subLabelText: '아이와 함께\n부모님도 진단해요',
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DiagnosisMother1Page()));
+                          },
+                          isParentButton: true),
+                    ),
+                    const SizedBox(width: 40),
+                    Flexible(
+                      flex: 2,
+                      child: Image.asset('assets/images/info.png'),
+                    ),
                   ],
                 ),
               ],
