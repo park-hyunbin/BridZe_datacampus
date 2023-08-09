@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:bridze/screen/daignosis_2/pumpkin.dart';
+import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 
 class HoPage extends StatefulWidget {
@@ -11,18 +11,18 @@ class HoPage extends StatefulWidget {
 
 final appleItem = {
   "list": [
-    {"image": "assets/images/hedgehog.png", "isSelected": false},
-    {"image": "assets/images/whale.png", "isSelected": false},
-    {"image": "assets/images/train.png", "isSelected": false},
-    {"image": "assets/images/sun.png", "isSelected": false},
-    {"image": "assets/images/spider.png", "isSelected": false},
-    {"image": "assets/images/rubberband.png", "isSelected": false},
-    {"image": "assets/images/potato.png", "isSelected": false},
-    {"image": "assets/images/pepper.png", "isSelected": false},
-    {"image": "assets/images/meat.png", "isSelected": false},
-    {"image": "assets/images/giraffe.png", "isSelected": false},
-    {"image": "assets/images/gorilla.png", "isSelected": false},
-    {"image": "assets/images/sweetpotato.png", "isSelected": false}
+    {"image": "assets/images/walnut.png", "isSelected": false},
+    {"image": "assets/images/watermelon.png", "isSelected": false},
+    {"image": "assets/images/whistle.png", "isSelected": false},
+    {"image": "assets/images/soap.png", "isSelected": false},
+    {"image": "assets/images/school.png", "isSelected": false},
+    {"image": "assets/images/ointment.png", "isSelected": false},
+    {"image": "assets/images/scarescrow.png", "isSelected": false},
+    {"image": "assets/images/poo.png", "isSelected": false},
+    {"image": "assets/images/pocket.png", "isSelected": false},
+    {"image": "assets/images/bao.png", "isSelected": false},
+    {"image": "assets/images/clap.png", "isSelected": false},
+    {"image": "assets/images/blanket.png", "isSelected": false}
   ]
 };
 
@@ -35,7 +35,7 @@ class HoPageState extends State<HoPage> {
 
     Timer(const Duration(seconds: 10), () {
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => const PumpkinPage()));
+          MaterialPageRoute(builder: (context) => const DiagnosisScreen()));
     });
 
     Timer.periodic(const Duration(seconds: 1), (timer) {
