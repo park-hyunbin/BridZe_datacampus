@@ -93,7 +93,11 @@ class DiagnosisKid11Page extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Image.asset("assets/images/cursor.png"),
+                      child: Image.asset(
+                        "assets/images/cursor.png",
+                        width: 100,
+                        height: 100,
+                      ),
                     ),
                   ),
                 ),

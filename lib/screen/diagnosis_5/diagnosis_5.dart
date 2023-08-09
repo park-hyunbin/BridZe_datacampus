@@ -2,18 +2,16 @@ import 'package:bridze/screen/diagnosis_5/diagnosis_kid_5_2.dart';
 import 'package:flutter/material.dart';
 
 class FivePage extends StatefulWidget {
-  const FivePage({Key? key}) : super(key: key);
+  const FivePage({Key? key, required String childName}) : super(key: key);
 
   @override
-  State<FivePage> createState() => _FivePageState();
+  State<FivePage> createState() => FivePageState();
 }
 
-class _FivePageState extends State<FivePage> {
+class FivePageState extends State<FivePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(
-          238, 243, 246, 1), // Set the background color to light blue
       body: Stack(
         children: [
           Image.asset(
@@ -49,7 +47,7 @@ class _FivePageState extends State<FivePage> {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "첫 번째 언어적 진단을 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ",
+                  "{widget.childName}이의 첫 번째 언어적 진단을 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
@@ -83,7 +81,8 @@ class _FivePageState extends State<FivePage> {
                           ),
                         );
                       },
-                      child: Image.asset("assets/images/cursor.png"),
+                      child: Image.asset("assets/images/cursor.png",
+                          width: 100, height: 100),
                     ),
                   ),
                 ),

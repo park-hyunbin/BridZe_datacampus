@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-2023/08/07-15:45:39.681 2b03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.58YRBl/flutter_tools_chrome_device.QNZmrR/Default/Session Storage/MANIFEST-000001
-2023/08/07-15:45:39.682 2b03 Recovering log #3
-2023/08/07-15:45:39.682 2b03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.58YRBl/flutter_tools_chrome_device.QNZmrR/Default/Session Storage/000003.log 
-=======
-2023/08/07-15:43:10.559 4180 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.b16875ae\flutter_tools_chrome_device.88855147\Default\Session Storage/MANIFEST-000001
-2023/08/07-15:43:10.560 4180 Recovering log #3
-2023/08/07-15:43:10.565 4180 Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.b16875ae\flutter_tools_chrome_device.88855147\Default\Session Storage/000003.log 
->>>>>>> main
+2023/08/08-20:00:44.867 5403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fmJVN2/flutter_tools_chrome_device.swe4xZ/Default/Session Storage/MANIFEST-000001
+2023/08/08-20:00:44.873 5403 Recovering log #3
+2023/08/08-20:00:44.873 5403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fmJVN2/flutter_tools_chrome_device.swe4xZ/Default/Session Storage/000003.log 

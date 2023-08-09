@@ -7,8 +7,6 @@ class ElevenPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(
-          238, 243, 246, 1), // Set the background color to light blue
       body: Stack(
         children: [
           Image.asset(
@@ -78,7 +76,11 @@ class ElevenPage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Image.asset("assets/images/cursor.png"),
+                      child: Image.asset(
+                        "assets/images/cursor.png",
+                        width: 100,
+                        height: 100,
+                      ),
                     ),
                   ),
                 ),

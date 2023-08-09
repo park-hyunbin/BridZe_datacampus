@@ -52,7 +52,7 @@ class DropDownState extends State<DropDown> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const FivePage(),
+              builder: (context) => const FivePage(childName : '아이의이름'),
             ),
           );
         } else if (value == "8") {

@@ -68,7 +68,11 @@ class DiagnosisMother1Page extends StatelessWidget {
                             builder: (context) =>
                                 const DiagnosisMother2Page()));
                   },
-                  child: Image.asset("assets/images/arrows.png"),
+                  child: Image.asset(
+                    "assets/images/arrows.png",
+                    width: 100,
+                    height: 100,
+                  ),
                 ),
               ),
             ),

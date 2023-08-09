@@ -9,11 +9,11 @@ class DiagnosisKidPage extends StatefulWidget {
 }
 
 class _DiagnosisKidPageState extends State<DiagnosisKidPage> {
-  final TextEditingController _nameController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
 
   @override
   void dispose() {
-    _nameController.dispose();
+    nameController.dispose();
     super.dispose();
   }
 
@@ -90,24 +90,26 @@ class _DiagnosisKidPageState extends State<DiagnosisKidPage> {
                           ),
                         ),
                         const SizedBox(width: 10),
-                        Expanded(
+                        Flexible(
                           child: TextFormField(
-                            controller: _nameController,
+                            controller: nameController,
                             style: const TextStyle(
                               fontSize: 20,
                             ),
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 10,
+                                horizontal: 10,
+                                vertical: 5,
                               ),
-                              filled: true,
                               fillColor: Colors.white,
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8),
                                 borderSide: BorderSide.none,
                               ),
                             ),
+                            onChanged: (value) {
+                              setState(() {});
+                            },
                           ),
                         ),
                       ],

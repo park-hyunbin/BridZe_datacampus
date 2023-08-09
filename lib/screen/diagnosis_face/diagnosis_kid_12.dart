@@ -10,11 +10,15 @@ class DiagnosisKid12Page extends StatefulWidget {
 }
 
 class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
-  AudioKid12 myAudioPlayer = AudioKid12(); // Use AudioKid12 class
+  AudioKid12 myAudioPlayer = AudioKid12();
   bool isPlaying = false;
+  int selectedFace = 0;
 
   void onFaceButtonTapped(int faceValue) {
     print("Face Value: $faceValue");
+    setState(() {
+      selectedFace = faceValue;
+    });
   }
 
   @override
@@ -171,10 +175,21 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                       onTap: () => onFaceButtonTapped(2),
                       child: Column(
                         children: [
-                          Image.asset(
-                            'assets/images/face2.png',
-                            width: 80,
-                            height: 80,
+                          ColorFiltered(
+                            colorFilter: selectedFace == 2
+                                ? const ColorFilter.mode(
+                                    Colors.red,
+                                    BlendMode.color,
+                                  )
+                                : const ColorFilter.mode(
+                                    Colors.transparent,
+                                    BlendMode.color,
+                                  ),
+                            child: Image.asset(
+                              'assets/images/face2.png',
+                              width: 80,
+                              height: 80,
+                            ),
                           ),
                           const SizedBox(height: 10),
                           const Text(
@@ -233,6 +248,8 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
+                        width: 100,
+                        height: 100,
                       ),
                     ),
                   ),

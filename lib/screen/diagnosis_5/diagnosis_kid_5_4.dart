@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis.dart';
+import 'package:bridze/screen/daignosis_2/diagnosis_kid_2.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/audio_test.dart';
 
@@ -63,7 +63,7 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                       '오늘 유치원에서 책을 읽었어요.\n책 제목은 백설공주와 일곱난쟁이이었어요.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 75,
+                        fontSize: 65,
                         fontFamily: 'KCC',
                       ),
                     ),
@@ -94,12 +94,12 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const DiagnosisScreen(),
+                                  builder: (context) => const Language2Page(),
                                 ),
                               );
                             },
                             child: Image.asset(
-                              "assets/images/finish_pink.png",
+                              "assets/images/cursor.png",
                               width: 100,
                               height: 100,
                             ),
