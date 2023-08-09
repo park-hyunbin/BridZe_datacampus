@@ -117,17 +117,17 @@ class _DiagnosisKidPageState extends State<DiagnosisKidPage> {
                     const SizedBox(
                       height: 40,
                     ),
-                    const Row(
+                    Row(
                       children: <Widget>[
-                        Text(
+                        const Text(
                           '나이 :',
                           style: TextStyle(
                             fontFamily: 'BMJUA',
                             fontSize: 40,
                           ),
                         ),
-                        SizedBox(width: 30),
-                        DropDown(),
+                        const SizedBox(width: 30),
+                        DropDown(name: nameController.text)
                       ],
                     ),
                   ],

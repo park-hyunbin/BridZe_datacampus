@@ -2,7 +2,9 @@ import 'package:bridze/screen/diagnosis_5/diagnosis_kid_5_2.dart';
 import 'package:flutter/material.dart';
 
 class FivePage extends StatefulWidget {
-  const FivePage({Key? key, required String childName}) : super(key: key);
+  final String name;
+
+  const FivePage({Key? key, required this.name}) : super(key: key);
 
   @override
   State<FivePage> createState() => FivePageState();
@@ -44,11 +46,11 @@ class FivePageState extends State<FivePage> {
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 40, top: 30),
+              Padding(
+                padding: const EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "{widget.childName}이의 첫 번째 언어적 진단을 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ",
-                  style: TextStyle(
+                  "${widget.name} 어린이의 첫 번째 언어적 진단을 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ",
+                  style: const TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
                     color: Color(0xff000000),

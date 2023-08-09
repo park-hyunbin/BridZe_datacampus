@@ -1,4 +1,4 @@
-import 'package:bridze/screen/daignosis_2/go.dart';
+import 'package:bridze/screen/daignosis_2/ho.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -16,7 +16,7 @@ class PumpkinPageState extends State<PumpkinPage> {
 
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const GoPage()));
+          context, MaterialPageRoute(builder: (context) => const HoPage()));
     });
   }
 

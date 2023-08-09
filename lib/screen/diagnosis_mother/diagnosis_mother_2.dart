@@ -24,10 +24,9 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
     return Scaffold(
       backgroundColor: const Color(0xffEEF3F6),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            // Center the entire row containing the image and text
             child: Padding(
               padding: const EdgeInsets.only(
                 top: 30,

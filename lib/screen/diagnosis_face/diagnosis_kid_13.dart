@@ -80,7 +80,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "왜 그렇게 생각했어~?",
+                    "행복한 표정을 지어봐 ~",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
@@ -112,7 +112,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                       ),
                       const SizedBox(width: 10),
                       const Text(
-                        "아이의 표정을 녹화 중",
+                        "아이의 표정이 촬영됩니다",
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: 'BMJUA',
@@ -140,8 +140,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                        0, 0, 40, 40), // Add spacing here
+                    padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(

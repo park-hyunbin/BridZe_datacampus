@@ -104,22 +104,27 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                   children: <Widget>[
                     GestureDetector(
                       onTap: () => onFaceButtonTapped(5),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/face5.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            "5",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontFamily: 'BMJUA',
+                      child: Container(
+                        color: selectedFace == 5
+                            ? Colors.pink.withOpacity(0.2)
+                            : null,
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/face5.png',
+                              width: 80,
+                              height: 80,
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 10),
+                            const Text(
+                              "5",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontFamily: 'BMJUA',
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -127,22 +132,27 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     ),
                     GestureDetector(
                       onTap: () => onFaceButtonTapped(4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/face4.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            "4",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontFamily: 'BMJUA',
+                      child: Container(
+                        color: selectedFace == 4
+                            ? Colors.pink.withOpacity(0.2)
+                            : null,
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/face4.png',
+                              width: 80,
+                              height: 80,
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 10),
+                            const Text(
+                              "4",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontFamily: 'BMJUA',
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -150,22 +160,27 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     ),
                     GestureDetector(
                       onTap: () => onFaceButtonTapped(3),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/face3.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            "3",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontFamily: 'BMJUA',
+                      child: Container(
+                        color: selectedFace == 3
+                            ? Colors.pink.withOpacity(0.2)
+                            : null,
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/face3.png',
+                              width: 80,
+                              height: 80,
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 10),
+                            const Text(
+                              "3",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontFamily: 'BMJUA',
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -173,33 +188,27 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     ),
                     GestureDetector(
                       onTap: () => onFaceButtonTapped(2),
-                      child: Column(
-                        children: [
-                          ColorFiltered(
-                            colorFilter: selectedFace == 2
-                                ? const ColorFilter.mode(
-                                    Colors.red,
-                                    BlendMode.color,
-                                  )
-                                : const ColorFilter.mode(
-                                    Colors.transparent,
-                                    BlendMode.color,
-                                  ),
-                            child: Image.asset(
+                      child: Container(
+                        color: selectedFace == 2
+                            ? Colors.pink.withOpacity(0.2)
+                            : null,
+                        child: Column(
+                          children: [
+                            Image.asset(
                               'assets/images/face2.png',
                               width: 80,
                               height: 80,
                             ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            "2",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontFamily: 'BMJUA',
+                            const SizedBox(height: 10),
+                            const Text(
+                              "2",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontFamily: 'BMJUA',
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -207,22 +216,27 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     ),
                     GestureDetector(
                       onTap: () => onFaceButtonTapped(1),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/face1.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            "1",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontFamily: 'BMJUA',
+                      child: Container(
+                        color: selectedFace == 1
+                            ? Colors.pink.withOpacity(0.2)
+                            : null,
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/face1.png',
+                              width: 80,
+                              height: 80,
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 10),
+                            const Text(
+                              "1",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontFamily: 'BMJUA',
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
