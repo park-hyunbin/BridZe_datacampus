@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:bridze/screen/daignosis_2/cat.dart';
 import 'package:flutter/material.dart';
 
 class SaPage extends StatefulWidget {
@@ -31,6 +32,11 @@ class SaPageState extends State<SaPage> {
   @override
   void initState() {
     super.initState();
+
+    Timer(const Duration(seconds: 10), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const CatPage()));
+    });
 
     Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
@@ -71,7 +77,7 @@ class SaPageState extends State<SaPage> {
             ],
           ),
           Positioned.fill(
-            top: 100,
+            top: 50,
             left: 100,
             right: 100,
             child: GridView.builder(
@@ -90,12 +96,17 @@ class SaPageState extends State<SaPage> {
                     });
                   },
                   child: Container(
+                    width: 200,
+                    height: 150,
                     color: appleItem["list"]?[index]["isSelected"] == true
-                        ? Colors.grey.withOpacity(0.5)
+                        ? Colors.pink.withOpacity(0.2)
                         : null,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
+                          height: 150,
+                          width: 150,
                           image,
                           fit: BoxFit.cover,
                         ),

@@ -70,8 +70,7 @@ class Language2PageState extends State<Language2Page> {
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                        0, 0, 40, 40), // Add spacing here
+                    padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(

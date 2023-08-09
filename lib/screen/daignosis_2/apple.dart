@@ -15,7 +15,7 @@ class ApplePageState extends State<ApplePage> {
     super.initState();
 
     // Create a timer that triggers after 5 seconds
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const SaPage()));
     });
