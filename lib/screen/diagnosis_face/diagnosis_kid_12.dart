@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_13.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_1.dart';
 import 'package:bridze/widgets/audio_kid_12.dart';
 import 'package:flutter/material.dart';
 
@@ -253,10 +253,11 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
                     child: GestureDetector(
                       onTap: () {
+                        myAudioPlayer.dispose();
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid13Page(),
+                            builder: (context) => const DiagnosisKid121Page(),
                           ),
                         );
                       },

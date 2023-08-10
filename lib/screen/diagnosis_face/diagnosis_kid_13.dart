@@ -1,4 +1,3 @@
-import 'package:bridze/screen/diagnosis.dart';
 import 'package:bridze/widgets/audio_kid_13.dart';
 import 'package:flutter/material.dart';
 import 'diagnosis_kid_14.dart';
@@ -134,29 +133,6 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                     ),
                     const SizedBox(width: 10),
                   ],
-                ),
-              ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const DiagnosisScreen(),
-                          ),
-                        );
-                      },
-                      child: Image.asset(
-                        "assets/images/finish_pink.png",
-                        width: 100,
-                        height: 100,
-                      ),
-                    ),
-                  ),
                 ),
               ),
             ],

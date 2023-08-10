@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis.dart';
+import 'package:bridze/screen/daignosis_2/diagnosis_kid_2.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/audio_test.dart';
 
@@ -99,7 +99,7 @@ class _EightReadPageState extends State<EightReadPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisScreen(),
+                            builder: (context) => const Language2Page(),
                           ),
                         );
                       },
