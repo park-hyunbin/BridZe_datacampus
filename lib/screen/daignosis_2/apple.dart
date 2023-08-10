@@ -10,14 +10,27 @@ class ApplePage extends StatefulWidget {
 }
 
 class ApplePageState extends State<ApplePage> {
+  bool _showBlackout = false;
+  bool _showApple = true; // Show the apple initially
+
   @override
   void initState() {
     super.initState();
 
-    // Create a timer that triggers after 5 seconds
+    // Create a timer that triggers after 3 seconds
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const SaPage()));
+      setState(() {
+        _showApple = false; // Hide the apple
+        _showBlackout = true; // Show the blackout
+      });
+
+      // Delay navigation by a bit to allow blackout animation to finish
+      Future.delayed(const Duration(milliseconds: 600), () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const SaPage()),
+        );
+      });
     });
   }
 
@@ -26,23 +39,29 @@ class ApplePageState extends State<ApplePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/diagnosis_kid.png',
-            fit: BoxFit.cover,
-            width: 1440,
-            height: 1024,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 300),
+            opacity: _showBlackout ? 1.0 : 0.0,
+            child: Container(
+              color: Colors.black,
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Image.asset(
-                  "assets/images/apple.png",
-                  width: 300,
-                  height: 300,
-                ),
-              ),
-            ],
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: _showApple
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: Image.asset(
+                          "assets/images/apple.png",
+                          width: 300,
+                          height: 300,
+                        ),
+                      ),
+                    ],
+                  )
+                : const SizedBox.shrink(),
           ),
         ],
       ),

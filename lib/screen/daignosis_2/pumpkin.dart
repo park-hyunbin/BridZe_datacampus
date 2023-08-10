@@ -10,13 +10,27 @@ class PumpkinPage extends StatefulWidget {
 }
 
 class PumpkinPageState extends State<PumpkinPage> {
+  bool _showBlackout = false;
+  bool _showPumpkin = true;
+
   @override
   void initState() {
     super.initState();
 
+    // Create a timer that triggers after 3 seconds
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const HoPage()));
+      setState(() {
+        _showPumpkin = false;
+        _showBlackout = true;
+      });
+
+      // Delay navigation by a bit to allow blackout animation to finish
+      Future.delayed(const Duration(milliseconds: 600), () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const HoPage()),
+        );
+      });
     });
   }
 
@@ -25,23 +39,29 @@ class PumpkinPageState extends State<PumpkinPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/diagnosis_kid.png',
-            fit: BoxFit.cover,
-            width: 1440,
-            height: 1024,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 300),
+            opacity: _showBlackout ? 1.0 : 0.0,
+            child: Container(
+              color: Colors.black,
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Image.asset(
-                  "assets/images/pumpkin.png",
-                  width: 300,
-                  height: 300,
-                ),
-              ),
-            ],
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: _showPumpkin
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: Image.asset(
+                          "assets/images/cat.png",
+                          width: 300,
+                          height: 300,
+                        ),
+                      ),
+                    ],
+                  )
+                : const SizedBox.shrink(),
           ),
         ],
       ),

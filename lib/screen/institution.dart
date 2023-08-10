@@ -53,37 +53,47 @@ class CalendarAppState extends State<CalendarApp> {
                   height: 30,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
-                    width: 220,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF96B9DB),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
-                    child: const Center(
-                      child: Text("시/도 선택",
-                          style: TextStyle(
-                            fontFamily: 'BMJUA',
-                            fontSize: 30,
-                          )),
+                  GestureDetector(
+                    onTap: () {
+                      // Handle 시/도 선택
+                    },
+                    child: Container(
+                      width: 220,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF96B9DB),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                      child: const Center(
+                        child: Text("시/도 선택",
+                            style: TextStyle(
+                              fontFamily: 'BMJUA',
+                              fontSize: 30,
+                            )),
+                      ),
                     ),
                   ),
                   const SizedBox(
                     width: 100,
                   ),
-                  Container(
-                    width: 220,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF96B9DB),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "동/읍/리/면 선택",
-                        style: TextStyle(
-                          fontFamily: 'BMJUA',
-                          fontSize: 30,
+                  GestureDetector(
+                    onTap: () {
+                      // Handle 동/읍/리/면 선택
+                    },
+                    child: Container(
+                      width: 220,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF96B9DB),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "동/읍/리/면 선택",
+                          style: TextStyle(
+                            fontFamily: 'BMJUA',
+                            fontSize: 30,
+                          ),
                         ),
                       ),
                     ),
@@ -97,19 +107,24 @@ class CalendarAppState extends State<CalendarApp> {
                 const SizedBox(
                   height: 50,
                 ),
-                Container(
-                  width: 300,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFE5C1C5),
-                    borderRadius: BorderRadius.circular(50.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "아린이 맞춤 오프라인 기관",
-                      style: TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 30,
+                GestureDetector(
+                  onTap: () {
+                    // Handle 아린이 맞춤 오프라인 기관
+                  },
+                  child: Container(
+                    width: 300,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFE5C1C5),
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "아린이 맞춤 오프라인 기관",
+                        style: TextStyle(
+                          fontFamily: 'BMJUA',
+                          fontSize: 30,
+                        ),
                       ),
                     ),
                   ),
@@ -117,19 +132,24 @@ class CalendarAppState extends State<CalendarApp> {
                 const SizedBox(
                   height: 100,
                 ),
-                Container(
-                  width: 300,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFE5C1C5),
-                    borderRadius: BorderRadius.circular(50.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "아린이 맞춤 온라인 플랫폼",
-                      style: TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 30,
+                GestureDetector(
+                  onTap: () {
+                    // Handle 아린이 맞춤 온라인 플랫폼
+                  },
+                  child: Container(
+                    width: 300,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFE5C1C5),
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "아린이 맞춤 온라인 플랫폼",
+                        style: TextStyle(
+                          fontFamily: 'BMJUA',
+                          fontSize: 30,
+                        ),
                       ),
                     ),
                   ),

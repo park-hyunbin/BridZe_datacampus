@@ -1,4 +1,3 @@
-import 'package:bridze/screen/daignosis_2/go.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -10,13 +9,27 @@ class CatPage extends StatefulWidget {
 }
 
 class CatPageState extends State<CatPage> {
+  bool _showBlackout = false;
+  bool _showCat = true; // Show the apple initially
+
   @override
   void initState() {
     super.initState();
 
+    // Create a timer that triggers after 3 seconds
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const GoPage()));
+      setState(() {
+        _showCat = false;
+        _showBlackout = true;
+      });
+
+      // Delay navigation by a bit to allow blackout animation to finish
+      Future.delayed(const Duration(milliseconds: 600), () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const GoPage()),
+        );
+      });
     });
   }
 
@@ -25,23 +38,29 @@ class CatPageState extends State<CatPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/diagnosis_kid.png',
-            fit: BoxFit.cover,
-            width: 1440,
-            height: 1024,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 300),
+            opacity: _showBlackout ? 1.0 : 0.0,
+            child: Container(
+              color: Colors.black,
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Image.asset(
-                  "assets/images/cat.png",
-                  width: 300,
-                  height: 300,
-                ),
-              ),
-            ],
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: _showCat
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: Image.asset(
+                          "assets/images/cat.png",
+                          width: 300,
+                          height: 300,
+                        ),
+                      ),
+                    ],
+                  )
+                : const SizedBox.shrink(),
           ),
         ],
       ),
