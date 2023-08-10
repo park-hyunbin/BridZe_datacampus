@@ -8,6 +8,7 @@
 
 import 'package:audioplayers_web/audioplayers_web.dart';
 import 'package:camera_web/camera_web.dart';
+import 'package:google_maps_flutter_web/google_maps_flutter_web.dart';
 import 'package:record_web/record_web.dart';
 import 'package:speech_to_text/speech_to_text_web.dart';
 import 'package:video_player_web/video_player_web.dart';
@@ -17,6 +18,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   final Registrar registrar = pluginRegistrar ?? webPluginRegistrar;
   AudioplayersPlugin.registerWith(registrar);
   CameraPlugin.registerWith(registrar);
+  GoogleMapsPlugin.registerWith(registrar);
   RecordPluginWeb.registerWith(registrar);
   SpeechToTextPlugin.registerWith(registrar);
   VideoPlayerPlugin.registerWith(registrar);

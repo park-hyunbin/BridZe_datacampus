@@ -9,6 +9,7 @@ class CalendarApp extends StatefulWidget {
 
 class CalendarAppState extends State<CalendarApp> {
   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -108,9 +109,7 @@ class CalendarAppState extends State<CalendarApp> {
                   height: 50,
                 ),
                 GestureDetector(
-                  onTap: () {
-                    // Handle 아린이 맞춤 오프라인 기관
-                  },
+                  onTap: () {},
                   child: Container(
                     width: 300,
                     height: 70,

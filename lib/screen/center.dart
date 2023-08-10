@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 void main() {
   runApp(const CenterApp());
@@ -135,12 +136,14 @@ class MyHomePage extends StatelessWidget {
               '이름',
               style: TextStyle(
                 fontSize: 15,
+                fontFamily: 'BMJUA',
               ),
             ),
             Text(
               '부모님 이름',
               style: TextStyle(
                 fontSize: 15,
+                fontFamily: 'BMJUA',
               ),
             ),
             SizedBox(
@@ -149,9 +152,12 @@ class MyHomePage extends StatelessWidget {
             SizedBox(
               height: 333,
               width: 375,
-              child: Icon(
-                Icons.map_outlined,
-                size: 250,
+              child: GoogleMap(
+                initialCameraPosition: CameraPosition(
+                  target: LatLng(
+                      37.4219999, -122.0840575), // Set initial map position
+                  zoom: 15.0,
+                ),
               ),
             ),
             SizedBox(
@@ -161,6 +167,7 @@ class MyHomePage extends StatelessWidget {
               '기관명',
               style: TextStyle(
                 fontSize: 15,
+                fontFamily: 'BMJUA',
               ),
             ),
             Text(
@@ -171,12 +178,6 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(
               height: 10,
-            ),
-            Text(
-              '상담 내용',
-              style: TextStyle(
-                fontSize: 15,
-              ),
             ),
           ],
         ),
