@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:record/record.dart';
+import 'package:http/http.dart' as http;
 
 class AudioRecorderWidget extends StatefulWidget {
   const AudioRecorderWidget({Key? key}) : super(key: key);
@@ -14,6 +17,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
   late AudioPlayer audioPlayer;
   bool isRecording = false;
   String audioPath = '';
+  String stt = '';
 
   @override
   void initState() {
@@ -32,7 +36,9 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
   Future<void> startRecording() async {
     try {
       if (await audioRecord.hasPermission()) {
-        await audioRecord.start();
+        await audioRecord.start(
+          encoder: AudioEncoder.flac,
+        );
         setState(() {
           isRecording = true;
         });
@@ -52,6 +58,34 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     } catch (e) {
       print('Error Stopping record: $e');
     }
+  }
+
+  Future myWeekend() async {
+    http.Response aresponse = await http.get(
+      Uri.parse(audioPath),
+    );
+    var request = http.MultipartRequest(
+      "POST",
+      Uri.parse("https://daitso105.run.goorm.site/upload"),
+    );
+
+    var audio = http.MultipartFile.fromBytes(
+      'audio',
+      aresponse.bodyBytes,
+      filename: 'test.flac',
+    );
+
+    request.files.add(audio);
+
+    //respond
+    var response = await request.send();
+    var responseData = await response.stream.toBytes();
+    var result = utf8.decode(responseData);
+    //output
+    print(result);
+    setState(() {
+      stt = 'STT 결과: $result';
+    });
   }
 
   Future<void> playRecording() async {
@@ -84,7 +118,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
             ),
             Text(
               isRecording ? '음성을 녹음 중입니다' : '마이크를 눌러 녹음을 시작하세요',
-              style: const TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 15),
             ),
           ],
         ),
@@ -93,21 +127,28 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RawMaterialButton(
-                onPressed: playRecording,
+                onPressed: () {
+                  myWeekend();
+                  playRecording();
+                },
                 elevation: 0.0,
                 fillColor: Colors.transparent,
                 shape: const CircleBorder(),
                 child: const Icon(
-                  Icons.play_arrow,
+                  Icons.touch_app_sharp,
                   size: 30,
                 ),
               ),
               const Text(
-                '녹음된 음성을 재생합니다',
-                style: TextStyle(fontSize: 18),
+                '음성 재생 및 stt 결과',
+                style: TextStyle(fontSize: 15),
               ),
             ],
           ),
+        Text(
+          stt,
+          style: const TextStyle(fontSize: 13),
+        ),
       ],
     );
   }

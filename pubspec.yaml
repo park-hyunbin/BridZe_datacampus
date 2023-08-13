@@ -43,6 +43,7 @@ dependencies:
   video_player: ^2.7.0
   table_calendar: ^3.0.9
   google_maps_flutter: ^2.0.10
+  http: ^1.1.0
 
   
 
