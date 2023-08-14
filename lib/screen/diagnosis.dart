@@ -1,7 +1,7 @@
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_11.dart';
 import 'package:bridze/screen/diagnosis_kid.dart';
 import 'package:bridze/screen/diagnosis_mother/diagnosis_mother_1.dart';
-import 'package:bridze/screen/diagnosis_vietnam/vietnam.dart';
+
 import 'package:bridze/widgets/containerbutton.dart';
 import 'package:bridze/widgets/imagebutton.dart';
 import 'package:flutter/material.dart';
@@ -76,22 +76,6 @@ class DiagnosisScreen extends StatelessWidget {
                             isParentButton: false),
                       ),
                       const SizedBox(width: 40),
-                      Flexible(
-                        flex: 1,
-                        child: ContainerButton(
-                          labelText: '언어 능력 평가>',
-                          isParentButton: false,
-                          subLabelText: '베트남어 수준을\n 알고 싶다면?',
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const VietnamPage(),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
                       const SizedBox(width: 40),
                       Flexible(
                         flex: 1,

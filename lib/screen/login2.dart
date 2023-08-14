@@ -1,3 +1,4 @@
+import 'package:bridze/screen/institution.dart';
 import 'package:flutter/material.dart';
 
 class Login2Page extends StatefulWidget {
@@ -159,20 +160,27 @@ class _Login2PageState extends State<Login2Page> {
                                       child: Padding(
                                         padding:
                                             const EdgeInsets.only(top: 20.0),
-                                        child: Container(
-                                          width: 230,
-                                          height: 60,
-                                          decoration: const BoxDecoration(
-                                            color: Color(0xFFFFFFFF),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(50.0)),
-                                          ),
-                                          child: const Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              SizedBox(),
-                                              Text(
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const CalendarApp()), // Replace with the appropriate widget
+                                            );
+                                          },
+                                          child: Container(
+                                            width: 230,
+                                            height: 60,
+                                            decoration: const BoxDecoration(
+                                              color: Color(0xFFFFFFFF),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(50.0),
+                                              ),
+                                            ),
+                                            child: const Center(
+                                              // Added Center widget to properly center the Text
+                                              child: Text(
                                                 "기관 연결 >",
                                                 style: TextStyle(
                                                   fontSize: 30,
@@ -180,7 +188,7 @@ class _Login2PageState extends State<Login2Page> {
                                                 ),
                                                 textAlign: TextAlign.center,
                                               ),
-                                            ],
+                                            ),
                                           ),
                                         ),
                                       ),
