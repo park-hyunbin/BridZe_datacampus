@@ -116,8 +116,8 @@ file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter-2.4.0/
 file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter-2.4.0/lib/
 google_maps_flutter_android
 2.18
-file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.15/
-file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.15/lib/
+file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.16/
+file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.16/lib/
 google_maps_flutter_ios
 2.18
 file:///Users/bin/.pub-cache/hosted/pub.dev/google_maps_flutter_ios-2.2.3/
@@ -135,9 +135,9 @@ html
 file:///Users/bin/.pub-cache/hosted/pub.dev/html-0.15.4/
 file:///Users/bin/.pub-cache/hosted/pub.dev/html-0.15.4/lib/
 http
-3.0
-file:///Users/bin/.pub-cache/hosted/pub.dev/http-1.1.0/
-file:///Users/bin/.pub-cache/hosted/pub.dev/http-1.1.0/lib/
+2.19
+file:///Users/bin/.pub-cache/hosted/pub.dev/http-0.13.6/
+file:///Users/bin/.pub-cache/hosted/pub.dev/http-0.13.6/lib/
 http_parser
 2.12
 file:///Users/bin/.pub-cache/hosted/pub.dev/http_parser-4.0.2/

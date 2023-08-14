@@ -153,6 +153,7 @@ class MyHomePage extends StatelessWidget {
               height: 333,
               width: 375,
               child: GoogleMap(
+                mapType: MapType.normal,
                 initialCameraPosition: CameraPosition(
                   target: LatLng(
                       37.4219999, -122.0840575), // Set initial map position
@@ -185,3 +186,5 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+mixin Marker {}

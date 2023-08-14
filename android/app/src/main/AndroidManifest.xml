@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bridze">
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="bridze"
         android:name="${applicationName}"
@@ -30,8 +32,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <meta-data 
-        android:name="com.google.android.geo.API_KEY"
-        android:value=""/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDgcwywxUMUmd_AuV5X7rVRjVOxD9VmPrE" />
     </application>
 </manifest>
