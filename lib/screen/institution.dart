@@ -47,71 +47,71 @@ class CalendarAppState extends State<CalendarApp> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 30),
                 const Text(
-                  "시/도를 선택해주세요",
+                  "시/도와 도시를 선택해주세요",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 35,
                     color: Color(0xFF96B9DB),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 400,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF96B9DB),
-                    borderRadius: BorderRadius.circular(50.0),
-                  ),
-                  child: Column(
-                    children: [
-                      DropdownButton<String>(
-                        value: selectedProvince,
-                        onChanged: (newValue) {
-                          setState(() {
-                            selectedProvince = newValue!;
-                            selectedCity = null;
-                          });
-                        },
-                        items: <String>[
-                          '서울특별시',
-                          '경기도',
-                          '강원도',
-                          '충청북도',
-                          '충청남도',
-                          '전라북도',
-                          '전라남도',
-                          '경상북도',
-                          '경상남도',
-                          '제주특별자치도',
-                        ].map<DropdownMenuItem<String>>((String value) {
-                          return DropdownMenuItem<String>(
-                            value: value,
-                            child: Text(
-                              value,
-                              style: const TextStyle(
-                                fontFamily: 'BMJUA',
-                                fontSize: 30,
+                const SizedBox(height: 50),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 300,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF96B9DB),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                      child: Center(
+                        child: DropdownButton<String>(
+                          value: selectedProvince,
+                          onChanged: (newValue) {
+                            setState(() {
+                              selectedProvince = newValue!;
+                              selectedCity = null;
+                            });
+                          },
+                          items: <String>[
+                            '서울특별시',
+                            '경기도',
+                            '강원도',
+                            '충청북도',
+                            '충청남도',
+                            '전라북도',
+                            '전라남도',
+                            '경상북도',
+                            '경상남도',
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(
+                                value,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontFamily: 'BMJUA',
+                                  fontSize: 30,
+                                ),
                               ),
-                            ),
-                          );
-                        }).toList(),
+                            );
+                          }).toList(),
+                        ),
                       ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      if (selectedProvince != null)
-                        Container(
-                          width: 400,
-                          height: 70,
-                          margin: const EdgeInsets.symmetric(vertical: 10),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF96B9DB),
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
+                    ),
+                    const SizedBox(width: 50),
+                    if (selectedProvince != null)
+                      Container(
+                        width: 300,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF96B9DB),
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        child: Center(
                           child: DropdownButton<String>(
                             value: selectedCity,
                             onChanged: (newValue) {
@@ -125,6 +125,7 @@ class CalendarAppState extends State<CalendarApp> {
                                 value: value,
                                 child: Text(
                                   value,
+                                  textAlign: TextAlign.center,
                                   style: const TextStyle(
                                     fontFamily: 'BMJUA',
                                     fontSize: 30,
@@ -134,64 +135,28 @@ class CalendarAppState extends State<CalendarApp> {
                             }).toList(),
                           ),
                         ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 150,
-                ),
-                const Text(
-                  "링크를 클릭하여 사이트를 방문해 예약하거나 전화번호로 전화해 예약해주세요 :)",
-                  style: TextStyle(fontSize: 25, fontFamily: 'BMJUA'),
+                      ),
+                  ],
                 ),
                 const SizedBox(
                   height: 50,
                 ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
+                Container(
                     width: 300,
-                    height: 70,
+                    height: 0,
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
                       color: const Color(0xFFE5C1C5),
-                      borderRadius: BorderRadius.circular(50.0),
                     ),
                     child: const Center(
                       child: Text(
-                        "아린이 맞춤 오프라인 기관",
+                        "아린이를 위한 오프라인 기관",
                         style: TextStyle(
-                          fontFamily: 'BMJUA',
-                          fontSize: 30,
+                          fontFamily: "BMJUA",
+                          fontSize: 24,
                         ),
                       ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 80,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    // Handle 아린이 맞춤 온라인 플랫폼
-                  },
-                  child: Container(
-                    width: 300,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFE5C1C5),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "아린이 맞춤 온라인 플랫폼",
-                        style: TextStyle(
-                          fontFamily: 'BMJUA',
-                          fontSize: 30,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                    )),
               ],
             ),
           ),
@@ -199,10 +164,4 @@ class CalendarAppState extends State<CalendarApp> {
       ),
     );
   }
-}
-
-void main() {
-  runApp(const MaterialApp(
-    home: CalendarApp(),
-  ));
 }
