@@ -1,2 +1,3 @@
-2023/08/16-15:38:43.345 4028 Creating DB C:\Users\Noah\AppData\Local\Temp\flutter_tools.4d97ea2a\flutter_tools_chrome_device.d1d760bb\Default\Service Worker\Database since it was missing.
-2023/08/16-15:38:43.359 4028 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.4d97ea2a\flutter_tools_chrome_device.d1d760bb\Default\Service Worker\Database/MANIFEST-000001
+2023/08/16-16:32:42.710 6c07 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.wM1uzV/flutter_tools_chrome_device.TN3z0Z/Default/Service Worker/Database/MANIFEST-000001
+2023/08/16-16:32:42.710 6c07 Recovering log #3
+2023/08/16-16:32:42.710 6c07 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.wM1uzV/flutter_tools_chrome_device.TN3z0Z/Default/Service Worker/Database/000003.log 

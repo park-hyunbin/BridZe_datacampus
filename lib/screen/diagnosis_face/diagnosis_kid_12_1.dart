@@ -1,5 +1,5 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_2.dart';
-import 'package:bridze/widgets/audio_kid_12.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_13.dart';
+import 'package:bridze/widgets/audio_kid_2.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisKid121Page extends StatefulWidget {
@@ -10,7 +10,7 @@ class DiagnosisKid121Page extends StatefulWidget {
 }
 
 class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
-  AudioKid12 myAudioPlayer = AudioKid12();
+  AudioKid2 myAudioPlayer = AudioKid2();
   bool isPlaying = false;
   int selectedFace = 0;
 
@@ -256,7 +256,7 @@ class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid122Page(),
+                            builder: (context) => const DiagnosisKid13Page(),
                           ),
                         );
                       },
