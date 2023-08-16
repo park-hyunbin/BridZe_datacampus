@@ -54,7 +54,7 @@ class PumpkinPageState extends State<PumpkinPage> {
                     children: [
                       Center(
                         child: Image.asset(
-                          "assets/images/cat.png",
+                          "assets/images/pumpkin.png",
                           width: 300,
                           height: 300,
                         ),

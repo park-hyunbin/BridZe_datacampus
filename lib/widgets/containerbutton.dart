@@ -30,8 +30,6 @@ class _ContainerButtonState extends State<ContainerButton> {
       child: GestureDetector(
         onTap: widget.onPressed,
         child: Container(
-          width: 200,
-          height: 200,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50.0),
             color: buttonColor,
@@ -49,12 +47,12 @@ class _ContainerButtonState extends State<ContainerButton> {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Text(
                 widget.subLabelText,
                 style: const TextStyle(
-                  fontFamily: 'BMJUA',
+                  fontFamily: 'Sriracha',
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.center,

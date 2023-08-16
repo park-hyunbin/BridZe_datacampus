@@ -60,38 +60,45 @@ class DiagnosisScreen extends StatelessWidget {
                       ),
                       const SizedBox(width: 40),
                       Flexible(
-                        flex: 1,
-                        child: ContainerButton(
-                            labelText: '언어 능력 평가>',
-                            subLabelText: '한국어 수준을\n 알고 싶다면?',
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const DiagnosisKidPage(),
-                                ),
-                              );
-                            },
-                            isParentButton: false),
+                        flex: 2,
+                        child: SizedBox(
+                          width: 300,
+                          height: 200,
+                          child: ContainerButton(
+                              labelText: '언어평가>',
+                              subLabelText: 'đánh giá ngôn ngữ',
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DiagnosisKidPage(),
+                                  ),
+                                );
+                              },
+                              isParentButton: false),
+                        ),
                       ),
                       const SizedBox(width: 40),
-                      const SizedBox(width: 40),
                       Flexible(
-                        flex: 1,
-                        child: ContainerButton(
-                            labelText: '정서적 진단>',
-                            subLabelText: '정서 상태를\n 확인합니다.',
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const DiagnosisKid11Page(),
-                                ),
-                              );
-                            },
-                            isParentButton: false),
+                        flex: 2,
+                        child: SizedBox(
+                          width: 300,
+                          height: 200,
+                          child: ContainerButton(
+                              labelText: '정서평가>',
+                              subLabelText: 'đánh giá tình cảm',
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DiagnosisKid11Page(),
+                                  ),
+                                );
+                              },
+                              isParentButton: false),
+                        ),
                       ),
                     ],
                   ),
@@ -113,23 +120,30 @@ class DiagnosisScreen extends StatelessWidget {
                     ),
                     const SizedBox(width: 40),
                     Flexible(
-                      flex: 1,
-                      child: ContainerButton(
-                          labelText: '언어적진단 >',
-                          subLabelText: '아이와 함께\n부모님도 진단해요',
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const DiagnosisMother1Page()));
-                          },
-                          isParentButton: true),
+                      flex: 2,
+                      child: SizedBox(
+                        width: 300,
+                        height: 200,
+                        child: ContainerButton(
+                            labelText: '언어평가 >',
+                            subLabelText: 'đánh giá ngôn ngữ',
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DiagnosisMother1Page()));
+                            },
+                            isParentButton: true),
+                      ),
                     ),
                     const SizedBox(width: 40),
                     Flexible(
                       flex: 2,
-                      child: Image.asset('assets/images/info.png'),
+                      child: Image.asset(
+                        'assets/images/info.png',
+                        width: 300,
+                      ),
                     ),
                   ],
                 ),

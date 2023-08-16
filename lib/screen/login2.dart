@@ -166,7 +166,7 @@ class _Login2PageState extends State<Login2Page> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const CalendarApp()), // Replace with the appropriate widget
+                                                      const InstitutionRecommend()), // Replace with the appropriate widget
                                             );
                                           },
                                           child: Container(
@@ -181,7 +181,7 @@ class _Login2PageState extends State<Login2Page> {
                                             child: const Center(
                                               // Added Center widget to properly center the Text
                                               child: Text(
-                                                "기관 연결 >",
+                                                "기관 추천 >",
                                                 style: TextStyle(
                                                   fontSize: 30,
                                                   fontFamily: "BMJUA",
