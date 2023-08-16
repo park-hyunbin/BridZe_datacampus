@@ -1,6 +1,7 @@
 import 'package:bridze/screen/daignosis_2/diagnosis_kid_2.dart';
 import 'package:flutter/material.dart';
-import '../../widgets/audio_test.dart';
+import '../../model/audio_test.dart';
+import '../../model/crr.dart';
 
 class EightReadPage extends StatefulWidget {
   const EightReadPage({Key? key}) : super(key: key);
@@ -75,9 +76,11 @@ class _EightReadPageState extends State<EightReadPage> {
                 height: 20,
               ),
               const Center(
-                child: AudioRecorderWidget(
-                  key: Key('audio_recorder8'),
-                ),
+                  child: AudioRecorderWidget(
+                key: Key('audio_recorder8'),
+              )),
+              const Center(
+                child: Score(initialValue: '8'),
               ),
               Column(
                 children: [

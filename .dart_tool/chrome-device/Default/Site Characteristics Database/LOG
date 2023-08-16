@@ -1,4 +1,13 @@
-2023/08/16-14:10:00.563 ae03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.JXaNK0/flutter_tools_chrome_device.X6wtVL/Default/Site Characteristics Database/MANIFEST-000001
-2023/08/16-14:10:00.563 ae03 Recovering log #6
-2023/08/16-14:10:00.563 ae03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.JXaNK0/flutter_tools_chrome_device.X6wtVL/Default/Site Characteristics Database/000006.log 
-2023/08/16-14:10:00.564 ae03 Delete type=0 #3
+2023/08/16-15:41:03.545 cc4 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.4280cbcf\flutter_tools_chrome_device.f3782cfe\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/16-15:41:03.546 cc4 Recovering log #3
+2023/08/16-15:41:03.546 cc4 Level-0 table #13: started
+2023/08/16-15:41:03.552 cc4 Level-0 table #13: 831 bytes OK
+2023/08/16-15:41:03.553 cc4 Recovering log #6
+2023/08/16-15:41:03.554 cc4 Level-0 table #14: started
+2023/08/16-15:41:03.557 cc4 Level-0 table #14: 829 bytes OK
+2023/08/16-15:41:03.557 cc4 Recovering log #10
+2023/08/16-15:41:03.558 cc4 Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.4280cbcf\flutter_tools_chrome_device.f3782cfe\Default\Site Characteristics Database/000010.log 
+2023/08/16-15:41:03.561 cc4 Delete type=0 #3
+2023/08/16-15:41:03.561 cc4 Delete type=2 #4
+2023/08/16-15:41:03.561 cc4 Delete type=2 #6
+2023/08/16-15:41:03.561 cc4 Delete type=0 #6

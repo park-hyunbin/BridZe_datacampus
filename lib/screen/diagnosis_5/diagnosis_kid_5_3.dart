@@ -1,6 +1,7 @@
 import 'package:bridze/screen/diagnosis_5/diagnosis_kid_5_4.dart';
 import 'package:flutter/material.dart';
-import '../../widgets/audio_test.dart';
+import '../../model/audio_test.dart';
+import '../../model/crr.dart';
 
 class FiveRead3Page extends StatefulWidget {
   const FiveRead3Page({Key? key}) : super(key: key);
@@ -71,7 +72,10 @@ class _FiveRead3PageState extends State<FiveRead3Page> {
                       height: 50,
                     ),
                     const Center(
-                      child: AudioRecorderWidget(key: Key('audio_recorder5')),
+                      child: AudioRecorderWidget(key: Key('audio_recorder5_2')),
+                    ),
+                    const Center(
+                      child: Score(initialValue: '5_2'),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(

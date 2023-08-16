@@ -1,6 +1,6 @@
 import 'package:bridze/screen/diagnosis_face/test_complete.dart';
 import 'package:flutter/material.dart';
-import '../../widgets/video_recorder.dart';
+import '../../model/video_recorder.dart';
 
 class DiagnosisKid14Page extends StatelessWidget {
   const DiagnosisKid14Page({Key? key}) : super(key: key);

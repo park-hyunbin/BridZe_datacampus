@@ -1,6 +1,7 @@
 import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
-import '../../widgets/audio_test.dart';
+import '../../model/audio_test.dart';
+import '../../model/crr.dart';
 
 class DiagnosisMother2Page extends StatefulWidget {
   const DiagnosisMother2Page({Key? key}) : super(key: key);
@@ -66,7 +67,10 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
             height: 50,
           ),
           const Center(
-            child: AudioRecorderWidget(key: Key('audio_recorder8')),
+            child: AudioRecorderWidget(key: Key('audio_recorder_mom')),
+          ),
+          const Center(
+            child: Score(initialValue: 'mom'),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 18.0),
