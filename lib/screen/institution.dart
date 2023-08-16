@@ -1,3 +1,4 @@
+import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/list/city.dart';
@@ -12,6 +13,8 @@ class InstitutionRecommend extends StatefulWidget {
 class InstitutionRecommendState extends State<InstitutionRecommend> {
   var selectedProvince;
   var selectedCity;
+  List<Widget> carouselItems = [];
+  Widget cityCarousel = CityCarousel(cities: gunsan);
 
   @override
   Widget build(BuildContext context) {
@@ -146,29 +149,16 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CarouselSlider(
-                      options: CarouselOptions(
-                        height: 400,
-                        enableInfiniteScroll: false, // 무한 스크롤 비활성화
+                    if (selectedCity == '군산시')
+                      cityCarousel
+                    else
+                      CarouselSlider(
+                        options: CarouselOptions(
+                          height: 400,
+                          enableInfiniteScroll: false,
+                        ),
+                        items: carouselItems,
                       ),
-                      items: [
-                        buildCarouselItem(
-                            '군산어린이심리센터',
-                            '063-464-7120',
-                            'assets/images/gunsan_1.png',
-                            '전북 군산시 공단대로 441 LG 테레콤'),
-                        buildCarouselItem(
-                            '아리울언어심리연구소',
-                            '123-456-7890',
-                            'assets/images/gunsan_2.png',
-                            '전북 군산시 공단대로 202 백토빌딩 3층'),
-                        buildCarouselItem(
-                            '소리엘언어심리센터',
-                            '987-654-3210',
-                            'assets/images/gunsan_3.png',
-                            '전북 군산시 나운로 4 현대코아 306호'),
-                      ],
-                    ),
                   ],
                 ),
               ],
@@ -176,43 +166,6 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildCarouselItem(
-      String title, String phoneNumber, String imagePath, String address) {
-    return Column(
-      children: [
-        Image.asset(
-          imagePath,
-          width: 300,
-          height: 227,
-        ),
-        const SizedBox(height: 10),
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 26,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'BMJUA',
-          ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          '전화번호: $phoneNumber',
-          style: const TextStyle(
-            fontSize: 24,
-            fontFamily: 'BMJUA',
-          ),
-        ),
-        Text(
-          '지번 : $address',
-          style: const TextStyle(
-            fontSize: 24,
-            fontFamily: 'BMJUA',
-          ),
-        )
-      ],
     );
   }
 }
