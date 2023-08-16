@@ -1,8 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
 
-class AudioKid12 {
+class AudioKid2 {
   AudioPlayer audioPlayer = AudioPlayer();
-  String audioFilePath = 'assets/audios/audiokid12.mp3';
+  String audioFilePath = 'assets/audios/face_2.mp3';
   bool isPlaying = false;
 
   Future<void> initAudio() async {

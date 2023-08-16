@@ -79,7 +79,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "행복한 표정을 지어봐 ~",
+                    "왜 그렇게 생각했어?",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
