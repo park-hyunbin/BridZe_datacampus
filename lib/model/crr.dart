@@ -50,7 +50,7 @@ class _ScoreState extends State<Score> {
           ),
         ),
         Text(
-          crrScore.toString(),
+          crrScore,
           style: const TextStyle(fontSize: 15, color: Colors.green),
         )
       ],
