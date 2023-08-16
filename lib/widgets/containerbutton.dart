@@ -41,7 +41,7 @@ class _ContainerButtonState extends State<ContainerButton> {
                 widget.labelText,
                 style: const TextStyle(
                   fontFamily: 'BMJUA',
-                  fontSize: 30,
+                  fontSize: 35,
                   color: Colors.black,
                 ),
                 textAlign: TextAlign.center,
@@ -53,7 +53,7 @@ class _ContainerButtonState extends State<ContainerButton> {
                 widget.subLabelText,
                 style: const TextStyle(
                   fontFamily: 'Sriracha',
-                  fontSize: 20,
+                  fontSize: 25,
                 ),
                 textAlign: TextAlign.center,
               ),

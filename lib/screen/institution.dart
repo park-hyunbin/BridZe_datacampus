@@ -1,3 +1,5 @@
+import 'package:bridze/list/gangdong.dart';
+import 'package:bridze/list/gunsan.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,8 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   var selectedProvince;
   var selectedCity;
   List<Widget> carouselItems = [];
-  Widget cityCarousel = CityCarousel(cities: gunsan);
+  Widget GunsanCarousel = CityCarousel(cities: gunsan);
+  Widget GangdongCarousel = CityCarousel(cities: gangdong);
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +153,9 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     if (selectedCity == '군산시')
-                      cityCarousel
+                      GunsanCarousel
+                    else if (selectedCity == '강동구')
+                      GangdongCarousel
                     else
                       CarouselSlider(
                         options: CarouselOptions(
