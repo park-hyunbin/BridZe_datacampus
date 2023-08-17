@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2023/08/17-12:24:09.048 7003 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.X1wjdT/flutter_tools_chrome_device.1Ee1ia/Default/Site Characteristics Database/MANIFEST-000001
 2023/08/17-12:24:09.053 7003 Recovering log #10
 2023/08/17-12:24:09.053 7003 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.X1wjdT/flutter_tools_chrome_device.1Ee1ia/Default/Site Characteristics Database/000010.log 
@@ -5,3 +6,25 @@
 2023/08/17-12:24:09.053 7003 Delete type=0 #3
 2023/08/17-12:24:09.053 7003 Delete type=2 #6
 2023/08/17-12:24:09.053 7003 Delete type=2 #4
+=======
+<<<<<<< Updated upstream
+2023/08/16-12:33:37.676 14d03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Je49i9/flutter_tools_chrome_device.6Hm8OA/Default/Site Characteristics Database/MANIFEST-000001
+2023/08/16-12:33:37.676 14d03 Recovering log #6
+2023/08/16-12:33:37.676 14d03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Je49i9/flutter_tools_chrome_device.6Hm8OA/Default/Site Characteristics Database/000006.log 
+2023/08/16-12:33:37.676 14d03 Delete type=0 #3
+=======
+2023/08/14-18:50:12.643 4978 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.37c45771\flutter_tools_chrome_device.4f087f3a\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/14-18:50:12.644 4978 Recovering log #3
+2023/08/14-18:50:12.644 4978 Level-0 table #13: started
+2023/08/14-18:50:12.647 4978 Level-0 table #13: 831 bytes OK
+2023/08/14-18:50:12.647 4978 Recovering log #6
+2023/08/14-18:50:12.647 4978 Level-0 table #14: started
+2023/08/14-18:50:12.652 4978 Level-0 table #14: 415 bytes OK
+2023/08/14-18:50:12.652 4978 Recovering log #10
+2023/08/14-18:50:12.652 4978 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.37c45771\flutter_tools_chrome_device.4f087f3a\Default\Site Characteristics Database/000010.log 
+2023/08/14-18:50:12.654 4978 Delete type=0 #3
+2023/08/14-18:50:12.654 4978 Delete type=2 #4
+2023/08/14-18:50:12.654 4978 Delete type=2 #6
+2023/08/14-18:50:12.654 4978 Delete type=0 #6
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

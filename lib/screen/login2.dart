@@ -24,7 +24,7 @@ class _Login2PageState extends State<Login2Page> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 150.0),
+                  padding: const EdgeInsets.only(top: 100.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -68,7 +68,7 @@ class _Login2PageState extends State<Login2Page> {
                           children: [
                             Container(
                               width: 300,
-                              height: 350,
+                              height: 400,
                               decoration: const BoxDecoration(
                                 color: Color(0xFFA1C0DD),
                                 borderRadius:
@@ -84,7 +84,7 @@ class _Login2PageState extends State<Login2Page> {
                                   ),
                                   const SizedBox(height: 20),
                                   const Text(
-                                    "아린이가 진행했던평가 결과를\n보고싶다면 ?",
+                                    "아린이가 진행했던\n평가 결과를\n보고싶다면 ?",
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontFamily: "BMJUA",
@@ -130,7 +130,7 @@ class _Login2PageState extends State<Login2Page> {
                               padding: const EdgeInsets.only(left: 100.0),
                               child: Container(
                                 width: 300,
-                                height: 350,
+                                height: 400,
                                 decoration: const BoxDecoration(
                                   color: Color(0xFFA1C0DD),
                                   borderRadius:
