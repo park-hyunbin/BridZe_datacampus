@@ -54,9 +54,9 @@ class _ScoreState extends State<Score> {
           ),
         ),
         Text(
-          crrScore, // crr 점수 표시 (현재 string형)
+          crrScore, // crr 점수 표시 (현재 string형, 예시: '12.34')
           style: const TextStyle(fontSize: 15, color: Colors.green),
-        )
+        ),
       ],
     );
   }
