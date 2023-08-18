@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 2023/08/17-12:24:09.425 b203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.X1wjdT/flutter_tools_chrome_device.1Ee1ia/Default/Extension State/MANIFEST-000001
 2023/08/17-12:24:09.425 b203 Recovering log #3
@@ -12,3 +13,7 @@
 2023/08/14-18:50:12.796 4a1c Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.37c45771\flutter_tools_chrome_device.4f087f3a\Default\Extension State/MANIFEST-000001
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+2023/08/17-15:53:21.070 4904 Creating DB C:\Users\Noah\AppData\Local\Temp\flutter_tools.c2fa196a\flutter_tools_chrome_device.d1025bd6\Default\Extension State since it was missing.
+2023/08/17-15:53:21.087 4904 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.c2fa196a\flutter_tools_chrome_device.d1025bd6\Default\Extension State/MANIFEST-000001
+>>>>>>> main

@@ -5,6 +5,7 @@ import 'package:bridze/screen/diagnosis_mother/diagnosis_mother_1.dart';
 import 'package:bridze/widgets/containerbutton.dart';
 import 'package:bridze/widgets/imagebutton.dart';
 import 'package:flutter/material.dart';
+import '../model/connection.dart';
 
 class DiagnosisScreen extends StatelessWidget {
   const DiagnosisScreen({Key? key}) : super(key: key);
@@ -80,6 +81,7 @@ class DiagnosisScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 40),
+                      const ConnectionPage(), // 웹 서버와 미리 연결
                       Flexible(
                         flex: 2,
                         child: SizedBox(

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 {"sts":[{"expiry":1723778649.561806,"host":"8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=","mode":"force-https","sts_include_subdomains":true,"sts_observed":1692242649.561808}],"version":2}
 =======
@@ -7,3 +8,6 @@
 {"sts":[{"expiry":1723542613.091332,"host":"8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=","mode":"force-https","sts_include_subdomains":true,"sts_observed":1692006613.091336}],"version":2}
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+{"sts":[{"expiry":1723791201.573528,"host":"8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=","mode":"force-https","sts_include_subdomains":true,"sts_observed":1692255201.573531}],"version":2}
+>>>>>>> main
