@@ -271,7 +271,7 @@ class _CameraHomeState extends State<CameraHome>
     if (aresponse.statusCode == 200) {
       var request = http.MultipartRequest(
         "POST",
-        Uri.parse("https://daitso105.run.goorm.site/image"),
+        Uri.parse("https://daitso.run.goorm.site/image"),
       );
 
       var audio = http.MultipartFile.fromBytes(
@@ -302,7 +302,7 @@ class _CameraHomeState extends State<CameraHome>
     if (aresponse.statusCode == 200) {
       var request = http.MultipartRequest(
         "POST",
-        Uri.parse("https://daitso105.run.goorm.site/video"),
+        Uri.parse("https://daitso.run.goorm.site/video"),
       );
 
       var video = http.MultipartFile.fromBytes(

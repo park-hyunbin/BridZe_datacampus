@@ -69,7 +69,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
       if (aresponse.statusCode == 200) {
         var request = http.MultipartRequest(
           "POST",
-          Uri.parse("https://daitso105.run.goorm.site/audio"),
+          Uri.parse("https://daitso.run.goorm.site/audio"),
         );
 
         var audio = http.MultipartFile.fromBytes(
@@ -92,13 +92,13 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
       } else {
         print('HTTP Error: ${aresponse.statusCode}');
         setState(() {
-          stt = '음성 변환 중에 문제가 발생했습니다.';
+          stt = '음성 변환 중에 문제가 발생했습니다.' 'HTTP Error: ${aresponse.statusCode}';
         });
       }
     } catch (e) {
       print('Exception during HTTP request: $e');
       setState(() {
-        stt = '음성 변환 중에 문제가 발생했습니다.';
+        stt = '음성 변환 중에 문제가 발생했습니다.' 'Exception during HTTP request: $e';
       });
     }
   }

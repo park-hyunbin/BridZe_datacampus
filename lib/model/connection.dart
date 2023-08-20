@@ -19,7 +19,7 @@ class _ConnectionState extends State<ConnectionPage> {
 
   Future<void> fetchData() async {
     final response =
-        await http.get(Uri.parse('https://daitso105.run.goorm.site/audio'));
+        await http.get(Uri.parse('https://daitso.run.goorm.site/audio'));
 
     if (response.statusCode == 200) {
       setState(() {

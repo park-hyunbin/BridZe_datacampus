@@ -20,7 +20,7 @@ class _ScoreState extends State<Score> {
   void initState() {
     super.initState();
     value = widget.initialValue; // 초기값을 변수에 저장
-    url = 'https://daitso105.run.goorm.site/crr?query=$value'; // API 요청 주소 설정
+    url = 'https://daitso.run.goorm.site/crr?query=$value'; // API 요청 주소 설정
   }
 
   // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신된다.
