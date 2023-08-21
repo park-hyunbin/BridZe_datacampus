@@ -75,7 +75,10 @@ class _FiveRead2PageState extends State<FiveRead2Page> {
                       child: AudioRecorderWidget(key: Key('audio_recorder5_1')),
                     ),
                     const Center(
-                      child: Score(initialValue: '5_1'),
+                      child: Score(
+                        initialValue: '5_1',
+                        number: 1,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(

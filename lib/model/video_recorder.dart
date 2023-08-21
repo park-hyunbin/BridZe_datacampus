@@ -10,8 +10,10 @@ import 'upload.dart';
 
 /// Camera example home widget.
 class CameraHome extends StatefulWidget {
+  final int number;
+
   /// Default Constructor
-  const CameraHome({super.key});
+  const CameraHome({super.key, required this.number});
 
   @override
   State<CameraHome> createState() {
@@ -30,12 +32,13 @@ class _CameraHomeState extends State<CameraHome>
   XFile? imageFile;
   XFile? videoFile;
   bool enableAudio = true;
-
+  int? number;
   List<CameraDescription> _cameras = <CameraDescription>[];
 
   @override
   void initState() {
     super.initState();
+    number = widget.number;
     initStateAsync();
   }
 
@@ -84,7 +87,7 @@ class _CameraHomeState extends State<CameraHome>
       onStopButtonPressed(); // Stop recording before turning off the camera
     }
     imageupload(imageFile);
-    videoupload(videoFile);
+    videoupload(videoFile, number!);
     controller!.dispose(); // Turn off the camera
     setState(() {
       controller = null;
@@ -358,7 +361,9 @@ class CameraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CameraHome(),
+      home: CameraHome(
+        number: 1,
+      ),
     );
   }
 }

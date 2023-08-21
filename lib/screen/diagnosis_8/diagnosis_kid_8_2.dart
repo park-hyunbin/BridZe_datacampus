@@ -80,7 +80,10 @@ class _EightReadPageState extends State<EightReadPage> {
                 key: Key('audio_recorder8'),
               )),
               const Center(
-                child: Score(initialValue: '8'),
+                child: Score(
+                  initialValue: '8',
+                  number: 0,
+                ),
               ),
               Column(
                 children: [

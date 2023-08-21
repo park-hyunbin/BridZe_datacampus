@@ -33,21 +33,21 @@ Future<void> imageupload(imageFile) async {
   }
 }
 
-Future<void> videoupload(videoFile) async {
+Future<void> videoupload(videoFile, int num) async {
   http.Response aresponse = await http.get(
     Uri.parse(videoFile!.path),
   );
-
+  String server = "https://daitso.run.goorm.site/video/$num";
   if (aresponse.statusCode == 200) {
     var request = http.MultipartRequest(
       "POST",
-      Uri.parse("https://daitso.run.goorm.site/video"),
+      Uri.parse(server),
     );
 
     var video = http.MultipartFile.fromBytes(
       'video',
       aresponse.bodyBytes,
-      filename: 'test.mp4',
+      filename: 'video$num.mp4',
     );
 
     request.files.add(video);

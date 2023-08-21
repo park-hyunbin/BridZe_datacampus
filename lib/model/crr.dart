@@ -3,9 +3,11 @@ import 'package:http/http.dart' as http;
 
 class Score extends StatefulWidget {
   final String initialValue;
+  final int number;
 
   // 생성자로 받아온 초기값에 따라 crr로 비교할 글이 달라짐.
-  const Score({Key? key, required this.initialValue}) : super(key: key);
+  const Score({Key? key, required this.initialValue, required this.number})
+      : super(key: key);
 
   @override
   _ScoreState createState() => _ScoreState();
@@ -15,12 +17,15 @@ class _ScoreState extends State<Score> {
   late String value;
   late String url; // API 요청을 보낼 주소
   String crrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
+  late int number;
 
   @override
   void initState() {
     super.initState();
     value = widget.initialValue; // 초기값을 변수에 저장
-    url = 'https://daitso.run.goorm.site/crr?query=$value'; // API 요청 주소 설정
+    number = widget.number;
+    url =
+        'https://daitso.run.goorm.site/crr/$number?query=$value'; // API 요청 주소 설정
   }
 
   // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신된다.

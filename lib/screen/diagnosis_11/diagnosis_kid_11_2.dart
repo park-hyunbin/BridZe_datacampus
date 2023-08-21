@@ -80,7 +80,10 @@ class _ElevenReadPageState extends State<ElevenReadPage> {
                 ),
               ),
               const Center(
-                child: Score(initialValue: '11'),
+                child: Score(
+                  initialValue: '11',
+                  number: 0,
+                ),
               ),
               Column(
                 children: [
