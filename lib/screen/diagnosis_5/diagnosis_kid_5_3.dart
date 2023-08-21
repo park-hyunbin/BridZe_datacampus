@@ -1,7 +1,7 @@
 import 'package:bridze/screen/diagnosis_5/diagnosis_kid_5_4.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
-import '../../model/crr.dart';
+import '../../model/crr_save.dart';
 
 class FiveRead3Page extends StatefulWidget {
   const FiveRead3Page({Key? key}) : super(key: key);

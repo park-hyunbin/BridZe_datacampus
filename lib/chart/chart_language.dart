@@ -2,43 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 void main() {
-  runApp(_ChartApp());
+  runApp(const ChartApp());
 }
 
-class _ChartApp extends StatefulWidget {
+class ChartApp extends StatefulWidget {
+  const ChartApp({super.key});
+
   @override
-  State<_ChartApp> createState() => _ChartAppState();
+  State<ChartApp> createState() => ChartAppState();
 }
 
-class _ChartAppState extends State<_ChartApp> {
+class ChartAppState extends State<ChartApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: _LanguagePage(),
+    return const MaterialApp(
+      home: LanguagePage(
+        avrScore: '',
+      ),
     );
   }
 }
 
-class _LanguagePage extends StatefulWidget {
+class LanguagePage extends StatefulWidget {
+  final String avrScore;
+
+  const LanguagePage({
+    super.key,
+    required this.avrScore,
+  });
+
   @override
-  _LanguagePageState createState() => _LanguagePageState();
+  LanguagePageState createState() => LanguagePageState();
 }
 
-class _LanguagePageState extends State<_LanguagePage> {
-  late List<_ChartData> data;
+class LanguagePageState extends State<LanguagePage> {
+  late List<ChartData> data;
   late TooltipBehavior _tooltip;
 
   @override
   void initState() {
     data = [
-      _ChartData(
+      ChartData(
         '또래친구점수',
         75,
         const Color.fromRGBO(254, 202, 202, 1.0),
       ),
-      _ChartData(
+      ChartData(
         '아린이점수',
-        45,
+        double.tryParse(widget.avrScore) ?? 0.0,
         const Color.fromARGB(255, 241, 133, 145),
       ),
     ];
@@ -112,13 +123,13 @@ class _LanguagePageState extends State<_LanguagePage> {
                       ),
                     ),
                     tooltipBehavior: _tooltip,
-                    series: <ChartSeries<_ChartData, String>>[
-                      BarSeries<_ChartData, String>(
+                    series: <ChartSeries<ChartData, String>>[
+                      BarSeries<ChartData, String>(
                         dataSource: data,
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        yValueMapper: (_ChartData data, _) => data.y,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
                         name: '언어 평가',
-                        pointColorMapper: (_ChartData data, _) => data.color,
+                        pointColorMapper: (ChartData data, _) => data.color,
                         dataLabelSettings: const DataLabelSettings(
                           isVisible: true, // 데이터 레이블 활성화
                           textStyle: TextStyle(
@@ -173,10 +184,10 @@ class _LanguagePageState extends State<_LanguagePage> {
   }
 }
 
-class _ChartData {
+class ChartData {
   final String x;
   final double y;
   final Color color;
 
-  _ChartData(this.x, this.y, this.color);
+  ChartData(this.x, this.y, this.color);
 }

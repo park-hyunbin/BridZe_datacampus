@@ -80,7 +80,7 @@ class UntactState extends State<Untact> {
                   height: 50,
                 ),
                 const Text(
-                  "부모와 함께 언어 및 상담 교육 받기",
+                  "부모와 함께 언어 및 상담 교육 받기(유료)",
                   style: TextStyle(fontSize: 25, fontFamily: 'BMJUA'),
                 ),
                 const SizedBox(
@@ -108,7 +108,7 @@ class UntactState extends State<Untact> {
                   height: 50,
                 ),
                 const Text(
-                  "말하기, 듣기, 읽기, 쓰기 교육 받기",
+                  "말하기, 듣기, 읽기, 쓰기 교육 받기(무료)",
                   style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'BMJUA',
@@ -153,6 +153,38 @@ class UntactState extends State<Untact> {
                         fontFamily: 'BMJUA',
                         fontSize: 30,
                       ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "한국어 어휘부터 회화까지 교육 받기(무료)",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'BMJUA',
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () async {
+                    const url =
+                        "https://www.iksi.or.kr/lms/main/crseMoreList_v2.do?cmtCrseSeCode=OFF001&crseType=OFF";
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw "Could not launch $url";
+                    }
+                  },
+                  child: const Text(
+                    "https://www.iksi.or.kr/lms/main/crseMoreList_v2.do?cmtCrseSeCode=OFF001&crseType=OFF",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: 'BMJUA',
+                      color: Colors.blue,
                     ),
                   ),
                 ),
