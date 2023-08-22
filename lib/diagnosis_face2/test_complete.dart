@@ -9,9 +9,6 @@ class DiagnosisEndPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Diagnosis Result'),
-      ),
       body: DiagnosisEnd(avrScore: avrScore), // DiagnosisEnd 위젯 사용
     );
   }
