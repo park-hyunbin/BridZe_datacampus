@@ -49,7 +49,7 @@ class FivePageState extends State<FivePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "${widget.name} 어린이의 첫 번째 언어적 진단을 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ",
+                  "${widget.name} 어린이의 첫 번째 언어 평가를 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ~",
                   style: const TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
@@ -60,9 +60,9 @@ class FivePageState extends State<FivePage> {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "Bắt đầu chẩn đoán ngôn ngữ đầu tiên.\nEm bé đọc y chang câu trên màn hình đi ",
+                  "Bắt đầu đánh giá ngôn ngữ đầu tiên.\nEm bé đọc y chang câu trên màn hình đi",
                   style: TextStyle(
-                    fontFamily: 'Rowdies',
+                    fontFamily: 'Sriracha',
                     fontSize: 40,
                     color: Color(0xff8EB5FF),
                   ),

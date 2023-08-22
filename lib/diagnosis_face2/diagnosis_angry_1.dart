@@ -58,7 +58,7 @@ class DiagnosisAngry1Page extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "안녕 ! 나는 화난 표정이야 !",
+                    "안녕 ! 나는 화가 난 표정이야 !",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',

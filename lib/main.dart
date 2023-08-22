@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  '다문화가정 아이들을 세상으로 잇다',
+                  '다문화가정 아동들을 세상으로 잇다',
                   style: TextStyle(
                     fontSize: 50,
                     fontFamily: 'BMJUA',

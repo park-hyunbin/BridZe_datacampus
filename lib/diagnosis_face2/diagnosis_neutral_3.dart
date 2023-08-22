@@ -2,8 +2,8 @@ import 'package:bridze/diagnosis_face2/diagnosis_nervous_1.dart';
 import 'package:flutter/material.dart';
 import '../../model/video_recorder.dart';
 
-class DiagnosisSurprise3Page extends StatelessWidget {
-  const DiagnosisSurprise3Page({Key? key}) : super(key: key);
+class DiagnosisNeutral3Page extends StatelessWidget {
+  const DiagnosisNeutral3Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

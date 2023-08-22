@@ -1,8 +1,8 @@
-import 'package:bridze/diagnosis_face2/diagnosis_surprise_2.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_neutral_2.dart';
 import 'package:flutter/material.dart';
 
-class DiagnosisSurprise1Page extends StatelessWidget {
-  const DiagnosisSurprise1Page({Key? key, required String avrScore})
+class DiagnosisNeutral1Page extends StatelessWidget {
+  const DiagnosisNeutral1Page({Key? key, required String avrScore})
       : super(key: key);
 
   @override
@@ -48,7 +48,7 @@ class DiagnosisSurprise1Page extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/images/surprise.png',
+                        'assets/images/neutral.png',
                       ),
                     ],
                   ),
@@ -58,7 +58,7 @@ class DiagnosisSurprise1Page extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "안녕 ! 나는 놀란 표정이야 !",
+                    "안녕 ! 나는 무표정이야 !",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
@@ -78,8 +78,7 @@ class DiagnosisSurprise1Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const DiagnosisSurprise2Page(),
+                            builder: (context) => const DiagnosisNeutral2Page(),
                           ),
                         );
                       },

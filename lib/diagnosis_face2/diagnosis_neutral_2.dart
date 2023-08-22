@@ -1,15 +1,15 @@
 import 'package:bridze/widgets/audio_kid_13.dart';
-import 'package:bridze/diagnosis_face2/diagnosis_surprise_3.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_neutral_3.dart';
 import 'package:flutter/material.dart';
 
-class DiagnosisSurprise2Page extends StatefulWidget {
-  const DiagnosisSurprise2Page({Key? key}) : super(key: key);
+class DiagnosisNeutral2Page extends StatefulWidget {
+  const DiagnosisNeutral2Page({Key? key}) : super(key: key);
 
   @override
-  State<DiagnosisSurprise2Page> createState() => _DiagnosisSurprise2PageState();
+  State<DiagnosisNeutral2Page> createState() => _DiagnosisNeutral2PageState();
 }
 
-class _DiagnosisSurprise2PageState extends State<DiagnosisSurprise2Page> {
+class _DiagnosisNeutral2PageState extends State<DiagnosisNeutral2Page> {
   AudioKid13 myAudioPlayer = AudioKid13();
   bool isPlaying = false;
 
@@ -79,7 +79,7 @@ class _DiagnosisSurprise2PageState extends State<DiagnosisSurprise2Page> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "놀란 표정을 지어봐 ~",
+                    "무표정을 지어봐 ~",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
@@ -100,7 +100,7 @@ class _DiagnosisSurprise2PageState extends State<DiagnosisSurprise2Page> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  const DiagnosisSurprise3Page(),
+                                  const DiagnosisNeutral3Page(),
                             ),
                           );
                         },

@@ -55,7 +55,7 @@ class DiagnosisKid20Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "Chúng ta hãy bắt đầu trò chơi biểu cảm với thỏ nào!\nHãy thể hiện hết mình cảm xúc của thỏ bằng biểu cảm nhé",
+                  "Chúng ta hãy bắt đầu trò chơi biểu cảm với thỏ nào !\nHãy thể hiện hết mình cảm xúc của thỏ bằng biểu cảm nhé",
                   style: TextStyle(
                     fontFamily: 'Sriracha',
                     fontSize: 40,

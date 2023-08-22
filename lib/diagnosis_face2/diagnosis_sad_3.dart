@@ -1,4 +1,4 @@
-import 'package:bridze/diagnosis_face2/diagnosis_surprise_1.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_neutral_1.dart';
 import 'package:flutter/material.dart';
 import '../../model/video_recorder.dart';
 
@@ -59,7 +59,7 @@ class DiagnosisSad3Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisSurprise1Page(
+                            builder: (context) => const DiagnosisNeutral1Page(
                               avrScore: '',
                             ),
                           ),

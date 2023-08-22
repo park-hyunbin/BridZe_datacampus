@@ -56,7 +56,7 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  "시/도와 도시를 선택해주세요",
+                  "도/시 와  시/군 을 선택해주세요",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 35,

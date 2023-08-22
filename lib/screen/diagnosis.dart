@@ -35,7 +35,7 @@ class DiagnosisScreen extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 const Text(
-                  'BridZe와 함께 시작해볼까요?',
+                  'BridZe와 함께 시작해볼까요 ?',
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 40,
@@ -64,7 +64,7 @@ class DiagnosisScreen extends StatelessWidget {
                           width: 300,
                           height: 200,
                           child: ContainerButton(
-                              labelText: '언어평가>',
+                              labelText: '언어평가 >',
                               subLabelText: 'đánh giá ngôn ngữ',
                               onPressed: () {
                                 Navigator.push(
@@ -85,7 +85,7 @@ class DiagnosisScreen extends StatelessWidget {
                           width: 300,
                           height: 200,
                           child: ContainerButton(
-                              labelText: '정서평가>',
+                              labelText: '정서평가 >',
                               subLabelText: 'đánh giá tình cảm',
                               onPressed: () {
                                 Navigator.push(

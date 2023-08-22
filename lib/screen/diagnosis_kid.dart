@@ -55,7 +55,7 @@ class _DiagnosisKidPageState extends State<DiagnosisKidPage> {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "아이의 기본 정보를 입력해주세요!",
+                  "아이의 기본 정보를 입력해주세요 !",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 40,

@@ -85,7 +85,7 @@ class _Login2PageState extends State<Login2Page> {
                                   ),
                                   const SizedBox(height: 20),
                                   const Text(
-                                    "진행했던평가 결과를\n보고싶다면 ?",
+                                    "진행했던\n평가 결과를\n보고싶다면 ?",
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontFamily: "BMJUA",

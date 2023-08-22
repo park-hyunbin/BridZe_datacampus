@@ -1,20 +1,7 @@
-<<<<<<< Updated upstream
-2023/08/22-11:06:12.189 7103 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.1Frcgk/flutter_tools_chrome_device.xXmsPf/Default/shared_proto_db/MANIFEST-000001
-2023/08/22-11:06:12.189 7103 Recovering log #12
-2023/08/22-11:06:12.190 7103 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.1Frcgk/flutter_tools_chrome_device.xXmsPf/Default/shared_proto_db/000012.log 
-2023/08/22-11:06:12.190 7103 Delete type=0 #10
-2023/08/22-11:06:12.190 7103 Delete type=0 #3
-=======
-2023/08/22-10:43:47.972 14cc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.25863916\flutter_tools_chrome_device.a1972134\Default\shared_proto_db/MANIFEST-000001
-2023/08/22-10:43:47.973 14cc Recovering log #3
-2023/08/22-10:43:47.974 14cc Level-0 table #3: started
-2023/08/22-10:43:47.977 14cc Level-0 table #3: 17968 bytes OK
-2023/08/22-10:43:47.977 14cc Recovering log #10
-2023/08/22-10:43:47.979 14cc Level-0 table #4: started
-2023/08/22-10:43:47.983 14cc Level-0 table #4: 119348 bytes OK
-2023/08/22-10:43:47.983 14cc Recovering log #12
-2023/08/22-10:43:47.984 14cc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.25863916\flutter_tools_chrome_device.a1972134\Default\shared_proto_db/000012.log 
-2023/08/22-10:43:47.985 14cc Delete type=0 #3
-2023/08/22-10:43:47.986 14cc Delete type=0 #10
-2023/08/22-10:43:47.986 14cc Delete type=2 #13
->>>>>>> Stashed changes
+2023/08/22-13:56:58.315 260c Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.97adbcfe\flutter_tools_chrome_device.3cc4457d\Default\shared_proto_db/MANIFEST-000001
+2023/08/22-13:56:58.315 260c Recovering log #15
+2023/08/22-13:56:58.315 260c Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.97adbcfe\flutter_tools_chrome_device.3cc4457d\Default\shared_proto_db/000015.log 
+2023/08/22-13:56:58.316 260c Delete type=0 #3
+2023/08/22-13:56:58.316 260c Delete type=2 #4
+2023/08/22-13:56:58.316 260c Delete type=0 #10
+2023/08/22-13:56:58.316 260c Delete type=0 #12

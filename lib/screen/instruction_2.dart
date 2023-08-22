@@ -87,7 +87,7 @@ class CalendarAppState extends State<CalendarApp> {
                   height: 150,
                 ),
                 const Text(
-                  "링크를 클릭하여 사이트를 방문해 예약하거나 전화번호로 전화해 예약해주세요 :)",
+                  "링크를 클릭하여 사이트에 방문해 예약하거나, 전화번호로 전화해 예약해주세요 :)",
                   style: TextStyle(fontSize: 25, fontFamily: 'BMJUA'),
                 ),
                 const SizedBox(

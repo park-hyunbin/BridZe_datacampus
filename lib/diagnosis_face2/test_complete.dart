@@ -39,7 +39,7 @@ class DiagnosisEnd extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 60),
                 child: Text(
-                  "진단이 끝났어요 !\n내 정보의 분석 결과를 클릭하여 확인해주세요.",
+                  "평가가 끝났어요 !\n내 정보의 분석 결과를 클릭하여 확인해주세요.",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
@@ -50,7 +50,7 @@ class DiagnosisEnd extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "Đã chẩn oán xong rồi!\nVui lòng xác nhận bằng cách nhấp vào kết quả phân\ntích thông tin của tôi.",
+                  "Buổi đánh giá đã kết thúc !\nVui lòng xác nhận bằng cách nhấp vào kết quả phân\ntích thông tin của tôi.",
                   style: TextStyle(
                     fontFamily: 'Sriracha',
                     fontSize: 40,
