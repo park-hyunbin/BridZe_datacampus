@@ -82,13 +82,6 @@ class Score2State extends State<Score2> {
       children: [
         GestureDetector(
           onTap: () async {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => LanguagePage2(
-                  crrScore: crrScore,
-                ),
-              ),
-            );
             fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
           },
           child: Container(

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< HEAD
@@ -24,4 +25,9 @@
 2023/08/22-17:24:45.799 2b03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Y12UUq/flutter_tools_chrome_device.jcCEoa/Default/Local Storage/leveldb/MANIFEST-000001
 2023/08/22-17:24:45.801 2b03 Recovering log #3
 2023/08/22-17:24:45.801 2b03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Y12UUq/flutter_tools_chrome_device.jcCEoa/Default/Local Storage/leveldb/000003.log 
+>>>>>>> main
+=======
+2023/08/22-20:54:30.005 5403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.IHZqeI/flutter_tools_chrome_device.thyt9a/Default/Local Storage/leveldb/MANIFEST-000001
+2023/08/22-20:54:30.006 5403 Recovering log #3
+2023/08/22-20:54:30.006 5403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.IHZqeI/flutter_tools_chrome_device.thyt9a/Default/Local Storage/leveldb/000003.log 
 >>>>>>> main

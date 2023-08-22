@@ -1,3 +1,4 @@
+import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -187,7 +188,14 @@ class LanguagePage2State extends State<LanguagePage2> {
                     height: 20,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DiagnosisScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       width: 300,
                       height: 80,

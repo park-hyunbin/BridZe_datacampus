@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DiagnosisScreen(),
+      home: const PictureSave(),
     );
   }
 }
 
-class DiagnosisScreen extends StatelessWidget {
-  const DiagnosisScreen({Key? key}) : super(key: key);
+class PictureSave extends StatelessWidget {
+  const PictureSave({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
