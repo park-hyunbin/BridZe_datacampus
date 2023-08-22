@@ -1,7 +1,7 @@
-import 'package:bridze/screen/diagnosis.dart';
+import 'package:bridze/chart/chart_parent.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
-import '../../model/crr.dart';
+import '../../model/avr.dart';
 
 class DiagnosisMother2Page extends StatefulWidget {
   const DiagnosisMother2Page({Key? key}) : super(key: key);
@@ -94,9 +94,13 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DiagnosisScreen()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ParentPage(
+                          crrScore: '',
+                        ),
+                      ),
+                    );
                   },
                   child: Image.asset(
                     "assets/images/finish_blue.png",

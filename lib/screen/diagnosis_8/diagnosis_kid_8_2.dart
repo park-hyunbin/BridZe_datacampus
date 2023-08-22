@@ -1,7 +1,7 @@
 import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
-import '../../model/crr.dart';
+import '../../model/avr.dart';
 
 class EightReadPage extends StatefulWidget {
   const EightReadPage({Key? key}) : super(key: key);

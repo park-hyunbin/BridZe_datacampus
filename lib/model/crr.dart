@@ -1,25 +1,23 @@
-import 'package:bridze/chart/chart_language.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Score extends StatefulWidget {
+class Score2 extends StatefulWidget {
   final String initialValue;
   final int number;
 
   // 생성자로 받아온 초기값에 따라 crr로 비교할 글이 달라짐.
-  const Score({Key? key, required this.initialValue, required this.number})
+  const Score2({Key? key, required this.initialValue, required this.number})
       : super(key: key);
 
   @override
-  _ScoreState createState() => _ScoreState();
+  Score2State createState() => Score2State();
 }
 
-class _ScoreState extends State<Score> {
+class Score2State extends State<Score2> {
   late String value;
   late String url; // API 요청을 보낼 주소
   String crrScore = '';
-  String avrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
   late int number;
 
   @override
@@ -52,21 +50,15 @@ class _ScoreState extends State<Score> {
         await http.get(Uri.parse('https://daitso.run.goorm.site/crr/average'));
     if (response.statusCode == 200) {
       setState(() {
-        avrScore = response.body;
+        crrScore = response.body;
       });
 
       // Save avrScore to SharedPreferences
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      prefs.setString('globalavrScore', avrScore);
-
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => LanguagePage(avrScore: avrScore),
-        ),
-      );
+      prefs.setString('globalcrrScore', crrScore);
     } else {
       setState(() {
-        avrScore = 'Error: ${response.statusCode}';
+        crrScore = 'Error: ${response.statusCode}';
       });
     }
   }
@@ -79,7 +71,6 @@ class _ScoreState extends State<Score> {
         GestureDetector(
           onTap: () async {
             fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
-            fetchavg();
           },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

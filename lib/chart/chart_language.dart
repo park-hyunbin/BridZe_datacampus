@@ -11,6 +11,7 @@ class ChartApp extends StatelessWidget {
     return const MaterialApp(
       home: LanguagePage(
         avrScore: '',
+        crrScore: '',
       ),
     );
   }
@@ -19,7 +20,9 @@ class ChartApp extends StatelessWidget {
 class LanguagePage extends StatefulWidget {
   final String avrScore;
 
-  const LanguagePage({Key? key, required this.avrScore}) : super(key: key);
+  const LanguagePage(
+      {Key? key, required this.avrScore, required String crrScore})
+      : super(key: key);
 
   @override
   LanguagePageState createState() => LanguagePageState();

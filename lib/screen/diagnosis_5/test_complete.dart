@@ -87,6 +87,7 @@ class DiagnosisEnd1Content extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => LanguagePage(
                               avrScore: avrScore,
+                              crrScore: '',
                             ),
                           ),
                         );

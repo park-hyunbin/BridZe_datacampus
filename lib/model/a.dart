@@ -17,6 +17,7 @@ class _ScoreState extends State<Score> {
   late String value;
   late String url; // API 요청을 보낼 주소
   String crrScore = '';
+  String avrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
   late int number;
 
   @override
@@ -44,6 +45,22 @@ class _ScoreState extends State<Score> {
     }
   }
 
+  void fetchavg() async {
+    http.Response response = await http.get(Uri.parse(
+        'https://daitso.run.goorm.site/crr/average')); // 주어진 주소로 GET 요청
+    if (response.statusCode == 200) {
+      // 요청이 성공한 경우
+      setState(() {
+        avrScore = response.body; // 받아온 결과를 변수에 저장하여 UI 갱신
+      });
+    } else {
+      // 요청이 실패한 경우
+      setState(() {
+        avrScore = 'Error: ${response.statusCode}'; // 에러 메시지를 변수에 저장하여 UI 갱신
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -52,6 +69,7 @@ class _ScoreState extends State<Score> {
         GestureDetector(
           onTap: () async {
             fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
+            fetchavg();
           },
           child: const Text(
             '문장 읽기를 마친 후 클릭해주세요!', // 버튼에 표시될 텍스트

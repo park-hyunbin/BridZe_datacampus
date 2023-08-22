@@ -1,5 +1,7 @@
+import 'package:bridze/chart/chart_language.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Score extends StatefulWidget {
   final String initialValue;
@@ -17,6 +19,7 @@ class _ScoreState extends State<Score> {
   late String value;
   late String url; // API 요청을 보낼 주소
   String crrScore = '';
+  String avrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
   late int number;
 
   @override
@@ -44,6 +47,33 @@ class _ScoreState extends State<Score> {
     }
   }
 
+  void fetchavg() async {
+    http.Response response =
+        await http.get(Uri.parse('https://daitso.run.goorm.site/crr/average'));
+    if (response.statusCode == 200) {
+      setState(() {
+        avrScore = response.body;
+      });
+
+      // Save avrScore to SharedPreferences
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setString('globalavrScore', avrScore);
+
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => LanguagePage(
+            avrScore: avrScore,
+            crrScore: '',
+          ),
+        ),
+      );
+    } else {
+      setState(() {
+        avrScore = 'Error: ${response.statusCode}';
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -52,12 +82,22 @@ class _ScoreState extends State<Score> {
         GestureDetector(
           onTap: () async {
             fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
+            fetchavg();
           },
-          child: const Text(
-            '문장 읽기를 마친 후 클릭해주세요!', // 버튼에 표시될 텍스트
-            style: TextStyle(
-              fontSize: 15,
-              fontFamily: 'BMJUA',
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(
+                  255, 241, 133, 145), // Change the button color as needed
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Text(
+              '결과보기!',
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: 'BMJUA',
+                color: Colors.white, // Change the text color as needed
+              ),
             ),
           ),
         ),
