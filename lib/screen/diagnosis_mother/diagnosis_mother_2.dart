@@ -1,4 +1,3 @@
-import 'package:bridze/chart/chart_parent.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/audio_test.dart';
@@ -91,31 +90,6 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
                 'assets/images/mother.png',
                 height: 60,
                 width: 120,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LanguagePage2(
-                          crrScore: crrScore,
-                        ),
-                      ),
-                    );
-                  },
-                  child: Image.asset(
-                    "assets/images/arrows.png",
-                    height: 100,
-                    width: 100,
-                  ),
-                ),
               ),
             ),
           ),

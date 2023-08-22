@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023/08/22-16:54:49.344 25dc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Site Characteristics Database/MANIFEST-000001
 2023/08/22-16:54:49.344 25dc Recovering log #15
 2023/08/22-16:54:49.344 25dc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Site Characteristics Database/000015.log 
@@ -8,3 +9,17 @@
 2023/08/22-16:54:49.345 25dc Delete type=0 #6
 2023/08/22-16:54:49.345 25dc Delete type=0 #10
 2023/08/22-16:54:49.345 25dc Delete type=2 #12
+=======
+2023/08/22-20:08:58.584 8e03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.kTDSL5/flutter_tools_chrome_device.4maOcX/Default/Site Characteristics Database/MANIFEST-000001
+2023/08/22-20:08:58.584 8e03 Recovering log #15
+2023/08/22-20:08:58.585 8e03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.kTDSL5/flutter_tools_chrome_device.4maOcX/Default/Site Characteristics Database/000015.log 
+2023/08/22-20:08:58.585 8e03 Delete type=0 #6
+2023/08/22-20:08:58.586 8e03 Delete type=0 #10
+2023/08/22-20:08:58.586 8e03 Delete type=0 #3
+2023/08/22-20:08:58.586 8e03 Delete type=2 #16
+2023/08/22-20:08:58.586 8e03 Delete type=2 #6
+2023/08/22-20:08:58.586 8e03 Delete type=2 #4
+2023/08/22-20:08:58.586 8e03 Delete type=2 #20
+2023/08/22-20:08:58.586 8e03 Delete type=2 #19
+2023/08/22-20:08:58.586 8e03 Delete type=2 #18
+>>>>>>> main

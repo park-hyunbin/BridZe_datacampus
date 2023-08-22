@@ -1,7 +1,10 @@
-import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+
+void main() {
+  runApp(const ChartApp2());
+}
 
 class ChartApp2 extends StatelessWidget {
   const ChartApp2({Key? key}) : super(key: key);
@@ -10,16 +13,18 @@ class ChartApp2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: LanguagePage2(
-        crrScore: '',
+        crrScore: '', // Pass the actual crrScore value here
       ),
     );
   }
 }
 
 class LanguagePage2 extends StatefulWidget {
+  final String crrScore;
+
   const LanguagePage2({
     Key? key,
-    required String crrScore,
+    required this.crrScore,
   }) : super(key: key);
 
   @override
@@ -27,17 +32,18 @@ class LanguagePage2 extends StatefulWidget {
 }
 
 class LanguagePage2State extends State<LanguagePage2> {
-  String crrScore = ''; // Remove the initial value assignment
+  String crrScore = '';
   String evaluation2 = '';
 
-  late List<ChartData> data;
+  late List<ChartData> data = []; // Initialize with an empty list
   late TooltipBehavior _tooltip;
 
   @override
   void initState() {
     super.initState();
+    crrScore = widget.crrScore;
     _tooltip = TooltipBehavior(enable: true);
-    initializeChartData();
+    initializeChartData(); // Call the method to initialize data
   }
 
   Future<void> initializeChartData() async {
@@ -45,29 +51,31 @@ class LanguagePage2State extends State<LanguagePage2> {
     final String? score2 = prefs.getString('globalcrrScore');
     double parsedScore2 = double.tryParse(score2 ?? '') ?? 0.0;
 
-    data = [
-      ChartData(
-        '한국인 부모님 점수',
-        75,
-        Color(int.parse('96B9DB', radix: 16)).withOpacity(1.0),
-      ),
-      ChartData(
-        '부모님 점수',
-        parsedScore2,
-        Color(int.parse('96B9DB', radix: 16)).withOpacity(1.0),
-      ),
-    ];
+    setState(() {
+      data = [
+        ChartData(
+          '한국인 부모님 점수',
+          75,
+          Color(int.parse('96B9DB', radix: 16)).withOpacity(1.0),
+        ),
+        ChartData(
+          '부모님 점수',
+          parsedScore2,
+          Color(int.parse('96B9DB', radix: 16)).withOpacity(1.0),
+        ),
+      ];
 
-    calculateEvaluation(); // Calculate evaluation using fetched crrScore
+      calculateEvaluation();
+    });
   }
 
   void calculateEvaluation() {
     double score2 = double.tryParse(crrScore) ?? 0.0;
     if (score2 >= 100) {
       evaluation2 = '상';
-    } else if (score2 >= 88) {
+    } else if (score2 >= 97) {
       evaluation2 = '상';
-    } else if (score2 > 69) {
+    } else if (score2 > 88) {
       evaluation2 = '중';
     } else {
       evaluation2 = '하';
@@ -85,7 +93,7 @@ class LanguagePage2State extends State<LanguagePage2> {
     return Stack(
       children: [
         Image.asset(
-          'assets/images/desktop1_2.png',
+          'assets/images/parent_background.png',
           fit: BoxFit.cover,
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -97,7 +105,7 @@ class LanguagePage2State extends State<LanguagePage2> {
               child: Column(
                 children: [
                   Text(
-                    '아린이의 언어평가 결과',
+                    '부모님 언어평가 결과',
                     style: TextStyle(
                       fontFamily: 'BMJUA',
                       fontSize: 50,
@@ -179,20 +187,14 @@ class LanguagePage2State extends State<LanguagePage2> {
                     height: 20,
                   ),
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const DiagnosisScreen(),
-                        ),
-                      );
-                    },
+                    onTap: () {},
                     child: Container(
                       width: 300,
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
-                        color: const Color.fromRGBO(229, 193, 197, 1.0),
+                        color: Color(int.parse('96B9DB', radix: 16))
+                            .withOpacity(1.0),
                       ),
                       child: Center(
                         child: Text(
