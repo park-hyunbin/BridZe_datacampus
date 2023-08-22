@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_1.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisKid11Page extends StatelessWidget {
@@ -31,7 +31,7 @@ class DiagnosisKid11Page extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 4",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 40,
                         fontFamily: 'Rowdies',
@@ -89,7 +89,7 @@ class DiagnosisKid11Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid12Page(),
+                            builder: (context) => const DiagnosisKid121Page(),
                           ),
                         );
                       },

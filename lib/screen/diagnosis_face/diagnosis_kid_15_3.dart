@@ -1,9 +1,9 @@
-import 'package:bridze/diagnosis_face2/diagnosis_kid_20.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_16_1.dart';
 import 'package:flutter/material.dart';
 import '../../model/video_recorder.dart';
 
-class DiagnosisKid14Page extends StatelessWidget {
-  const DiagnosisKid14Page({Key? key}) : super(key: key);
+class DiagnosisKid153Page extends StatelessWidget {
+  const DiagnosisKid153Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class DiagnosisKid14Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid20Page(
+                            builder: (context) => const DiagnosisKid161Page(
                               avrScore: '',
                             ),
                           ),

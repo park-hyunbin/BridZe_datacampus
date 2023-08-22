@@ -45,7 +45,7 @@ class _EightReadPageState extends State<EightReadPage> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 2",
+                      "đánh giá ngôn ngữ",
                       style: TextStyle(
                         fontSize: 40,
                         fontFamily: 'Rowdies',

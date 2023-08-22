@@ -1,15 +1,15 @@
 import 'package:bridze/widgets/audio_kid_13.dart';
 import 'package:flutter/material.dart';
-import 'diagnosis_kid_14.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_16_3.dart';
 
-class DiagnosisKid13Page extends StatefulWidget {
-  const DiagnosisKid13Page({Key? key}) : super(key: key);
+class DiagnosisKid162Page extends StatefulWidget {
+  const DiagnosisKid162Page({Key? key}) : super(key: key);
 
   @override
-  State<DiagnosisKid13Page> createState() => _DiagnosisKid13PageState();
+  State<DiagnosisKid162Page> createState() => _DiagnosisKid162PageState();
 }
 
-class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
+class _DiagnosisKid162PageState extends State<DiagnosisKid162Page> {
   AudioKid13 myAudioPlayer = AudioKid13(); // Use AudioKid12 class
   bool isPlaying = false;
 
@@ -51,7 +51,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 4",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 50,
                         fontFamily: 'Rowdies',
@@ -99,7 +99,7 @@ class _DiagnosisKid13PageState extends State<DiagnosisKid13Page> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const DiagnosisKid14Page(),
+                              builder: (context) => const DiagnosisKid163Page(),
                             ),
                           );
                         },

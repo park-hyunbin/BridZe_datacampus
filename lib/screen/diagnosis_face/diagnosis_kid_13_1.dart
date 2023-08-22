@@ -1,16 +1,17 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_13.dart';
-import 'package:bridze/widgets/audio_kid_5.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_13_2.dart';
+import 'package:bridze/widgets/audio_kid_2.dart';
 import 'package:flutter/material.dart';
 
-class DiagnosisKid124Page extends StatefulWidget {
-  const DiagnosisKid124Page({Key? key}) : super(key: key);
+class DiagnosisKid131Page extends StatefulWidget {
+  const DiagnosisKid131Page({Key? key, required String avrScore})
+      : super(key: key);
 
   @override
-  DiagnosisKid124PageState createState() => DiagnosisKid124PageState();
+  DiagnosisKid131PageState createState() => DiagnosisKid131PageState();
 }
 
-class DiagnosisKid124PageState extends State<DiagnosisKid124Page> {
-  AudioKid5 myAudioPlayer = AudioKid5();
+class DiagnosisKid131PageState extends State<DiagnosisKid131Page> {
+  AudioKid2 myAudioPlayer = AudioKid2();
   bool isPlaying = false;
   int selectedFace = 0;
 
@@ -59,7 +60,7 @@ class DiagnosisKid124PageState extends State<DiagnosisKid124Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 4",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 50,
                         fontFamily: 'Rowdies',
@@ -87,7 +88,7 @@ class DiagnosisKid124PageState extends State<DiagnosisKid124Page> {
                 padding: EdgeInsets.only(top: 30),
                 child: Center(
                   child: Text(
-                    "부모님에게 너의 고민을 말해 ?",
+                    "너는 부모님을 믿어 ?",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
@@ -256,7 +257,7 @@ class DiagnosisKid124PageState extends State<DiagnosisKid124Page> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid13Page(),
+                            builder: (context) => const DiagnosisKid132Page(),
                           ),
                         );
                       },

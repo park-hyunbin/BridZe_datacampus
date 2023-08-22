@@ -43,7 +43,7 @@ class _DiagnosisKidPageState extends State<DiagnosisKidPage> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 1",
+                      "Nhập thông tin",
                       style: TextStyle(
                         fontFamily: 'Rowdies',
                         fontSize: 40,

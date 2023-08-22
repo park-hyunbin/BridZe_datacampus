@@ -42,7 +42,7 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
                   ),
                   const SizedBox(width: 10),
                   const Text(
-                    "문장을 읽어주세요.",
+                    "문장을 읽어주세요",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',

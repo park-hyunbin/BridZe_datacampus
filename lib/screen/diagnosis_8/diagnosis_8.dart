@@ -32,7 +32,7 @@ class EightPage extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 2",
+                      "đánh giá ngôn ngữ",
                       style: TextStyle(
                         fontSize: 40,
                         fontFamily: 'Rowdies',
@@ -44,7 +44,7 @@ class EightPage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "첫 번째 언어 평가를 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ~",
+                  "언어 평가를 시작합니다.\n화면에 나오는 문장을 아이가 그대로 읽어주세요 ~",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
@@ -55,7 +55,7 @@ class EightPage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "Bắt đầu đánh giá ngôn ngữ đầu tiên.\nEm bé đọc y chang câu trên màn hình đi",
+                  "Bắt đầu đánh giá ngôn ngữ.\nEm bé đọc y chang câu trên màn hình đi",
                   style: TextStyle(
                     fontFamily: 'Sriracha',
                     fontSize: 40,

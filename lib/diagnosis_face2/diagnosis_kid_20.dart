@@ -32,7 +32,7 @@ class DiagnosisKid20Page extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 5",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 40,
                         fontFamily: 'Rowdies',

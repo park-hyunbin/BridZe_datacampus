@@ -1,16 +1,17 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_1.dart';
-import 'package:bridze/widgets/audio_kid_1.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_16_2.dart';
+import 'package:bridze/widgets/audio_kid_5.dart';
 import 'package:flutter/material.dart';
 
-class DiagnosisKid12Page extends StatefulWidget {
-  const DiagnosisKid12Page({Key? key}) : super(key: key);
+class DiagnosisKid161Page extends StatefulWidget {
+  const DiagnosisKid161Page({Key? key, required String avrScore})
+      : super(key: key);
 
   @override
-  DiagnosisKid12PageState createState() => DiagnosisKid12PageState();
+  DiagnosisKid161PageState createState() => DiagnosisKid161PageState();
 }
 
-class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
-  AudioKid1 myAudioPlayer = AudioKid1();
+class DiagnosisKid161PageState extends State<DiagnosisKid161Page> {
+  AudioKid5 myAudioPlayer = AudioKid5();
   bool isPlaying = false;
   int selectedFace = 0;
 
@@ -27,8 +28,7 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
     myAudioPlayer.initAudio().then((_) {
       setState(() {
         isPlaying = true;
-        myAudioPlayer
-            .toggleAudio(); // Start playing the audio when initialization is complete
+        myAudioPlayer.toggleAudio();
       });
     });
   }
@@ -60,7 +60,7 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 4",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 50,
                         fontFamily: 'Rowdies',
@@ -88,7 +88,7 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                 padding: EdgeInsets.only(top: 30),
                 child: Center(
                   child: Text(
-                    "너는 부모님에게 화가 날 때가 있어 ?",
+                    "부모님에게 너의 고민을 말해 ?",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
@@ -257,7 +257,7 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid121Page(),
+                            builder: (context) => const DiagnosisKid162Page(),
                           ),
                         );
                       },

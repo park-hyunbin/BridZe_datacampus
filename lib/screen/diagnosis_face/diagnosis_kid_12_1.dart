@@ -1,5 +1,5 @@
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_2.dart';
-import 'package:bridze/widgets/audio_kid_2.dart';
+import 'package:bridze/widgets/audio_kid_1.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisKid121Page extends StatefulWidget {
@@ -10,7 +10,7 @@ class DiagnosisKid121Page extends StatefulWidget {
 }
 
 class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
-  AudioKid2 myAudioPlayer = AudioKid2();
+  AudioKid1 myAudioPlayer = AudioKid1();
   bool isPlaying = false;
   int selectedFace = 0;
 
@@ -27,7 +27,8 @@ class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
     myAudioPlayer.initAudio().then((_) {
       setState(() {
         isPlaying = true;
-        myAudioPlayer.toggleAudio();
+        myAudioPlayer
+            .toggleAudio(); // Start playing the audio when initialization is complete
       });
     });
   }
@@ -59,7 +60,7 @@ class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 4",
+                      "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 50,
                         fontFamily: 'Rowdies',
@@ -87,7 +88,7 @@ class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
                 padding: EdgeInsets.only(top: 30),
                 child: Center(
                   child: Text(
-                    "너는 부모님을 믿어 ?",
+                    "너는 부모님에게 화가 날 때가 있어 ?",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',
