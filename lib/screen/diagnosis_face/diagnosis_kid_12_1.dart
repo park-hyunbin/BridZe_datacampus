@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis_face/diagnosis_kid_13.dart';
+import 'package:bridze/screen/diagnosis_face/diagnosis_kid_12_2.dart';
 import 'package:bridze/widgets/audio_kid_2.dart';
 import 'package:flutter/material.dart';
 
@@ -256,7 +256,7 @@ class DiagnosisKid121PageState extends State<DiagnosisKid121Page> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid13Page(),
+                            builder: (context) => const DiagnosisKid122Page(),
                           ),
                         );
                       },
