@@ -4,6 +4,7 @@ import 'package:bridze/screen/diagnosis_mother/diagnosis_mother_1.dart';
 import 'package:bridze/widgets/containerbutton.dart';
 import 'package:bridze/widgets/imagebutton.dart';
 import 'package:flutter/material.dart';
+import '../model/connection.dart';
 
 class DiagnosisScreen extends StatelessWidget {
   const DiagnosisScreen({Key? key}) : super(key: key);
@@ -128,10 +129,12 @@ class DiagnosisScreen extends StatelessWidget {
                             subLabelText: 'đánh giá ngôn ngữ',
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const DiagnosisMother1Page()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DiagnosisMother1Page()),
+                              );
+                              const ConnectionPage();
                             },
                             isParentButton: true),
                       ),

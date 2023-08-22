@@ -86,7 +86,7 @@ class _CameraHomeState extends State<CameraHome>
     if (controller!.value.isRecordingVideo) {
       onStopButtonPressed(); // Stop recording before turning off the camera
     }
-    imageupload(imageFile);
+    imageupload(imageFile, number!);
     videoupload(videoFile, number!);
     controller!.dispose(); // Turn off the camera
     setState(() {

@@ -89,6 +89,17 @@ class LanguagePage2State extends State<LanguagePage2> {
   }
 
   Widget buildChartAndUI() {
+    double score = double.tryParse(widget.avrScore) ?? 0.0;
+
+    if (score >= 100) {
+      evaluation = '상';
+    } else if (score >= 88) {
+      evaluation = '상';
+    } else if (score > 69) {
+      evaluation = '중';
+    } else {
+      evaluation = '하';
+    }
     return Stack(
       children: [
         Image.asset(

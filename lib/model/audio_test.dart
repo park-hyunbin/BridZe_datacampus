@@ -84,6 +84,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
         var response = await request.send();
         var responseData = await response.stream.toBytes();
         var result = utf8.decode(responseData);
+        print('stt: $result');
       } else {
         print('HTTP Error: ${aresponse.statusCode}');
         setState(() {
