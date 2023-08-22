@@ -75,12 +75,11 @@ class Score2State extends State<Score2> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(
-                  255, 241, 133, 145), // Change the button color as needed
+              color: const Color(0xff8EB5FF),
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Text(
-              '결과보기!',
+              '클릭해주세요!',
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: 'BMJUA',
