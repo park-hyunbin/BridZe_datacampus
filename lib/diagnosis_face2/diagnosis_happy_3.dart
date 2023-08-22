@@ -1,6 +1,7 @@
 import 'package:bridze/diagnosis_face2/diagnosis_angry_1.dart';
 import 'package:flutter/material.dart';
-import '../../model/video_recorder.dart';
+import '../../model/picture.dart';
+import '../model/execute.dart';
 
 class DiagnosisHappy3Page extends StatelessWidget {
   const DiagnosisHappy3Page({Key? key}) : super(key: key);
@@ -44,9 +45,7 @@ class DiagnosisHappy3Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Center(
-                  child: CameraHome(
-                    number: 1, // 추후에 번호 수정
-                  ),
+                  child: picture(),
                 ),
               ),
               Expanded(
@@ -64,6 +63,7 @@ class DiagnosisHappy3Page extends StatelessWidget {
                             ),
                           ),
                         );
+                        executeFile();
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
