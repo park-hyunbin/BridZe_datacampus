@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 2023/08/22-14:56:10.521 2c0 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\Site Characteristics Database/MANIFEST-000001
 2023/08/22-14:56:10.522 2c0 Recovering log #15
@@ -39,4 +40,15 @@
 2023/08/22-16:28:05.145 9403 Delete type=2 #20
 2023/08/22-16:28:05.145 9403 Delete type=2 #19
 2023/08/22-16:28:05.145 9403 Delete type=2 #18
+>>>>>>> Stashed changes
+=======
+2023/08/22-16:26:26.780 1444 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.47698c63\flutter_tools_chrome_device.52db4fb8\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/22-16:26:26.781 1444 Recovering log #15
+2023/08/22-16:26:26.781 1444 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.47698c63\flutter_tools_chrome_device.52db4fb8\Default\Site Characteristics Database/000015.log 
+2023/08/22-16:26:26.781 1444 Delete type=2 #3
+2023/08/22-16:26:26.781 1444 Delete type=0 #3
+2023/08/22-16:26:26.781 1444 Delete type=2 #4
+2023/08/22-16:26:26.781 1444 Delete type=2 #6
+2023/08/22-16:26:26.781 1444 Delete type=0 #6
+2023/08/22-16:26:26.781 1444 Delete type=0 #10
 >>>>>>> Stashed changes

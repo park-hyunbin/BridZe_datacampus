@@ -1,7 +1,10 @@
 async
 2.18
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 file:///C:/Users/seokj/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/
 file:///C:/Users/seokj/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib/
 audioplayers
@@ -448,6 +451,7 @@ flutter_web_plugins
 3.0
 file:///C:/Users/seokj/flutter/packages/flutter_web_plugins/
 file:///C:/Users/seokj/flutter/packages/flutter_web_plugins/lib/
+<<<<<<< Updated upstream
 =======
 file:///C:/Users/Noah/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/
 file:///C:/Users/Noah/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib/
@@ -900,5 +904,7 @@ file:///C:/Users/Noah/flutter/packages/flutter_web_plugins/lib/
 =======
 file:///opt/homebrew/Caskroom/flutter/3.7.1/flutter/packages/flutter_web_plugins/
 file:///opt/homebrew/Caskroom/flutter/3.7.1/flutter/packages/flutter_web_plugins/lib/
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 2
