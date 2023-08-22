@@ -9,13 +9,13 @@ final List<Institution> gunsan = [
   ),
   Institution(
     name: '아리울언어심리연구소',
-    phoneNumber: '123-456-7890',
+    phoneNumber: '063-465-7808',
     imagePath: 'assets/images/gunsan_2.png',
     address: '전북 군산시 공단대로 202 백토빌딩 3층',
   ),
   Institution(
     name: '소리엘언어심리센터',
-    phoneNumber: '987-654-3210',
+    phoneNumber: '063-465-9799',
     imagePath: 'assets/images/gunsan_3.png',
     address: '전북 군산시 나운로 4 현대코아 306호',
   ),

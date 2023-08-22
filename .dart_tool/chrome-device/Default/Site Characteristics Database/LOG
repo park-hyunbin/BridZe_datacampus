@@ -1,54 +1,10 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-2023/08/22-14:56:10.521 2c0 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/22-14:56:10.522 2c0 Recovering log #15
-2023/08/22-14:56:10.522 2c0 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\Site Characteristics Database/000015.log 
-2023/08/22-14:56:10.523 2c0 Delete type=2 #3
-2023/08/22-14:56:10.523 2c0 Delete type=0 #3
-2023/08/22-14:56:10.523 2c0 Delete type=2 #4
-2023/08/22-14:56:10.523 2c0 Delete type=2 #6
-2023/08/22-14:56:10.523 2c0 Delete type=0 #6
-2023/08/22-14:56:10.523 2c0 Delete type=0 #10
-=======
-2023/08/22-15:00:58.111 ae03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/Site Characteristics Database/MANIFEST-000001
-2023/08/22-15:00:58.112 ae03 Recovering log #10
-2023/08/22-15:00:58.112 ae03 Level-0 table #12: started
-2023/08/22-15:00:58.132 ae03 Level-0 table #12: 806 bytes OK
-2023/08/22-15:00:58.132 ae03 Recovering log #15
-2023/08/22-15:00:58.134 ae03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/Site Characteristics Database/000015.log 
-2023/08/22-15:00:58.172 ae03 Delete type=0 #6
-2023/08/22-15:00:58.172 ae03 Delete type=0 #10
-2023/08/22-15:00:58.172 ae03 Delete type=0 #3
-2023/08/22-15:00:58.172 ae03 Delete type=2 #16
-2023/08/22-15:00:58.172 ae03 Delete type=2 #6
-2023/08/22-15:00:58.172 ae03 Delete type=2 #4
-2023/08/22-15:00:58.172 ae03 Delete type=2 #20
-2023/08/22-15:00:58.172 ae03 Delete type=2 #19
-2023/08/22-15:00:58.172 ae03 Delete type=2 #18
->>>>>>> main
-=======
-2023/08/22-16:28:05.144 9403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/Site Characteristics Database/MANIFEST-000001
-2023/08/22-16:28:05.144 9403 Recovering log #15
-2023/08/22-16:28:05.145 9403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/Site Characteristics Database/000015.log 
-2023/08/22-16:28:05.145 9403 Delete type=0 #6
-2023/08/22-16:28:05.145 9403 Delete type=0 #10
-2023/08/22-16:28:05.145 9403 Delete type=0 #3
-2023/08/22-16:28:05.145 9403 Delete type=2 #16
-2023/08/22-16:28:05.145 9403 Delete type=2 #6
-2023/08/22-16:28:05.145 9403 Delete type=2 #4
-2023/08/22-16:28:05.145 9403 Delete type=2 #20
-2023/08/22-16:28:05.145 9403 Delete type=2 #19
-2023/08/22-16:28:05.145 9403 Delete type=2 #18
->>>>>>> Stashed changes
-=======
-2023/08/22-16:26:26.780 1444 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.47698c63\flutter_tools_chrome_device.52db4fb8\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/22-16:26:26.781 1444 Recovering log #15
-2023/08/22-16:26:26.781 1444 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.47698c63\flutter_tools_chrome_device.52db4fb8\Default\Site Characteristics Database/000015.log 
-2023/08/22-16:26:26.781 1444 Delete type=2 #3
-2023/08/22-16:26:26.781 1444 Delete type=0 #3
-2023/08/22-16:26:26.781 1444 Delete type=2 #4
-2023/08/22-16:26:26.781 1444 Delete type=2 #6
-2023/08/22-16:26:26.781 1444 Delete type=0 #6
-2023/08/22-16:26:26.781 1444 Delete type=0 #10
->>>>>>> Stashed changes
+2023/08/22-16:54:49.344 25dc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/22-16:54:49.344 25dc Recovering log #15
+2023/08/22-16:54:49.344 25dc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Site Characteristics Database/000015.log 
+2023/08/22-16:54:49.345 25dc Delete type=2 #3
+2023/08/22-16:54:49.345 25dc Delete type=0 #3
+2023/08/22-16:54:49.345 25dc Delete type=2 #4
+2023/08/22-16:54:49.345 25dc Delete type=2 #6
+2023/08/22-16:54:49.345 25dc Delete type=0 #6
+2023/08/22-16:54:49.345 25dc Delete type=0 #10
+2023/08/22-16:54:49.345 25dc Delete type=2 #12

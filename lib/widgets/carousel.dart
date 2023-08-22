@@ -64,7 +64,7 @@ class CityCarousel extends StatelessWidget {
             ),
           ),
           Text(
-            '지번 : $address',
+            '지번: $address',
             style: const TextStyle(
               fontSize: 24,
               fontFamily: 'BMJUA',

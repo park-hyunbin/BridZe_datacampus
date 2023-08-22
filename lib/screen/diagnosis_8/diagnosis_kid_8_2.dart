@@ -1,4 +1,3 @@
-import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
 import '../../model/avr.dart';
@@ -93,30 +92,6 @@ class _EightReadPageState extends State<EightReadPage> {
                     height: 100,
                   ),
                 ],
-              ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                        0, 0, 40, 40), // Add spacing here
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const DiagnosisScreen(),
-                          ),
-                        );
-                      },
-                      child: Image.asset(
-                        "assets/images/finish_pink.png",
-                        width: 100,
-                        height: 100,
-                      ),
-                    ),
-                  ),
-                ),
               ),
             ],
           ),

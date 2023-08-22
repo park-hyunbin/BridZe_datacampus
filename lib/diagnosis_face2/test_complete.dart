@@ -34,7 +34,7 @@ class DiagnosisEnd extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 40, top: 60),
+                padding: EdgeInsets.only(left: 40, top: 120),
                 child: Text(
                   "평가가 끝났어요 !\n내 정보의 분석 결과를 클릭하여 확인해주세요.",
                   style: TextStyle(
@@ -56,7 +56,7 @@ class DiagnosisEnd extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 120),
                 child: SizedBox(
                   height: 80,
                   child: Center(
