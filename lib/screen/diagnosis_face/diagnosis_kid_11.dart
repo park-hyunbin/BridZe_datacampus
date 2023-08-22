@@ -43,7 +43,7 @@ class DiagnosisKid11Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "비언어적 진단을 시작합니다.\n토리찌에게 솔직하게 답해주세요~",
+                  "정서 평가를 시작합니다.\n토리찌에게 솔직하게 답해주세요~",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'BMJUA',
@@ -54,7 +54,7 @@ class DiagnosisKid11Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 40, top: 30),
                 child: Text(
-                  "Bắt đầu chẩn đoán phi ngôn ngữ.\nHãy trả lời câu hỏi của thỏ một cách thành thật nhé",
+                  "Bắt đầu đánh giá cảm xúc.\nHãy trả lời câu hỏi của thỏ một cách thành thật nhé",
                   style: TextStyle(
                     fontFamily: 'Sriracha',
                     fontSize: 40,

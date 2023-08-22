@@ -1,4 +1,4 @@
-import 'package:bridze/screen/diagnosis_face/test_complete.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_kid_20.dart';
 import 'package:flutter/material.dart';
 import '../../model/video_recorder.dart';
 
@@ -11,7 +11,7 @@ class DiagnosisKid14Page extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Image.asset(
-            'assets/images/diagnosis_kid.png',
+            'assets/images/diagnosis_kid_2.png',
             fit: BoxFit.cover,
             height: 1024,
             width: 1440,
@@ -59,7 +59,7 @@ class DiagnosisKid14Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisEnd(
+                            builder: (context) => const DiagnosisKid20Page(
                               avrScore: '',
                             ),
                           ),

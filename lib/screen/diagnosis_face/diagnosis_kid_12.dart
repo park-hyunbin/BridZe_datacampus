@@ -39,7 +39,7 @@ class DiagnosisKid12PageState extends State<DiagnosisKid12Page> {
       body: Stack(
         children: <Widget>[
           Image.asset(
-            'assets/images/diagnosis_kid.png',
+            'assets/images/diagnosis_kid_2.png',
             fit: BoxFit.cover,
             height: 1024,
             width: 1440,
