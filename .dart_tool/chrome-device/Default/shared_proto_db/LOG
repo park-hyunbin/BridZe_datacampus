@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023/08/22-14:56:10.678 30cc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\shared_proto_db/MANIFEST-000001
 2023/08/22-14:56:10.679 30cc Recovering log #15
 2023/08/22-14:56:10.680 30cc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\shared_proto_db/000015.log 
@@ -5,3 +6,12 @@
 2023/08/22-14:56:10.680 30cc Delete type=2 #4
 2023/08/22-14:56:10.680 30cc Delete type=0 #10
 2023/08/22-14:56:10.680 30cc Delete type=0 #12
+=======
+2023/08/22-15:00:58.635 6403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/shared_proto_db/MANIFEST-000001
+2023/08/22-15:00:58.636 6403 Recovering log #15
+2023/08/22-15:00:58.636 6403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/shared_proto_db/000015.log 
+2023/08/22-15:00:58.636 6403 Delete type=0 #12
+2023/08/22-15:00:58.636 6403 Delete type=0 #10
+2023/08/22-15:00:58.636 6403 Delete type=0 #3
+2023/08/22-15:00:58.636 6403 Delete type=2 #4
+>>>>>>> main

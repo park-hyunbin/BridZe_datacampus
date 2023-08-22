@@ -1,7 +1,8 @@
 import 'package:bridze/chart/chart_parent.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/audio_test.dart';
-import '../../model/avr.dart';
+import '../../model/crr.dart';
 
 class DiagnosisMother2Page extends StatefulWidget {
   const DiagnosisMother2Page({Key? key}) : super(key: key);
@@ -13,11 +14,19 @@ class DiagnosisMother2Page extends StatefulWidget {
 class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
   bool showPlayer = false;
   String? audioPath;
+  String crrScore = '';
 
   @override
   void initState() {
     showPlayer = false;
     super.initState();
+  }
+
+  Future<void> _loadcrrScore() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      crrScore = prefs.getString('globalavrScore') ?? '';
+    });
   }
 
   @override
@@ -70,7 +79,7 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
             child: AudioRecorderWidget(key: Key('audio_recorder_mom')),
           ),
           const Center(
-            child: Score(
+            child: Score2(
               initialValue: 'mom',
               number: 0,
             ),
@@ -89,21 +98,20 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
             child: Align(
               alignment: Alignment.bottomRight,
               child: Padding(
-                padding:
-                    const EdgeInsets.fromLTRB(0, 0, 40, 40), // Add spacing here
+                padding: const EdgeInsets.fromLTRB(0, 0, 40, 40),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ParentPage(
-                          crrScore: '',
+                        builder: (context) => ParentPage(
+                          crrScore: crrScore,
                         ),
                       ),
                     );
                   },
                   child: Image.asset(
-                    "assets/images/finish_blue.png",
+                    "assets/images/arrows.png",
                     height: 100,
                     width: 100,
                   ),
