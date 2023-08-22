@@ -1,5 +1,3 @@
-import 'package:bridze/chart/chart_language.dart';
-import 'package:bridze/screen/diagnosis_5/test_complete.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
 import '../../model/crr.dart';
@@ -89,32 +87,6 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                         'assets/images/kid.png',
                         width: 100,
                         height: 100,
-                      ),
-                    ),
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.bottomRight,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(
-                              0, 0, 40, 40), // Add spacing here
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DiagnosisEnd1Page(
-                                    avrScore: avrScore,
-                                  ),
-                                ),
-                              );
-                            },
-                            child: Image.asset(
-                              "assets/images/cursor.png",
-                              width: 100,
-                              height: 100,
-                            ),
-                          ),
-                        ),
                       ),
                     ),
                   ],

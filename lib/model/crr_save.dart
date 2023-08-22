@@ -66,19 +66,18 @@ class _ScoreState extends State<Score> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextButton(
-          onPressed: () async {
+        GestureDetector(
+          onTap: () async {
             fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
             fetchavg();
           },
           child: const Text(
-            'Compute crr score', // 버튼에 표시될 텍스트
-            style: TextStyle(fontSize: 15),
+            '문장 읽기를 마친 후 클릭해주세요!', // 버튼에 표시될 텍스트
+            style: TextStyle(
+              fontSize: 15,
+              fontFamily: 'BMJUA',
+            ),
           ),
-        ),
-        Text(
-          crrScore, // crr 점수 표시 (현재 string형, 예시: '12.34')
-          style: const TextStyle(fontSize: 15, color: Colors.green),
         ),
       ],
     );

@@ -1,17 +1,7 @@
-import 'dart:js';
-
-import 'package:bridze/provider/provider.dart';
+import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-
-final avrScoreProvider = Provider.of<AvrScoreProvider>(context as BuildContext);
-String avrScore = avrScoreProvider.avrScore;
-
-void main() {
-  runApp(const ChartApp());
-}
 
 class ChartApp extends StatelessWidget {
   const ChartApp({Key? key}) : super(key: key);
@@ -47,25 +37,14 @@ class LanguagePageState extends State<LanguagePage> {
     super.initState();
     avrScore = widget.avrScore; // avrScore 값을 먼저 받아옴
     calculateEvaluation();
-    initializeChartData();
+    _tooltip = TooltipBehavior(enable: true);
   }
 
-  void calculateEvaluation() {
-    double score = double.tryParse(avrScore) ?? 0.0;
-    if (score >= 100) {
-      evaluation = '상';
-    } else if (score >= 88) {
-      evaluation = '상';
-    } else if (score > 75) {
-      evaluation = '중';
-    } else {
-      evaluation = '하';
-    }
-  }
-
-  void initializeChartData() async {
+  Future<void> initializeChartData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final String score = prefs.getString('globalavrScore')!;
+    final String? score = prefs.getString('globalavrScore');
+    double parsedScore = double.tryParse(score ?? '') ?? 0.0;
+
     data = [
       ChartData(
         '또래친구점수',
@@ -74,113 +53,149 @@ class LanguagePageState extends State<LanguagePage> {
       ),
       ChartData(
         '아린이점수',
-        double.tryParse(score) ?? 0.0,
+        parsedScore,
         const Color.fromARGB(255, 241, 133, 145),
       ),
     ];
     _tooltip = TooltipBehavior(enable: true);
   }
 
+  void calculateEvaluation() {
+    double score = double.tryParse(avrScore) ?? 0.0;
+    if (score >= 100) {
+      evaluation = '상';
+    } else if (score >= 88) {
+      evaluation = '상';
+    } else if (score > 69) {
+      evaluation = '중';
+    } else {
+      evaluation = '하';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/desktop1_2.png',
-            fit: BoxFit.cover,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-          ),
-          Column(
-            children: [
-              const SizedBox(height: 70),
-              const Center(
-                child: Column(
-                  children: [
-                    Text(
-                      '아린이의 언어평가 결과',
-                      style: TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 50,
-                      ),
+      body: FutureBuilder<void>(
+        future: initializeChartData(),
+        builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return buildChartAndUI();
+          } else {
+            return const Center(child: CircularProgressIndicator());
+          }
+        },
+      ),
+    );
+  }
+
+  Widget buildChartAndUI() {
+    return Stack(
+      children: [
+        Image.asset(
+          'assets/images/desktop1_2.png',
+          fit: BoxFit.cover,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+        ),
+        Column(
+          children: [
+            const SizedBox(height: 70),
+            const Center(
+              child: Column(
+                children: [
+                  Text(
+                    '아린이의 언어평가 결과',
+                    style: TextStyle(
+                      fontFamily: 'BMJUA',
+                      fontSize: 50,
                     ),
-                    SizedBox(
-                      height: 20,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '* 상중하로 평가',
+                    style: TextStyle(
+                      fontFamily: 'BMJUA',
+                      fontSize: 24,
                     ),
-                    Text(
-                      '* 상중하로 평가',
-                      style: TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 24,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 50),
+            Center(
+              child: Container(
+                width: 600,
+                height: 400,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                ),
+                child: SfCartesianChart(
+                  primaryXAxis: CategoryAxis(
+                    labelStyle: const TextStyle(
+                      fontFamily: 'BMJUA',
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
+                  ),
+                  primaryYAxis: NumericAxis(
+                    minimum: 0,
+                    maximum: 100,
+                    interval: 10,
+                    labelStyle: const TextStyle(
+                      fontFamily: 'BMJUA',
+                      color: Colors.black,
+                    ),
+                  ),
+                  tooltipBehavior: _tooltip,
+                  series: <ChartSeries<ChartData, String>>[
+                    BarSeries<ChartData, String>(
+                      dataSource: data,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y,
+                      name: '언어 평가',
+                      pointColorMapper: (ChartData data, _) => data.color,
+                      dataLabelSettings: const DataLabelSettings(
+                        isVisible: true,
+                        textStyle: TextStyle(
+                          fontFamily: 'BMJUA',
+                          fontSize: 12,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 50),
-              Center(
-                child: Container(
-                  width: 600,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 2,
+            ),
+            const SizedBox(height: 30),
+            Center(
+              child: Column(
+                children: [
+                  const Text(
+                    '발음 및 읽기 능력 평가',
+                    style: TextStyle(
+                      fontFamily: 'BMJUA',
+                      fontSize: 24,
                     ),
                   ),
-                  child: SfCartesianChart(
-                    primaryXAxis: CategoryAxis(
-                      labelStyle: const TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                    ),
-                    primaryYAxis: NumericAxis(
-                      minimum: 0,
-                      maximum: 100,
-                      interval: 10,
-                      labelStyle: const TextStyle(
-                        fontFamily: 'BMJUA',
-                        color: Colors.black,
-                      ),
-                    ),
-                    tooltipBehavior: _tooltip,
-                    series: <ChartSeries<ChartData, String>>[
-                      BarSeries<ChartData, String>(
-                        dataSource: data,
-                        xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y,
-                        name: '언어 평가',
-                        pointColorMapper: (ChartData data, _) => data.color,
-                        dataLabelSettings: const DataLabelSettings(
-                          isVisible: true,
-                          textStyle: TextStyle(
-                            fontFamily: 'BMJUA',
-                            fontSize: 12,
-                          ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DiagnosisScreen(),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 30),
-              Center(
-                child: Column(
-                  children: [
-                    const Text(
-                      '발음 및 읽기 능력 평가',
-                      style: TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 24,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Container(
+                      );
+                    },
+                    child: Container(
                       width: 300,
                       height: 80,
                       decoration: BoxDecoration(
@@ -197,13 +212,13 @@ class LanguagePageState extends State<LanguagePage> {
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

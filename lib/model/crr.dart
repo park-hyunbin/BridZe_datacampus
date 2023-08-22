@@ -1,8 +1,7 @@
+import 'package:bridze/chart/chart_language.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../chart/chart_language.dart';
 
 class Score extends StatefulWidget {
   final String initialValue;
@@ -18,48 +17,51 @@ class Score extends StatefulWidget {
 
 class _ScoreState extends State<Score> {
   late String value;
-  late String url;
+  late String url; // API 요청을 보낼 주소
   String crrScore = '';
-  String avrScore = ''; // 추가: avrScore 변수를 선언
+  String avrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
   late int number;
 
   @override
   void initState() {
     super.initState();
-    value = widget.initialValue;
+    value = widget.initialValue; // 초기값을 변수에 저장
     number = widget.number;
-    url = 'https://daitso.run.goorm.site/crr/$number?query=$value';
+    url =
+        'https://daitso.run.goorm.site/crr/$number?query=$value'; // API 요청 주소 설정
   }
 
+  // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신된다.
   void fetchdata(String url) async {
-    http.Response response = await http.get(Uri.parse(url));
-
+    http.Response response = await http.get(Uri.parse(url)); // 주어진 주소로 GET 요청
     if (response.statusCode == 200) {
-      crrScore = response.body;
-      fetchavg(); // fetchavg를 먼저 호출해서 avrScore를 받아오도록 변경
+      // 요청이 성공한 경우
+      setState(() {
+        crrScore = response.body; // 받아온 결과를 변수에 저장하여 UI 갱신
+      });
     } else {
-      crrScore = 'Error: ${response.statusCode}';
+      // 요청이 실패한 경우
+      setState(() {
+        crrScore = 'Error: ${response.statusCode}'; // 에러 메시지를 변수에 저장하여 UI 갱신
+      });
     }
   }
 
   void fetchavg() async {
     http.Response response =
         await http.get(Uri.parse('https://daitso.run.goorm.site/crr/average'));
-
     if (response.statusCode == 200) {
       setState(() {
-        avrScore = response.body; // avrScore 변수에 값을 저장하여 UI 갱신
+        avrScore = response.body;
       });
-      final SharedPreferences prefs = await SharedPreferences.getInstance();
-      await prefs.setString('globalavrScore', avrScore);
 
-      // 아래 코드가 이동하였으므로 fetchavg()에서 호출하지 않음
-      Navigator.push(
-        context,
+      // Save avrScore to SharedPreferences
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setString('globalavrScore', avrScore);
+
+      Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => LanguagePage(
-            avrScore: avrScore,
-          ),
+          builder: (context) => LanguagePage(avrScore: avrScore),
         ),
       );
     } else {
@@ -74,18 +76,27 @@ class _ScoreState extends State<Score> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextButton(
-          onPressed: () async {
-            fetchdata(url);
+        GestureDetector(
+          onTap: () async {
+            fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
+            fetchavg();
           },
-          child: const Text(
-            'Compute crr score',
-            style: TextStyle(fontSize: 15),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(
+                  255, 241, 133, 145), // Change the button color as needed
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Text(
+              '결과보기!',
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: 'BMJUA',
+                color: Colors.white, // Change the text color as needed
+              ),
+            ),
           ),
-        ),
-        Text(
-          crrScore,
-          style: const TextStyle(fontSize: 15, color: Colors.green),
         ),
       ],
     );

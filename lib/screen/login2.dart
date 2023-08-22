@@ -1,4 +1,4 @@
-import 'package:bridze/chart/chart_language.dart';
+import 'package:bridze/chart/chart_language_profile.dart';
 import 'package:bridze/screen/institution.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +85,7 @@ class _Login2PageState extends State<Login2Page> {
                                   ),
                                   const SizedBox(height: 20),
                                   const Text(
-                                    "아린이가 진행했던\n평가 결과를\n보고싶다면 ?",
+                                    "진행했던평가 결과를\n보고싶다면 ?",
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontFamily: "BMJUA",
@@ -98,7 +98,7 @@ class _Login2PageState extends State<Login2Page> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const LanguagePage(
+                                              const LanguagePage2(
                                             avrScore: '',
                                           ),
                                         ),
@@ -156,7 +156,7 @@ class _Login2PageState extends State<Login2Page> {
                                     ),
                                     const SizedBox(height: 20),
                                     const Text(
-                                      "아린이 근처에 있는 기관\n방문 일정을\n잡고싶다면 ?",
+                                      "근처 기관\n방문 일정을\n잡고싶다면 ?",
                                       style: TextStyle(
                                         fontSize: 25,
                                         fontFamily: "BMJUA",

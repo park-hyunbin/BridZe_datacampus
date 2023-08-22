@@ -84,11 +84,6 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
         var response = await request.send();
         var responseData = await response.stream.toBytes();
         var result = utf8.decode(responseData);
-        // output
-        print(result);
-        setState(() {
-          stt = 'STT 결과: $result';
-        });
       } else {
         print('HTTP Error: ${aresponse.statusCode}');
         setState(() {
@@ -133,7 +128,10 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
             ),
             Text(
               isRecording ? '음성을 녹음 중입니다' : '마이크를 눌러 녹음을 시작하세요',
-              style: const TextStyle(fontSize: 15),
+              style: const TextStyle(
+                fontSize: 15,
+                fontFamily: 'BMJUA',
+              ),
             ),
           ],
         ),
@@ -155,8 +153,11 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
                 ),
               ),
               const Text(
-                '음성 재생 및 stt 결과',
-                style: TextStyle(fontSize: 15),
+                '음성 재생 하기',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontFamily: 'BMJUA',
+                ),
               ),
             ],
           ),
