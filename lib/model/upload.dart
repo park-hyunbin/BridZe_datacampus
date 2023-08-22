@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-Future<void> imageupload(imageFile) async {
+Future<void> imageupload(imageFile, int num) async {
   http.Response aresponse = await http.get(
     Uri.parse(imageFile!.path),
   );
@@ -10,13 +10,13 @@ Future<void> imageupload(imageFile) async {
   if (aresponse.statusCode == 200) {
     var request = http.MultipartRequest(
       "POST",
-      Uri.parse("https://daitso.run.goorm.site/image"),
+      Uri.parse("https://daitso.run.goorm.site/image/$num"),
     );
 
     var audio = http.MultipartFile.fromBytes(
       'image',
       aresponse.bodyBytes,
-      filename: 'test.jpg',
+      filename: 'image$num.jpg',
     );
 
     request.files.add(audio);
