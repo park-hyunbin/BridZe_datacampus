@@ -70,7 +70,10 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
             child: AudioRecorderWidget(key: Key('audio_recorder_mom')),
           ),
           const Center(
-            child: Score(initialValue: 'mom'),
+            child: Score(
+              initialValue: 'mom',
+              number: 0,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 18.0),

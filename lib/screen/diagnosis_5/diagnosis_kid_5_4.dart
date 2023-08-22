@@ -1,4 +1,4 @@
-import 'package:bridze/screen/daignosis_2/diagnosis_kid_2.dart';
+import 'package:bridze/screen/diagnosis.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
 import '../../model/crr.dart';
@@ -75,7 +75,10 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                       child: AudioRecorderWidget(key: Key('audio_recorder5_3')),
                     ),
                     const Center(
-                      child: Score(initialValue: '5_3'),
+                      child: Score(
+                        initialValue: '5_3',
+                        number: 3,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -98,7 +101,7 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Language2Page(),
+                                  builder: (context) => const DiagnosisScreen(),
                                 ),
                               );
                             },
