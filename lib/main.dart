@@ -4,7 +4,9 @@ import 'package:bridze/screen/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -90,7 +92,7 @@ class HomePage extends StatelessWidget {
                       const SizedBox(width: 120),
                       buildIconButton(
                         icon: Icons.favorite,
-                        label: '진단',
+                        label: '평가',
                         onPressed: () {
                           Navigator.pushNamed(context, '/diagnosis');
                         },

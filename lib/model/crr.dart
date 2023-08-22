@@ -1,6 +1,8 @@
-import 'package:bridze/chart/chart_language.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../chart/chart_language.dart';
 
 class Score extends StatefulWidget {
   final String initialValue;
@@ -16,29 +18,42 @@ class Score extends StatefulWidget {
 
 class _ScoreState extends State<Score> {
   late String value;
-  late String url; // API 요청을 보낼 주소
+  late String url;
   String crrScore = '';
-  String avrScore = ''; // crr 점수를 저장할 변수 (string형, 필요시 double형으로 수정)
+  String avrScore = ''; // 추가: avrScore 변수를 선언
   late int number;
 
   @override
   void initState() {
     super.initState();
-    value = widget.initialValue; // 초기값을 변수에 저장
+    value = widget.initialValue;
     number = widget.number;
-    url =
-        'https://daitso.run.goorm.site/crr/$number?query=$value'; // API 요청 주소 설정
+    url = 'https://daitso.run.goorm.site/crr/$number?query=$value';
   }
 
-  // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신된다.
   void fetchdata(String url) async {
-    http.Response response = await http.get(Uri.parse(url)); // 주어진 주소로 GET 요청
-    if (response.statusCode == 200) {
-      // 요청이 성공한 경우
-      setState(() {
-        crrScore = response.body; // 받아온 결과를 변수에 저장하여 UI 갱신
-      });
+    http.Response response = await http.get(Uri.parse(url));
 
+    if (response.statusCode == 200) {
+      crrScore = response.body;
+      fetchavg(); // fetchavg를 먼저 호출해서 avrScore를 받아오도록 변경
+    } else {
+      crrScore = 'Error: ${response.statusCode}';
+    }
+  }
+
+  void fetchavg() async {
+    http.Response response =
+        await http.get(Uri.parse('https://daitso.run.goorm.site/crr/average'));
+
+    if (response.statusCode == 200) {
+      setState(() {
+        avrScore = response.body; // avrScore 변수에 값을 저장하여 UI 갱신
+      });
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setString('globalavrScore', avrScore);
+
+      // 아래 코드가 이동하였으므로 fetchavg()에서 호출하지 않음
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -48,25 +63,8 @@ class _ScoreState extends State<Score> {
         ),
       );
     } else {
-      // 요청이 실패한 경우
       setState(() {
-        crrScore = 'Error: ${response.statusCode}'; // 에러 메시지를 변수에 저장하여 UI 갱신
-      });
-    }
-  }
-
-  void fetchavg() async {
-    http.Response response = await http.get(Uri.parse(
-        'https://daitso.run.goorm.site/crr/average')); // 주어진 주소로 GET 요청
-    if (response.statusCode == 200) {
-      // 요청이 성공한 경우
-      setState(() {
-        avrScore = response.body; // 받아온 결과를 변수에 저장하여 UI 갱신
-      });
-    } else {
-      // 요청이 실패한 경우
-      setState(() {
-        avrScore = 'Error: ${response.statusCode}'; // 에러 메시지를 변수에 저장하여 UI 갱신
+        avrScore = 'Error: ${response.statusCode}';
       });
     }
   }
@@ -78,16 +76,15 @@ class _ScoreState extends State<Score> {
       children: [
         TextButton(
           onPressed: () async {
-            fetchdata(url); // 버튼 클릭 시 fetchdata 함수 실행
-            fetchavg();
+            fetchdata(url);
           },
           child: const Text(
-            'Compute crr score', // 버튼에 표시될 텍스트
+            'Compute crr score',
             style: TextStyle(fontSize: 15),
           ),
         ),
         Text(
-          crrScore, // crr 점수 표시 (현재 string형, 예시: '12.34')
+          crrScore,
           style: const TextStyle(fontSize: 15, color: Colors.green),
         ),
       ],
