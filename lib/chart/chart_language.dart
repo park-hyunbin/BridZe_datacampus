@@ -10,7 +10,8 @@ class ChartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: LanguagePage(
-        avrScore: avrScore,
+        avrScore: '',
+        crrScore: '',
       ),
     );
   }

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 2023/08/22-14:56:10.678 30cc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\shared_proto_db/MANIFEST-000001
 2023/08/22-14:56:10.679 30cc Recovering log #15
@@ -15,3 +16,12 @@
 2023/08/22-15:00:58.636 6403 Delete type=0 #3
 2023/08/22-15:00:58.636 6403 Delete type=2 #4
 >>>>>>> main
+=======
+2023/08/22-16:28:05.598 9403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/shared_proto_db/MANIFEST-000001
+2023/08/22-16:28:05.598 9403 Recovering log #15
+2023/08/22-16:28:05.599 9403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/shared_proto_db/000015.log 
+2023/08/22-16:28:05.599 9403 Delete type=0 #12
+2023/08/22-16:28:05.599 9403 Delete type=0 #10
+2023/08/22-16:28:05.599 9403 Delete type=0 #3
+2023/08/22-16:28:05.599 9403 Delete type=2 #4
+>>>>>>> Stashed changes

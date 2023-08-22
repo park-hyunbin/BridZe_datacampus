@@ -104,7 +104,7 @@ class _DiagnosisMother2PageState extends State<DiagnosisMother2Page> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ParentPage(
+                        builder: (context) => LanguagePage2(
                           crrScore: crrScore,
                         ),
                       ),
