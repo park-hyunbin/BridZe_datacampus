@@ -1,3 +1,4 @@
+import 'package:bridze/chart/chart_language.dart';
 import 'package:bridze/screen/institution.dart';
 import 'package:flutter/material.dart';
 
@@ -93,6 +94,15 @@ class _Login2PageState extends State<Login2Page> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const LanguagePage(
+                                            avrScore: '',
+                                          ),
+                                        ),
+                                      );
                                       // Handle the action when tapped
                                     },
                                     child: Padding(

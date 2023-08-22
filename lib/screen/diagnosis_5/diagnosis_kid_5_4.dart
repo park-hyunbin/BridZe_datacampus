@@ -1,4 +1,5 @@
-import 'package:bridze/screen/diagnosis.dart';
+import 'package:bridze/chart/chart_language.dart';
+import 'package:bridze/screen/diagnosis_5/test_complete.dart';
 import 'package:flutter/material.dart';
 import '../../model/audio_test.dart';
 import '../../model/crr.dart';
@@ -101,7 +102,9 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const DiagnosisScreen(),
+                                  builder: (context) => DiagnosisEnd1Page(
+                                    avrScore: avrScore,
+                                  ),
                                 ),
                               );
                             },

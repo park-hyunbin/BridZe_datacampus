@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 2023/08/17-12:24:09.222 5203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.X1wjdT/flutter_tools_chrome_device.1Ee1ia/Default/Session Storage/MANIFEST-000001
 2023/08/17-12:24:09.222 5203 Recovering log #3
@@ -23,4 +24,9 @@
 2023/08/21-11:42:55.194 2d03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.VFXiNy/flutter_tools_chrome_device.l48nzR/Default/Session Storage/MANIFEST-000001
 2023/08/21-11:42:55.195 2d03 Recovering log #3
 2023/08/21-11:42:55.195 2d03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.VFXiNy/flutter_tools_chrome_device.l48nzR/Default/Session Storage/000003.log 
+>>>>>>> main
+=======
+2023/08/21-20:00:07.280 5203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Wi4Avj/flutter_tools_chrome_device.dwvTO6/Default/Session Storage/MANIFEST-000001
+2023/08/21-20:00:07.281 5203 Recovering log #3
+2023/08/21-20:00:07.282 5203 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Wi4Avj/flutter_tools_chrome_device.dwvTO6/Default/Session Storage/000003.log 
 >>>>>>> main

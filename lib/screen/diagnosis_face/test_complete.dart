@@ -1,8 +1,26 @@
-import 'package:bridze/screen/diagnosis.dart';
+import 'package:bridze/chart/chart_language.dart';
 import 'package:flutter/material.dart';
 
+class DiagnosisEndPage extends StatelessWidget {
+  final String avrScore;
+
+  const DiagnosisEndPage({Key? key, required this.avrScore}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Diagnosis Result'),
+      ),
+      body: DiagnosisEnd(avrScore: avrScore), // DiagnosisEnd 위젯 사용
+    );
+  }
+}
+
 class DiagnosisEnd extends StatelessWidget {
-  const DiagnosisEnd({Key? key}) : super(key: key);
+  final String avrScore;
+
+  const DiagnosisEnd({Key? key, required this.avrScore}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +82,9 @@ class DiagnosisEnd extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisScreen(),
+                            builder: (context) => LanguagePage(
+                              avrScore: avrScore,
+                            ),
                           ),
                         );
                       },

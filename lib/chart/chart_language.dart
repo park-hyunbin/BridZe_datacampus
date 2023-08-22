@@ -1,18 +1,21 @@
+import 'dart:js';
+
+import 'package:bridze/provider/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+
+final avrScoreProvider = Provider.of<AvrScoreProvider>(context as BuildContext);
+String avrScore = avrScoreProvider.avrScore;
 
 void main() {
   runApp(const ChartApp());
 }
 
-class ChartApp extends StatefulWidget {
-  const ChartApp({super.key});
+class ChartApp extends StatelessWidget {
+  const ChartApp({Key? key}) : super(key: key);
 
-  @override
-  State<ChartApp> createState() => ChartAppState();
-}
-
-class ChartAppState extends State<ChartApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -26,21 +29,43 @@ class ChartAppState extends State<ChartApp> {
 class LanguagePage extends StatefulWidget {
   final String avrScore;
 
-  const LanguagePage({
-    super.key,
-    required this.avrScore,
-  });
+  const LanguagePage({Key? key, required this.avrScore}) : super(key: key);
 
   @override
   LanguagePageState createState() => LanguagePageState();
 }
 
 class LanguagePageState extends State<LanguagePage> {
+  String avrScore = '';
+  String evaluation = '';
+
   late List<ChartData> data;
   late TooltipBehavior _tooltip;
 
   @override
   void initState() {
+    super.initState();
+    avrScore = widget.avrScore; // avrScore 값을 먼저 받아옴
+    calculateEvaluation();
+    initializeChartData();
+  }
+
+  void calculateEvaluation() {
+    double score = double.tryParse(avrScore) ?? 0.0;
+    if (score >= 100) {
+      evaluation = '상';
+    } else if (score >= 88) {
+      evaluation = '상';
+    } else if (score > 75) {
+      evaluation = '중';
+    } else {
+      evaluation = '하';
+    }
+  }
+
+  void initializeChartData() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String score = prefs.getString('globalavrScore')!;
     data = [
       ChartData(
         '또래친구점수',
@@ -49,12 +74,11 @@ class LanguagePageState extends State<LanguagePage> {
       ),
       ChartData(
         '아린이점수',
-        double.tryParse(widget.avrScore) ?? 0.0,
+        double.tryParse(score) ?? 0.0,
         const Color.fromARGB(255, 241, 133, 145),
       ),
     ];
     _tooltip = TooltipBehavior(enable: true);
-    super.initState();
   }
 
   @override
@@ -131,7 +155,7 @@ class LanguagePageState extends State<LanguagePage> {
                         name: '언어 평가',
                         pointColorMapper: (ChartData data, _) => data.color,
                         dataLabelSettings: const DataLabelSettings(
-                          isVisible: true, // 데이터 레이블 활성화
+                          isVisible: true,
                           textStyle: TextStyle(
                             fontFamily: 'BMJUA',
                             fontSize: 12,
@@ -163,10 +187,10 @@ class LanguagePageState extends State<LanguagePage> {
                         borderRadius: BorderRadius.circular(20.0),
                         color: const Color.fromRGBO(229, 193, 197, 1.0),
                       ),
-                      child: const Center(
+                      child: Center(
                         child: Text(
-                          '발음 평가 : 하',
-                          style: TextStyle(
+                          '발음 평가 : $evaluation',
+                          style: const TextStyle(
                             fontFamily: 'BMJUA',
                             fontSize: 30,
                           ),

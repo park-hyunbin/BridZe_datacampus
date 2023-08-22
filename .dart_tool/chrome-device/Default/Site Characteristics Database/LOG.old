@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 2023/08/17-11:21:19.930 8a03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.5O5DzJ/flutter_tools_chrome_device.DWmHpe/Default/Site Characteristics Database/MANIFEST-000001
 2023/08/17-11:21:19.930 8a03 Recovering log #10
@@ -33,4 +34,13 @@
 2023/08/21-11:42:17.216 15203 Delete type=0 #3
 2023/08/21-11:42:17.216 15203 Delete type=2 #6
 2023/08/21-11:42:17.216 15203 Delete type=2 #4
+>>>>>>> main
+=======
+2023/08/21-16:05:24.286 6f03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.xzosPL/flutter_tools_chrome_device.5cKuGn/Default/Site Characteristics Database/MANIFEST-000001
+2023/08/21-16:05:24.286 6f03 Recovering log #10
+2023/08/21-16:05:24.286 6f03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.xzosPL/flutter_tools_chrome_device.5cKuGn/Default/Site Characteristics Database/000010.log 
+2023/08/21-16:05:24.286 6f03 Delete type=0 #6
+2023/08/21-16:05:24.286 6f03 Delete type=0 #3
+2023/08/21-16:05:24.286 6f03 Delete type=2 #6
+2023/08/21-16:05:24.286 6f03 Delete type=2 #4
 >>>>>>> main

@@ -61,7 +61,7 @@ class _FiveRead3PageState extends State<FiveRead3Page> {
                       height: 50,
                     ),
                     const Text(
-                      '푸바오가 아이바오를 핥아줬어요.\n푸바오는 판다랜드에 살아요.',
+                      '고양이가 강아지를 핥아줬어요.\n강아지는 사료를 먹어요.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 75,
