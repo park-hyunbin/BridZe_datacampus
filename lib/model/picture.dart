@@ -10,10 +10,8 @@ import 'upload.dart';
 
 /// Camera example home widget.
 class picture extends StatefulWidget {
-  final int number;
-
   /// Default Constructor
-  const picture({super.key, required this.number});
+  const picture({super.key});
 
   @override
   State<picture> createState() {
@@ -33,11 +31,13 @@ class _pictureState extends State<picture>
   bool enableAudio = true;
   int? number;
   List<CameraDescription> _cameras = <CameraDescription>[];
+  bool isTakingPictures = false;
+  Timer? pictureTimer;
+  int count = 0;
 
   @override
   void initState() {
     super.initState();
-    number = widget.number;
     initStateAsync();
   }
 
@@ -77,16 +77,43 @@ class _pictureState extends State<picture>
   @override
   void dispose() {
     //WidgetsBinding.instance.removeObserver(this);
+    pictureTimer?.cancel();
     controller?.dispose();
     super.dispose();
   }
 
   void onCameraTogglePressed() {
-    imageupload(imageFile, number!);
     controller!.dispose(); // Turn off the camera
     setState(() {
       controller = null;
       imageFile = null;
+    });
+  }
+
+  void startPictureTimer() {
+    int picturesTaken = 0;
+
+    pictureTimer = Timer.periodic(const Duration(milliseconds: 500), (timer) {
+      if (picturesTaken < 10) {
+        // You can adjust the number of pictures to be taken (10 in this case)
+        takePicture().then((XFile? file) {
+          if (mounted && file != null) {
+            setState(() {
+              imageFile = file;
+              count += 1;
+            });
+            imageupload(imageFile, count);
+            showInSnackBar('Picture saved to ${file.path}');
+          }
+        });
+        picturesTaken++;
+      } else {
+        // Stop the timer after taking the desired number of pictures
+        timer.cancel();
+        setState(() {
+          isTakingPictures = false;
+        });
+      }
     });
   }
 
@@ -139,8 +166,14 @@ class _pictureState extends State<picture>
           icon: const Icon(Icons.camera_alt),
           color: Colors.blue,
           onPressed: cameraController.value.isInitialized &&
-                  !cameraController.value.isRecordingVideo
-              ? onTakePictureButtonPressed
+                  !cameraController.value.isRecordingVideo &&
+                  !isTakingPictures
+              ? () {
+                  setState(() {
+                    isTakingPictures = true;
+                  });
+                  startPictureTimer();
+                }
               : null,
         ),
         IconButton(
@@ -284,9 +317,7 @@ class CameraApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: picture(
-          number: 3,
-        ),
+        body: picture(),
       ),
     );
   }
