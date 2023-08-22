@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-2023/08/22-14:56:10.673 30cc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\shared_proto_db\metadata/MANIFEST-000001
-2023/08/22-14:56:10.674 30cc Recovering log #3
-2023/08/22-14:56:10.674 30cc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.6cf087b9\flutter_tools_chrome_device.7f143723\Default\shared_proto_db\metadata/000003.log 
-=======
-2023/08/22-15:00:58.635 6403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/shared_proto_db/metadata/MANIFEST-000001
-2023/08/22-15:00:58.635 6403 Recovering log #3
-2023/08/22-15:00:58.635 6403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.fG7QAD/flutter_tools_chrome_device.1Po1wT/Default/shared_proto_db/metadata/000003.log 
->>>>>>> main
-=======
-2023/08/22-16:28:05.597 9703 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/shared_proto_db/metadata/MANIFEST-000001
-2023/08/22-16:28:05.597 9703 Recovering log #3
-2023/08/22-16:28:05.597 9703 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.S6NWUc/flutter_tools_chrome_device.m748Fl/Default/shared_proto_db/metadata/000003.log 
->>>>>>> Stashed changes
+2023/08/22-20:08:59.317 8e03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.kTDSL5/flutter_tools_chrome_device.4maOcX/Default/shared_proto_db/metadata/MANIFEST-000001
+2023/08/22-20:08:59.317 8e03 Recovering log #3
+2023/08/22-20:08:59.317 8e03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.kTDSL5/flutter_tools_chrome_device.4maOcX/Default/shared_proto_db/metadata/000003.log 

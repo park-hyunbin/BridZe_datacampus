@@ -1,37 +1,7 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< HEAD
-2023/08/22-14:13:58.944 276c Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.f02d9174\flutter_tools_chrome_device.792b6ec0\Default\shared_proto_db/MANIFEST-000001
-2023/08/22-14:13:58.944 276c Recovering log #15
-2023/08/22-14:13:58.944 276c Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.f02d9174\flutter_tools_chrome_device.792b6ec0\Default\shared_proto_db/000015.log 
-2023/08/22-14:13:58.945 276c Delete type=0 #3
-2023/08/22-14:13:58.945 276c Delete type=2 #4
-2023/08/22-14:13:58.945 276c Delete type=0 #10
-2023/08/22-14:13:58.945 276c Delete type=0 #12
-=======
-2023/08/22-14:12:39.098 14e03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.5WGa3h/flutter_tools_chrome_device.mTDVKd/Default/shared_proto_db/MANIFEST-000001
-2023/08/22-14:12:39.099 14e03 Recovering log #15
-2023/08/22-14:12:39.099 14e03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.5WGa3h/flutter_tools_chrome_device.mTDVKd/Default/shared_proto_db/000015.log 
-2023/08/22-14:12:39.099 14e03 Delete type=0 #12
-2023/08/22-14:12:39.099 14e03 Delete type=0 #10
-2023/08/22-14:12:39.099 14e03 Delete type=0 #3
-2023/08/22-14:12:39.099 14e03 Delete type=2 #4
->>>>>>> main
-=======
-2023/08/22-14:49:00.769 7003 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Ff1cXA/flutter_tools_chrome_device.7qNbaf/Default/shared_proto_db/MANIFEST-000001
-2023/08/22-14:49:00.769 7003 Recovering log #15
-2023/08/22-14:49:00.769 7003 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Ff1cXA/flutter_tools_chrome_device.7qNbaf/Default/shared_proto_db/000015.log 
-2023/08/22-14:49:00.769 7003 Delete type=0 #12
-2023/08/22-14:49:00.769 7003 Delete type=0 #10
-2023/08/22-14:49:00.769 7003 Delete type=0 #3
-2023/08/22-14:49:00.769 7003 Delete type=2 #4
->>>>>>> main
-=======
-2023/08/22-15:15:46.018 15003 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jAXGBi/flutter_tools_chrome_device.y8ilnE/Default/shared_proto_db/MANIFEST-000001
-2023/08/22-15:15:46.018 15003 Recovering log #15
-2023/08/22-15:15:46.019 15003 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jAXGBi/flutter_tools_chrome_device.y8ilnE/Default/shared_proto_db/000015.log 
-2023/08/22-15:15:46.019 15003 Delete type=0 #12
-2023/08/22-15:15:46.019 15003 Delete type=0 #10
-2023/08/22-15:15:46.019 15003 Delete type=0 #3
-2023/08/22-15:15:46.019 15003 Delete type=2 #4
->>>>>>> Stashed changes
+2023/08/22-17:24:46.229 6f03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Y12UUq/flutter_tools_chrome_device.jcCEoa/Default/shared_proto_db/MANIFEST-000001
+2023/08/22-17:24:46.229 6f03 Recovering log #15
+2023/08/22-17:24:46.229 6f03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Y12UUq/flutter_tools_chrome_device.jcCEoa/Default/shared_proto_db/000015.log 
+2023/08/22-17:24:46.229 6f03 Delete type=0 #12
+2023/08/22-17:24:46.229 6f03 Delete type=0 #10
+2023/08/22-17:24:46.229 6f03 Delete type=0 #3
+2023/08/22-17:24:46.229 6f03 Delete type=2 #4
