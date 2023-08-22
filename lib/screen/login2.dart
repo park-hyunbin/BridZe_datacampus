@@ -1,6 +1,7 @@
 import 'package:bridze/chart/chart_language_profile.dart';
 import 'package:bridze/screen/institution.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Login2Page extends StatefulWidget {
   const Login2Page({Key? key}) : super(key: key);
@@ -10,6 +11,22 @@ class Login2Page extends StatefulWidget {
 }
 
 class _Login2PageState extends State<Login2Page> {
+  @override
+  String avrScore = ''; // Initialize with the appropriate value
+
+  @override
+  void initState() {
+    super.initState();
+    _loadAvrScore();
+  }
+
+  Future<void> _loadAvrScore() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      avrScore = prefs.getString('globalavrScore') ?? '';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,16 +111,12 @@ class _Login2PageState extends State<Login2Page> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      Navigator.push(
-                                        context,
+                                      Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const LanguagePage2(
-                                            avrScore: '',
-                                          ),
+                                              LanguagePage2(avrScore: avrScore),
                                         ),
                                       );
-                                      // Handle the action when tapped
                                     },
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 20.0),
