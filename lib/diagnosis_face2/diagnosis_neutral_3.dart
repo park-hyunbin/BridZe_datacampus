@@ -1,4 +1,5 @@
 import 'package:bridze/diagnosis_face2/diagnosis_ferar_1.dart';
+import 'package:bridze/model/execute.dart';
 import 'package:flutter/material.dart';
 import '../model/picture.dart';
 
@@ -62,11 +63,7 @@ class DiagnosisNeutral3Page extends StatelessWidget {
                             ),
                           ),
                         );
-<<<<<<< Updated upstream
                         executeFile('neutral');
-=======
-                        //executeFile();
->>>>>>> Stashed changes
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
