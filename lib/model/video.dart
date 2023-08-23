@@ -85,7 +85,9 @@ class _VideoState extends State<Video>
     if (controller!.value.isRecordingVideo) {
       onStopButtonPressed(); // Stop recording before turning off the camera
     }
-    videoupload(videoFile, number!);
+    if (videoFile != null) {
+      videoupload(videoFile, number!);
+    }
     controller!.dispose(); // Turn off the camera
     setState(() {
       controller = null;
@@ -151,7 +153,10 @@ class _VideoState extends State<Video>
           color: Colors.red,
           onPressed: cameraController.value.isInitialized &&
                   cameraController.value.isRecordingVideo
-              ? onStopButtonPressed
+              ? () {
+                  onStopButtonPressed();
+                  //onCameraTogglePressed(); // Replace with the actual name of your second function
+                }
               : null,
         ),
         IconButton(
