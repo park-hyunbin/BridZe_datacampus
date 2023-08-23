@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +20,46 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class PictureSave extends StatelessWidget {
+class PictureSave extends StatefulWidget {
   const PictureSave({Key? key}) : super(key: key);
+
+  @override
+  _PictureSaveState createState() => _PictureSaveState();
+}
+
+class _PictureSaveState extends State<PictureSave> {
+  List<String> serverUrls = [
+    'https://daitso.run.goorm.site/download/image?emotion=happy',
+    'https://daitso.run.goorm.site/download/image?emotion=angry',
+    'https://daitso.run.goorm.site/download/image?emotion=sad',
+    'https://daitso.run.goorm.site/download/image?emotion=fear',
+    'https://daitso.run.goorm.site/download/image?emotion=neutral',
+  ];
+
+  List<Image> images = List.filled(5, Image.network(''));
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchImages();
+  }
+
+  Future<void> _fetchImages() async {
+    for (int i = 0; i < serverUrls.length; i++) {
+      try {
+        final response = await http.get(Uri.parse(serverUrls[i]));
+        if (response.statusCode == 200) {
+          setState(() {
+            images[i] = Image.memory(response.bodyBytes, fit: BoxFit.cover);
+          });
+        } else {
+          print('Failed to fetch image from server $i');
+        }
+      } catch (e) {
+        print('Error fetching image from server $i: $e');
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +121,7 @@ class PictureSave extends StatelessWidget {
                             width: 2.0,
                           ),
                         ),
+                        child: images[0],
                       ),
                     ),
                     const SizedBox(width: 40),
@@ -96,6 +136,7 @@ class PictureSave extends StatelessWidget {
                             width: 2.0,
                           ),
                         ),
+                        child: images[1],
                       ),
                     ),
                     const SizedBox(
@@ -112,6 +153,7 @@ class PictureSave extends StatelessWidget {
                             width: 2.0,
                           ),
                         ),
+                        child: images[2],
                       ),
                     ),
                   ],
@@ -134,6 +176,7 @@ class PictureSave extends StatelessWidget {
                           width: 2.0,
                         ),
                       ),
+                      child: images[3],
                     ),
                   ),
                   const SizedBox(width: 40),
@@ -148,6 +191,7 @@ class PictureSave extends StatelessWidget {
                           width: 2.0,
                         ),
                       ),
+                      child: images[4],
                     ),
                   ),
                 ],
