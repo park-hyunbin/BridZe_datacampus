@@ -82,14 +82,6 @@ class _pictureState extends State<picture>
     super.dispose();
   }
 
-  void onCameraTogglePressed() {
-    controller!.dispose(); // Turn off the camera
-    setState(() {
-      controller = null;
-      imageFile = null;
-    });
-  }
-
   void startPictureTimer() {
     int picturesTaken = 0;
 
@@ -174,13 +166,6 @@ class _pictureState extends State<picture>
                   });
                   startPictureTimer();
                 }
-              : null,
-        ),
-        IconButton(
-          icon: const Icon(Icons.no_photography_outlined),
-          color: Colors.black,
-          onPressed: cameraController.value.isInitialized
-              ? onCameraTogglePressed
               : null,
         ),
       ],
