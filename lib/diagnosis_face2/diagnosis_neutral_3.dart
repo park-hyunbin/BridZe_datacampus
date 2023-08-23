@@ -1,8 +1,5 @@
 import 'package:bridze/diagnosis_face2/diagnosis_fear_1.dart';
-<<<<<<< Updated upstream
-=======
 import 'package:bridze/model/execute.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import '../model/picture.dart';
 

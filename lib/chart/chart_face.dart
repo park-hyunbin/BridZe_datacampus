@@ -1,3 +1,4 @@
+import 'package:bridze/face_save/picture_save.dart';
 import 'package:bridze/provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -61,7 +62,7 @@ class _FacePageState extends State<FacePage> {
       _ChartData(
         '부모와의 유대관계 점수', // 새로운 데이터 포인트 추가
         relationshipScore, // 관계 점수 사용
-        const Color.fromARGB(255, 123, 200, 148),
+        const Color.fromARGB(255, 241, 133, 145),
       ),
     ];
     _tooltip = TooltipBehavior(enable: true);
@@ -189,19 +190,29 @@ class _FacePageState extends State<FacePage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    width: 300,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      color: const Color.fromRGBO(229, 193, 197, 1.0),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        '유대관계 평가 : 중하',
-                        style: TextStyle(
-                          fontFamily: 'BMJUA',
-                          fontSize: 30,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PictureSave(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 300,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: const Color.fromRGBO(229, 193, 197, 1.0),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          '유대관계 평가 : 중하',
+                          style: TextStyle(
+                            fontFamily: 'BMJUA',
+                            fontSize: 30,
+                          ),
                         ),
                       ),
                     ),
