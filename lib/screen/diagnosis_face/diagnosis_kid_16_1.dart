@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import 'package:bridze/diagnosis_face2/diagnosis_kid_20.dart';
 import 'package:bridze/provider/provider.dart';
+=======
+import 'package:bridze/provider/provider.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_kid_20.dart';
+>>>>>>> main
 import 'package:bridze/widgets/audio_kid_5.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

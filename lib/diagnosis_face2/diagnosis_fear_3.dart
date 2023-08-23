@@ -63,7 +63,11 @@ class DiagnosisFear3Page extends StatelessWidget {
                             ),
                           ),
                         );
+<<<<<<< HEAD
                         executeFile('fear');
+=======
+                        executeFile('nervous');
+>>>>>>> main
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
