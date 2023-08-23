@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+{"sts":[{"expiry":1724314262.560581,"host":"8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=","mode":"force-https","sts_include_subdomains":true,"sts_observed":1692778262.560604}],"version":2}
+=======
+<<<<<<< HEAD
 {"sts":[{"expiry":1724312774.128275,"host":"8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=","mode":"force-https","sts_include_subdomains":true,"sts_observed":1692776774.128279}],"version":2}
 =======
 <<<<<<< HEAD
@@ -11,3 +14,4 @@
 >>>>>>> main
 >>>>>>> 4754edabb3ca12690df1172cc5a44841171c109a
 >>>>>>> main
+>>>>>>> 40699d2274b9dc37ea334fa86e72eb708987f439

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+{"net":{"http_server_properties":{"servers":[{"alternative_service":[{"advertised_alpns":["h3"],"expiration":"13339843862560415","port":443,"protocol_str":"quic"}],"anonymization":["GAAAABIAAABodHRwczovL2dvb2dsZS5jb20AAA==",false],"server":"https://accounts.google.com","supports_spdy":true},{"alternative_service":[{"advertised_alpns":["h3"],"expiration":"13339843868852570","port":443,"protocol_str":"quic"}],"anonymization":["FAAAABAAAABodHRwOi8vbG9jYWxob3N0",false],"network_stats":{"srtt":104852},"server":"https://fonts.gstatic.com","supports_spdy":true}],"supports_quic":{"address":"192.168.98.172","used_quic":true},"version":5},"network_qualities":{"CAISABiAgICA+P////8B":"4G"}}}
+=======
+<<<<<<< HEAD
 {"net":{"http_server_properties":{"servers":[{"alternative_service":[{"advertised_alpns":["h3"],"expiration":"13339842374128207","port":443,"protocol_str":"quic"}],"anonymization":["GAAAABIAAABodHRwczovL2dvb2dsZS5jb20AAA==",false],"network_stats":{"srtt":40255},"server":"https://accounts.google.com","supports_spdy":true},{"alternative_service":[{"advertised_alpns":["h3"],"expiration":"13339842392688307","port":443,"protocol_str":"quic"}],"anonymization":["MAAAACsAAABodHRwczovL29wdGltaXphdGlvbmd1aWRlLXBhLmdvb2dsZWFwaXMuY29tAA==",false],"network_stats":{"srtt":31227},"server":"https://optimizationguide-pa.googleapis.com","supports_spdy":true},{"alternative_service":[{"advertised_alpns":["h3"],"expiration":"13339842378543179","port":443,"protocol_str":"quic"}],"anonymization":["FAAAABAAAABodHRwOi8vbG9jYWxob3N0",false],"network_stats":{"srtt":41808},"server":"https://fonts.gstatic.com","supports_spdy":true}],"supports_quic":{"address":"172.30.1.22","used_quic":true},"version":5},"network_qualities":{"CAISABiAgICA+P////8B":"4G"}}}
 =======
 <<<<<<< HEAD
@@ -11,3 +14,4 @@
 >>>>>>> main
 >>>>>>> 4754edabb3ca12690df1172cc5a44841171c109a
 >>>>>>> main
+>>>>>>> 40699d2274b9dc37ea334fa86e72eb708987f439
