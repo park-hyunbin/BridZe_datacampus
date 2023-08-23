@@ -1,15 +1,10 @@
 import 'package:bridze/diagnosis_face2/test_complete.dart';
+import 'package:bridze/model/execute.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
-import '../model/execute.dart';
 
-<<<<<<< HEAD
 class DiagnosisFear3Page extends StatelessWidget {
   const DiagnosisFear3Page({Key? key}) : super(key: key);
-=======
-class DiagnosisNervous3Page extends StatelessWidget {
-  const DiagnosisNervous3Page({Key? key}) : super(key: key);
->>>>>>> main
 
   @override
   Widget build(BuildContext context) {
@@ -68,11 +63,7 @@ class DiagnosisNervous3Page extends StatelessWidget {
                             ),
                           ),
                         );
-<<<<<<< HEAD
-                        executeFile();
-=======
-                        executeFile('nervous');
->>>>>>> main
+                        executeFile('fear');
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

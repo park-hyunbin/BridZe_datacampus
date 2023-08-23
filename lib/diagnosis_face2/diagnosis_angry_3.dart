@@ -1,7 +1,7 @@
 import 'package:bridze/diagnosis_face2/diagnosis_sad_1.dart';
+import 'package:bridze/model/execute.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
-import '../model/execute.dart';
 
 class DiagnosisAngry3Page extends StatelessWidget {
   const DiagnosisAngry3Page({Key? key}) : super(key: key);

@@ -1,4 +1,5 @@
 import 'package:bridze/diagnosis_face2/diagnosis_neutral_1.dart';
+import 'package:bridze/model/execute.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
 import '../model/execute.dart';
