@@ -1,9 +1,36 @@
 import 'package:bridze/diagnosis_face2/diagnosis_happy_2.dart';
+import 'package:bridze/widgets/audio_happy.dart';
 import 'package:flutter/material.dart';
 
+<<<<<<< Updated upstream
 class DiagnosisHappy1Page extends StatelessWidget {
   const DiagnosisHappy1Page({Key? key, required String avrScore})
       : super(key: key);
+=======
+class DiagnosisHappy1Page extends StatefulWidget {
+  const DiagnosisHappy1Page({Key? key}) : super(key: key);
+>>>>>>> Stashed changes
+
+  @override
+  State<DiagnosisHappy1Page> createState() => _DiagnosisHappy1PageState();
+}
+
+class _DiagnosisHappy1PageState extends State<DiagnosisHappy1Page> {
+  AudioHappy myAudioPlayer = AudioHappy();
+
+  bool isPlaying = false;
+
+  @override
+  void initState() {
+    super.initState();
+    myAudioPlayer.initAudio().then((_) {
+      setState(() {
+        isPlaying = true;
+        myAudioPlayer
+            .toggleAudio(); // Start playing the audio when initialization is complete
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
