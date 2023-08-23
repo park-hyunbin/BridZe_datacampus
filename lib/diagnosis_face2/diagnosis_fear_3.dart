@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import '../../model/picture.dart';
 import '../model/execute.dart';
 
+<<<<<<< HEAD
 class DiagnosisFear3Page extends StatelessWidget {
   const DiagnosisFear3Page({Key? key}) : super(key: key);
+=======
+class DiagnosisNervous3Page extends StatelessWidget {
+  const DiagnosisNervous3Page({Key? key}) : super(key: key);
+>>>>>>> main
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +68,11 @@ class DiagnosisFear3Page extends StatelessWidget {
                             ),
                           ),
                         );
+<<<<<<< HEAD
                         executeFile();
+=======
+                        executeFile('nervous');
+>>>>>>> main
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

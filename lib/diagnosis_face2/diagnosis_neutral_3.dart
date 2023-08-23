@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import 'package:bridze/diagnosis_face2/diagnosis_fear_1.dart';
+=======
+import 'package:bridze/diagnosis_face2/diagnosis_ferar_1.dart';
+import 'package:bridze/model/execute.dart';
+>>>>>>> main
 import 'package:flutter/material.dart';
-import '../model/execute.dart';
 import '../model/picture.dart';
 
 class DiagnosisNeutral3Page extends StatelessWidget {
@@ -63,7 +67,7 @@ class DiagnosisNeutral3Page extends StatelessWidget {
                             ),
                           ),
                         );
-                        executeFile();
+                        executeFile('neutral');
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

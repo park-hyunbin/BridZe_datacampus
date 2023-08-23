@@ -63,7 +63,7 @@ class DiagnosisSad3Page extends StatelessWidget {
                             ),
                           ),
                         );
-                        executeFile();
+                        executeFile('sad');
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

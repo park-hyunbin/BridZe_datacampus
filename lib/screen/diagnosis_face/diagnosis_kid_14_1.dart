@@ -1,6 +1,9 @@
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_14_2.dart';
 import 'package:bridze/widgets/audio_kid_3.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/provider.dart';
 
 class DiagnosisKid141Page extends StatefulWidget {
   const DiagnosisKid141Page({Key? key, required String avrScore})
@@ -14,12 +17,24 @@ class DiagnosisKid141PageState extends State<DiagnosisKid141Page> {
   AudioKid3 myAudioPlayer = AudioKid3();
   bool isPlaying = false;
   int selectedFace = 0;
+  int totalScore = 0;
 
   void onFaceButtonTapped(int faceValue) {
-    print("Face Value: $faceValue");
     setState(() {
       selectedFace = faceValue;
+      totalScore = calculateTotalScore(selectedFace);
     });
+
+    context.read<TotalScoreProvider>().addRelationshipScore(totalScore);
+  }
+
+  int calculateTotalScore(int faceValue) {
+    if (faceValue == 1) return 1;
+    if (faceValue == 2) return 2;
+    if (faceValue == 3) return 6;
+    if (faceValue == 4) return 8;
+    if (faceValue == 5) return 10;
+    return 0;
   }
 
   @override

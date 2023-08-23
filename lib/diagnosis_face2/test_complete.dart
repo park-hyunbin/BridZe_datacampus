@@ -1,5 +1,7 @@
-import 'package:bridze/chart/chart_language.dart';
+import 'package:bridze/chart/chart_face.dart';
+import 'package:bridze/provider/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DiagnosisEndPage extends StatelessWidget {
   final String avrScore;
@@ -76,12 +78,15 @@ class DiagnosisEnd extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
+                        final relationshipScore =
+                            Provider.of<TotalScoreProvider>(context,
+                                    listen: false)
+                                .averageScore;
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LanguagePage(
-                              avrScore: avrScore,
-                              crrScore: '',
+                            builder: (context) => FacePage(
+                              relationshipScore: relationshipScore,
                             ),
                           ),
                         );
