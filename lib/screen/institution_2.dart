@@ -57,7 +57,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
                 Container(
                   width: 400,
@@ -77,7 +77,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
                 const Text(
                   "부모와 함께 언어 및 상담 교육 받기(유료)",
@@ -105,7 +105,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
                 const Text(
                   "말하기, 듣기, 읽기, 쓰기 교육 받기(무료)",
@@ -137,7 +137,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 35,
                 ),
                 Container(
                   width: 400,
@@ -157,7 +157,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 const Text(
                   "한국어 어휘부터 회화까지 교육 받기(무료)",
