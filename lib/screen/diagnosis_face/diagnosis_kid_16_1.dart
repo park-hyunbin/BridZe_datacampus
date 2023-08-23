@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import 'package:bridze/diagnosis_face2/diagnosis_kid_20.dart';
+=======
 import 'package:bridze/provider/provider.dart';
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_16_2.dart';
+>>>>>>> main
 import 'package:bridze/widgets/audio_kid_5.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -76,7 +80,7 @@ class DiagnosisKid161PageState extends State<DiagnosisKid161Page> {
                     const Text(
                       "đánh giá tình cảm",
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontFamily: 'Rowdies',
                       ),
                     ),
@@ -271,7 +275,9 @@ class DiagnosisKid161PageState extends State<DiagnosisKid161Page> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisKid162Page(),
+                            builder: (context) => const DiagnosisKid20Page(
+                              avrScore: '',
+                            ),
                           ),
                         );
                       },

@@ -1,7 +1,7 @@
-import 'package:bridze/diagnosis_face2/diagnosis_ferar_1.dart';
-import 'package:bridze/model/execute.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_fear_1.dart';
 import 'package:flutter/material.dart';
 import '../model/picture.dart';
+import '../model/execute.dart';
 
 class DiagnosisNeutral3Page extends StatelessWidget {
   const DiagnosisNeutral3Page({Key? key}) : super(key: key);
@@ -58,7 +58,7 @@ class DiagnosisNeutral3Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisNervous1Page(
+                            builder: (context) => const DiagnosisFear1Page(
                               avrScore: '',
                             ),
                           ),

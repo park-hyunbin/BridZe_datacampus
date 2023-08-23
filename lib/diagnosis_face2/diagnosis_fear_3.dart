@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../model/picture.dart';
 import '../model/execute.dart';
 
-class DiagnosisNervous3Page extends StatelessWidget {
-  const DiagnosisNervous3Page({Key? key}) : super(key: key);
+class DiagnosisFear3Page extends StatelessWidget {
+  const DiagnosisFear3Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

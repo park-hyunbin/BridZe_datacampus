@@ -51,9 +51,9 @@ class _DiagnosisAngry2PageState extends State<DiagnosisAngry2Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-                      "Bước 5",
+                      "đánh giá tình cảm",
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontFamily: 'Rowdies',
                       ),
                     ),
@@ -79,7 +79,7 @@ class _DiagnosisAngry2PageState extends State<DiagnosisAngry2Page> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 30),
                   child: Text(
-                    "화가 난 표정을 지어봐 ~",
+                    "화가난 표정을 지어봐 ~",
                     style: TextStyle(
                       fontSize: 40,
                       fontFamily: 'BMJUA',

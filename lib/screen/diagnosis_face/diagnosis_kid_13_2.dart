@@ -53,7 +53,7 @@ class _DiagnosisKid132PageState extends State<DiagnosisKid132Page> {
                     const Text(
                       "đánh giá tình cảm",
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontFamily: 'Rowdies',
                       ),
                     ),
