@@ -2,7 +2,6 @@ import 'package:bridze/widgets/audio_kid_13.dart';
 import 'package:bridze/diagnosis_face2/diagnosis_fear_3.dart';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
 class DiagnosisFear2Page extends StatefulWidget {
   const DiagnosisFear2Page({Key? key}) : super(key: key);
 
@@ -11,16 +10,6 @@ class DiagnosisFear2Page extends StatefulWidget {
 }
 
 class _DiagnosisFear2PageState extends State<DiagnosisFear2Page> {
-=======
-class DiagnosisNervous2Page extends StatefulWidget {
-  const DiagnosisNervous2Page({Key? key}) : super(key: key);
-
-  @override
-  State<DiagnosisNervous2Page> createState() => _DiagnosisNervous2PageState();
-}
-
-class _DiagnosisNervous2PageState extends State<DiagnosisNervous2Page> {
->>>>>>> main
   AudioKid13 myAudioPlayer = AudioKid13();
   bool isPlaying = false;
 
@@ -62,15 +51,9 @@ class _DiagnosisNervous2PageState extends State<DiagnosisNervous2Page> {
                     ),
                     const SizedBox(width: 10),
                     const Text(
-<<<<<<< HEAD
                       "đánh giá tình cảm",
                       style: TextStyle(
                         fontSize: 40,
-=======
-                      "Bước 5",
-                      style: TextStyle(
-                        fontSize: 50,
->>>>>>> main
                         fontFamily: 'Rowdies',
                       ),
                     ),
@@ -116,12 +99,7 @@ class _DiagnosisNervous2PageState extends State<DiagnosisNervous2Page> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-<<<<<<< HEAD
                               builder: (context) => const DiagnosisFear3Page(),
-=======
-                              builder: (context) =>
-                                  const DiagnosisNervous3Page(),
->>>>>>> main
                             ),
                           );
                         },
