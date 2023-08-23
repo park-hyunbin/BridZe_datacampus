@@ -45,7 +45,7 @@ class DiagnosisKid143Page extends StatelessWidget {
                 padding: EdgeInsets.only(top: 15),
                 child: Center(
                   child: CameraHome(
-                    number: 1, // 추후에 번호 수정
+                    number: 2, // 추후에 번호 수정
                   ),
                 ),
               ),
