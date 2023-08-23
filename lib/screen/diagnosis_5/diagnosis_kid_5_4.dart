@@ -60,7 +60,7 @@ class _FiveRead4PageState extends State<FiveRead4Page> {
                       height: 50,
                     ),
                     const Text(
-                      '오늘 유치원에서 책을 읽었어요.\n책 제목은 백설공주와 일곱난쟁이 였어요.',
+                      '오늘 유치원에서 책을 읽었어요.\n책 제목은 백설공주와 일곱난쟁이이었어요.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 65,

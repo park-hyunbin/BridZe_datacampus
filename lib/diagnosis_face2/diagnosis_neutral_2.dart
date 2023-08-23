@@ -53,7 +53,7 @@ class _DiagnosisNeutral2PageState extends State<DiagnosisNeutral2Page> {
                     const Text(
                       "đánh giá tình cảm",
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontFamily: 'Rowdies',
                       ),
                     ),

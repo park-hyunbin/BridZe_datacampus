@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-2023/08/22-16:54:49.377 1970 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Extension Rules/MANIFEST-000001
-2023/08/22-16:54:49.378 1970 Recovering log #3
-2023/08/22-16:54:49.384 1970 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.cc5b020f\flutter_tools_chrome_device.bc328152\Default\Extension Rules/000003.log 
-=======
-2023/08/22-16:55:50.536 9203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jIvyOL/flutter_tools_chrome_device.28m1Wa/Default/Extension Rules/MANIFEST-000001
-2023/08/22-16:55:50.536 9203 Recovering log #3
-2023/08/22-16:55:50.536 9203 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jIvyOL/flutter_tools_chrome_device.28m1Wa/Default/Extension Rules/000003.log 
->>>>>>> main
+2023/08/23-14:43:44.018 2d4c Creating DB C:\Users\seokj\AppData\Local\Temp\flutter_tools.eed3de10\flutter_tools_chrome_device.7a4c9e79\Default\Extension Rules since it was missing.
+2023/08/23-14:43:44.036 2d4c Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.eed3de10\flutter_tools_chrome_device.7a4c9e79\Default\Extension Rules/MANIFEST-000001

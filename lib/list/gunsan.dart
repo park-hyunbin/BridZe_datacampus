@@ -2,7 +2,7 @@ import '../widgets/institution.dart';
 
 final List<Institution> gunsan = [
   Institution(
-    name: '군산어린이심리센터',
+    name: '군산 언어심리센터',
     phoneNumber: '063-464-7120',
     imagePath: 'assets/images/gunsan_1.png',
     address: '전북 군산시 공단대로 441 LG 테레콤',

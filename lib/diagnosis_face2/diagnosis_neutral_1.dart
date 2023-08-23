@@ -34,7 +34,7 @@ class DiagnosisNeutral1Page extends StatelessWidget {
                     const Text(
                       "đánh giá tình cảm",
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontFamily: 'Rowdies',
                       ),
                     ),
