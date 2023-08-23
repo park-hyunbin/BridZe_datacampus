@@ -23,14 +23,14 @@ class _VideoAppState extends State<VideoApp> {
 
   List<VideoPlayerController> _initializeVideoControllers() {
     return [
-      VideoPlayerController.network(
-        'https://daitso.run.goorm.site/download/video/1',
+      VideoPlayerController.networkUrl(
+        Uri.parse('https://daitso.run.goorm.site/download/video/1'),
       ),
-      VideoPlayerController.network(
-        'https://daitso.run.goorm.site/download/video/2',
+      VideoPlayerController.networkUrl(
+        Uri.parse('https://daitso.run.goorm.site/download/video/2'),
       ),
-      VideoPlayerController.network(
-        'https://daitso.run.goorm.site/download/video/3',
+      VideoPlayerController.networkUrl(
+        Uri.parse('https://daitso.run.goorm.site/download/video/3'),
       ),
     ]..forEach((controller) async {
         await controller.initialize();
