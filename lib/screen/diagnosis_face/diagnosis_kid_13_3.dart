@@ -1,6 +1,6 @@
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_14_1.dart';
 import 'package:flutter/material.dart';
-import '../../model/video_recorder.dart';
+import '../../model/video.dart';
 
 class DiagnosisKid133Page extends StatelessWidget {
   const DiagnosisKid133Page({Key? key}) : super(key: key);
@@ -44,7 +44,7 @@ class DiagnosisKid133Page extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Center(
-                  child: CameraHome(
+                  child: Video(
                     number: 1, // 추후에 번호 수정
                   ),
                 ),
