@@ -78,7 +78,7 @@ class DiagnosisNervous1Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisNervous2Page(),
+                            builder: (context) => const DiagnosisFear2Page(),
                           ),
                         );
                       },
