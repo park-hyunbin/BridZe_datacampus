@@ -63,11 +63,7 @@ class DiagnosisHappy3Page extends StatelessWidget {
                             ),
                           ),
                         );
-<<<<<<< Updated upstream
                         executeFile('happy');
-=======
-                        //executeFile();
->>>>>>> Stashed changes
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
