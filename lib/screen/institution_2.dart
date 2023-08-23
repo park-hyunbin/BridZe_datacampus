@@ -167,7 +167,7 @@ class UntactState extends State<Untact> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 GestureDetector(
                   onTap: () async {
