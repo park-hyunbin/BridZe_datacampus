@@ -1,4 +1,4 @@
-import 'package:bridze/diagnosis_face2/diagnosis_nervous_2.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_fear_2.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisNervous1Page extends StatelessWidget {

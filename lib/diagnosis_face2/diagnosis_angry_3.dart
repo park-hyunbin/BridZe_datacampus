@@ -63,7 +63,7 @@ class DiagnosisAngry3Page extends StatelessWidget {
                             ),
                           ),
                         );
-                        executeFile();
+                        executeFile('angry');
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

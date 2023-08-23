@@ -63,7 +63,7 @@ class DiagnosisNervous3Page extends StatelessWidget {
                             ),
                           ),
                         );
-                        executeFile();
+                        executeFile('nervous');
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

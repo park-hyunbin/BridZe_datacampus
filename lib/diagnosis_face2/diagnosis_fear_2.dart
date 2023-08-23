@@ -1,5 +1,5 @@
 import 'package:bridze/widgets/audio_kid_13.dart';
-import 'package:bridze/diagnosis_face2/diagnosis_nervous_3.dart';
+import 'package:bridze/diagnosis_face2/diagnosis_fear_3.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisNervous2Page extends StatefulWidget {
