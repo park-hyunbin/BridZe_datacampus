@@ -1,6 +1,7 @@
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_11.dart';
 import 'package:bridze/screen/diagnosis_kid.dart';
 import 'package:bridze/screen/diagnosis_mother/diagnosis_mother_1.dart';
+import 'package:bridze/screen/login2.dart';
 import 'package:bridze/widgets/containerbutton.dart';
 import 'package:bridze/widgets/imagebutton.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,19 @@ class DiagnosisScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Login2Page(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.arrow_forward),
+          ),
+        ],
         iconTheme: const IconThemeData(
           color: Colors.black,
         ),
