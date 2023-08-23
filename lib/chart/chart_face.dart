@@ -15,24 +15,26 @@ class ChartFaceApp extends StatefulWidget {
 }
 
 class ChartFaceAppState extends State<ChartFaceApp> {
-  double getAverageScoreFromProvider() {
-    return context.watch<TotalScoreProvider>().averageScore;
+  double getRelationshipScoreFromProvider() {
+    return context.watch<TotalScoreProvider>().relationshipScore;
   }
 
   @override
   Widget build(BuildContext context) {
-    final averageScore = getAverageScoreFromProvider();
+    final relationshipScore = getRelationshipScoreFromProvider();
 
     return MaterialApp(
-      home: FacePage(averageScore: averageScore),
+      home: FacePage(
+        relationshipScore: relationshipScore,
+      ),
     );
   }
 }
 
 class FacePage extends StatefulWidget {
-  final double averageScore;
+  final double relationshipScore;
 
-  const FacePage({Key? key, required this.averageScore}) : super(key: key);
+  const FacePage({Key? key, required this.relationshipScore}) : super(key: key);
 
   @override
   _FacePageState createState() => _FacePageState();
@@ -41,11 +43,14 @@ class FacePage extends StatefulWidget {
 class _FacePageState extends State<FacePage> {
   late List<_ChartData> data;
   late TooltipBehavior _tooltip;
+  double relationshipScore = 0.0; // Initialize the relationshipScore
 
   @override
   void initState() {
-    // Provider를 통해 평균 점수를 가져오도록 수정합니다.
-    double averageScore = widget.averageScore;
+    super.initState();
+
+    // Provider를 통해 관계 점수를 가져옵니다.
+    relationshipScore = context.read<TotalScoreProvider>().relationshipScore;
 
     data = [
       _ChartData(
@@ -54,13 +59,12 @@ class _FacePageState extends State<FacePage> {
         const Color.fromRGBO(254, 202, 202, 1.0),
       ),
       _ChartData(
-        '아이 점수',
-        averageScore, // 평균 점수로 변경합니다.
-        const Color.fromARGB(255, 241, 133, 145),
+        '부모와의 유대관계 점수', // 새로운 데이터 포인트 추가
+        relationshipScore, // 관계 점수 사용
+        const Color.fromARGB(255, 123, 200, 148),
       ),
     ];
     _tooltip = TooltipBehavior(enable: true);
-    super.initState();
   }
 
   @override

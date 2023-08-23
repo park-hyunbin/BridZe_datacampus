@@ -23,7 +23,7 @@ class DiagnosisKid151PageState extends State<DiagnosisKid151Page> {
       totalScore = calculateTotalScore(selectedFace);
     });
 
-    context.read<TotalScoreProvider>().addScore(totalScore);
+    context.read<TotalScoreProvider>().addRelationshipScore(totalScore);
   }
 
   int calculateTotalScore(int faceValue) {

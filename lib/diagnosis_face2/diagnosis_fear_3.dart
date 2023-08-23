@@ -1,7 +1,6 @@
 import 'package:bridze/diagnosis_face2/test_complete.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
-import '../model/execute.dart';
 
 class DiagnosisNervous3Page extends StatelessWidget {
   const DiagnosisNervous3Page({Key? key}) : super(key: key);
@@ -63,7 +62,11 @@ class DiagnosisNervous3Page extends StatelessWidget {
                             ),
                           ),
                         );
+<<<<<<< Updated upstream:lib/diagnosis_face2/diagnosis_fear_3.dart
                         executeFile('nervous');
+=======
+                        //executeFile();
+>>>>>>> Stashed changes:lib/diagnosis_face2/diagnosis_nervous_3.dart
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
