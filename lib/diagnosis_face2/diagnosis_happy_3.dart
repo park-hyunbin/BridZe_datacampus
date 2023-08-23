@@ -1,4 +1,5 @@
 import 'package:bridze/diagnosis_face2/diagnosis_angry_1.dart';
+import 'package:bridze/model/execute2.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
 import '../model/execute.dart';
@@ -64,6 +65,7 @@ class DiagnosisHappy3Page extends StatelessWidget {
                           ),
                         );
                         executeFile('happy');
+                        v2f();
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",

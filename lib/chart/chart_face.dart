@@ -3,6 +3,7 @@ import 'package:bridze/provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const ChartFaceApp());
@@ -46,6 +47,24 @@ class _FacePageState extends State<FacePage> {
   late TooltipBehavior _tooltip;
   double relationshipScore = 0.0; // Initialize the relationshipScore
 
+  String serverUrl = 'https://daitso.run.goorm.site//download/chart/image';
+  Image? image;
+
+  Future<void> _fetchImage() async {
+    try {
+      final response = await http.get(Uri.parse(serverUrl));
+      if (response.statusCode == 200) {
+        setState(() {
+          image = Image.memory(response.bodyBytes, fit: BoxFit.cover);
+        });
+      } else {
+        print('Failed to fetch image from server');
+      }
+    } catch (e) {
+      print('Error fetching image from server: $e');
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -66,6 +85,8 @@ class _FacePageState extends State<FacePage> {
       ),
     ];
     _tooltip = TooltipBehavior(enable: true);
+
+    _fetchImage();
   }
 
   @override
@@ -169,11 +190,7 @@ class _FacePageState extends State<FacePage> {
                         width: 2,
                       ),
                     ),
-                    child: Image.asset(
-                      width: 100,
-                      height: 100,
-                      'assets/images/kid.png',
-                    ),
+                    child: image,
                   ),
                 ],
               ),

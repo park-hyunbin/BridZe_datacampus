@@ -1,5 +1,6 @@
 import 'package:bridze/diagnosis_face2/diagnosis_neutral_1.dart';
 import 'package:bridze/model/execute.dart';
+import 'package:bridze/model/execute2.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
 
@@ -64,6 +65,7 @@ class DiagnosisSad3Page extends StatelessWidget {
                           ),
                         );
                         executeFile('sad');
+                        executeFile2();
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
