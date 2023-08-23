@@ -1,12 +1,19 @@
-2023/08/23-17:50:17.684 45e8 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.87e4c0b4\flutter_tools_chrome_device.f25fe3ef\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/23-17:50:17.685 644 Compacting 7@0 + 0@1 files
-2023/08/23-17:50:17.691 644 Generated table #39@0: 3 keys, 263 bytes
-2023/08/23-17:50:17.691 644 Compacted 7@0 + 0@1 files => 263 bytes
-2023/08/23-17:50:17.693 644 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/08/23-17:50:17.693 644 Delete type=2 #3
-2023/08/23-17:50:17.694 644 Delete type=2 #12
-2023/08/23-17:50:17.694 644 Delete type=2 #27
-2023/08/23-17:50:17.694 644 Delete type=2 #33
-2023/08/23-17:50:17.694 644 Delete type=2 #34
-2023/08/23-17:50:17.694 644 Delete type=2 #35
-2023/08/23-17:50:17.694 644 Delete type=2 #36
+2023/08/23-19:09:34.926 89c Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.17be68ae\flutter_tools_chrome_device.1df42bff\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/23-19:09:34.927 89c Recovering log #3
+2023/08/23-19:09:34.928 89c Level-0 table #41: started
+2023/08/23-19:09:34.935 89c Level-0 table #41: 226 bytes OK
+2023/08/23-19:09:34.935 89c Recovering log #15
+2023/08/23-19:09:34.935 89c Level-0 table #42: started
+2023/08/23-19:09:34.943 89c Level-0 table #42: 508 bytes OK
+2023/08/23-19:09:34.943 89c Recovering log #26
+2023/08/23-19:09:34.943 89c Level-0 table #43: started
+2023/08/23-19:09:34.950 89c Level-0 table #43: 209 bytes OK
+2023/08/23-19:09:34.950 89c Recovering log #38
+2023/08/23-19:09:34.950 89c Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.17be68ae\flutter_tools_chrome_device.1df42bff\Default\Site Characteristics Database/000038.log 
+2023/08/23-19:09:34.954 89c Delete type=2 #3
+2023/08/23-19:09:34.954 89c Delete type=0 #3
+2023/08/23-19:09:34.954 89c Delete type=2 #12
+2023/08/23-19:09:34.954 89c Delete type=0 #15
+2023/08/23-19:09:34.954 89c Delete type=0 #26
+2023/08/23-19:09:34.954 89c Delete type=2 #27
+2023/08/23-19:09:34.954 89c Delete type=2 #33

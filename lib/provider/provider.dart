@@ -25,7 +25,7 @@ class TotalScoreProvider with ChangeNotifier {
   double get relationshipScore {
     if (_relationshipScores.isEmpty) return 0;
     int total = _relationshipScores.reduce((value, element) => value + element);
-    double scaledTotal = total.toDouble(); // Convert to double without scaling
+    double scaledTotal = total * 2; // Convert to double without scaling
     return scaledTotal > 100 ? 100 : scaledTotal; // Cap the score at 100
   }
 }

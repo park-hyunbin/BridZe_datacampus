@@ -1,24 +1,6 @@
+import 'package:bridze/face_save/video_save.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Diagnosis App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const PictureSave(),
-    );
-  }
-}
 
 class PictureSave extends StatefulWidget {
   const PictureSave({Key? key}) : super(key: key);
@@ -199,19 +181,29 @@ class _PictureSaveState extends State<PictureSave> {
               const SizedBox(
                 height: 30,
               ),
-              Container(
-                width: 700,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: const Color.fromRGBO(254, 202, 202, 1.0),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Center(
-                  child: Text(
-                    "감정과 표정을 잘 알아야 유대관계와 정서에 좋아요",
-                    style: TextStyle(
-                      fontFamily: "BMJUA",
-                      fontSize: 27,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VideoApp(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 700,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: const Color.fromRGBO(254, 202, 202, 1.0),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "감정과 표정을 잘 알아야 유대관계와 정서에 좋아요",
+                      style: TextStyle(
+                        fontFamily: "BMJUA",
+                        fontSize: 27,
+                      ),
                     ),
                   ),
                 ),

@@ -60,10 +60,10 @@ class _DiagnosisKid152PageState extends State<DiagnosisKid152Page> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Center(
-                  child: Row(
+              Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
@@ -71,68 +71,63 @@ class _DiagnosisKid152PageState extends State<DiagnosisKid152Page> {
                         width: 250,
                         height: 250,
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 40, top: 30),
-                  child: Text(
-                    "왜 그렇게 생각했어 ?",
-                    style: TextStyle(
-                      fontSize: 40,
-                      fontFamily: 'BMJUA',
-                      color: Color(0xff000000),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30, top: 30),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const DiagnosisKid153Page(),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/images/camera.png',
-                          width: 40,
-                          height: 40,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
+                      const SizedBox(height: 30),
                       const Text(
-                        "아이의 표정이 촬영됩니다",
+                        "화가난 표정을 지어봐 ~",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 40,
                           fontFamily: 'BMJUA',
+                          color: Color(0xff000000),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30, top: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DiagnosisKid153Page(),
+                                  ),
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/camera.png',
+                                width: 40,
+                                height: 40,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            const Text(
+                              "왜 그렇게 생각했어 ?",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'BMJUA',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30, top: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/kid.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                            const SizedBox(width: 10),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30, top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/kid.png',
-                      width: 50,
-                      height: 50,
-                    ),
-                    const SizedBox(width: 10),
-                  ],
                 ),
               ),
             ],
