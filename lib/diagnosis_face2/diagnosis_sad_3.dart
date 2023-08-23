@@ -1,6 +1,7 @@
 import 'package:bridze/diagnosis_face2/diagnosis_neutral_1.dart';
 import 'package:flutter/material.dart';
 import '../../model/picture.dart';
+import '../model/execute.dart';
 
 class DiagnosisSad3Page extends StatelessWidget {
   const DiagnosisSad3Page({Key? key}) : super(key: key);
@@ -62,11 +63,7 @@ class DiagnosisSad3Page extends StatelessWidget {
                             ),
                           ),
                         );
-<<<<<<< Updated upstream
                         executeFile('sad');
-=======
-                        //executeFile();
->>>>>>> Stashed changes
                       },
                       child: Image.asset(
                         "assets/images/cursor.png",
