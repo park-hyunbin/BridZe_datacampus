@@ -63,7 +63,7 @@ class HomeScreenState extends State<HomeScreen> {
             ),
             const Padding(
               padding: EdgeInsets.only(left: 480, top: 30.0),
-              child: Text("평가 과정",
+              child: Text("평가 과정 안내",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 70,

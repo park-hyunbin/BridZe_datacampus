@@ -12,7 +12,8 @@ class Login2Page extends StatefulWidget {
 
 class _Login2PageState extends State<Login2Page> {
   @override
-  String avrScore = ''; // Initialize with the appropriate value
+  String avrScore = '';
+  String crrScore = '';
 
   @override
   void initState() {
@@ -24,6 +25,13 @@ class _Login2PageState extends State<Login2Page> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       avrScore = prefs.getString('globalavrScore') ?? '';
+    });
+  }
+
+  Future<void> _loadCrrScore() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      crrScore = prefs.getString('globalcrrScore') ?? '';
     });
   }
 
@@ -113,8 +121,9 @@ class _Login2PageState extends State<Login2Page> {
                                     onTap: () {
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
-                                          builder: (context) =>
-                                              LanguagePage2(avrScore: avrScore),
+                                          builder: (context) => LanguagePage2(
+                                            avrScore: avrScore,
+                                          ),
                                         ),
                                       );
                                     },

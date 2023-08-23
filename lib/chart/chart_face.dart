@@ -1,44 +1,61 @@
+import 'package:bridze/provider/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 void main() {
-  runApp(_ChartFaceApp());
+  runApp(const ChartFaceApp());
 }
 
-class _ChartFaceApp extends StatefulWidget {
+class ChartFaceApp extends StatefulWidget {
+  const ChartFaceApp({super.key});
+
   @override
-  State<_ChartFaceApp> createState() => _ChartFaceAppState();
+  State<ChartFaceApp> createState() => ChartFaceAppState();
 }
 
-class _ChartFaceAppState extends State<_ChartFaceApp> {
+class ChartFaceAppState extends State<ChartFaceApp> {
+  double getAverageScoreFromProvider() {
+    return context.watch<TotalScoreProvider>().averageScore;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final averageScore = getAverageScoreFromProvider();
+
     return MaterialApp(
-      home: _FacePage(),
+      home: FacePage(averageScore: averageScore),
     );
   }
 }
 
-class _FacePage extends StatefulWidget {
+class FacePage extends StatefulWidget {
+  final double averageScore;
+
+  const FacePage({Key? key, required this.averageScore}) : super(key: key);
+
   @override
   _FacePageState createState() => _FacePageState();
 }
 
-class _FacePageState extends State<_FacePage> {
+class _FacePageState extends State<FacePage> {
   late List<_ChartData> data;
   late TooltipBehavior _tooltip;
 
   @override
   void initState() {
+    // Provider를 통해 평균 점수를 가져오도록 수정합니다.
+    double averageScore = widget.averageScore;
+
     data = [
       _ChartData(
         '또래친구점수',
-        75,
+        50,
         const Color.fromRGBO(254, 202, 202, 1.0),
       ),
       _ChartData(
-        '아린이점수',
-        45,
+        '아이 점수',
+        averageScore, // 평균 점수로 변경합니다.
         const Color.fromARGB(255, 241, 133, 145),
       ),
     ];
@@ -64,7 +81,7 @@ class _FacePageState extends State<_FacePage> {
                 child: Column(
                   children: [
                     Text(
-                      '아린이의 언어평가 결과',
+                      '정서평가 결과',
                       style: TextStyle(
                         fontFamily: 'BMJUA',
                         fontSize: 50,
@@ -120,7 +137,7 @@ class _FacePageState extends State<_FacePage> {
                             dataSource: data,
                             xValueMapper: (_ChartData data, _) => data.x,
                             yValueMapper: (_ChartData data, _) => data.y,
-                            name: '언어 평가',
+                            name: '정서 평가',
                             pointColorMapper: (_ChartData data, _) =>
                                 data.color,
                             dataLabelSettings: const DataLabelSettings(

@@ -1,11 +1,17 @@
+import 'package:bridze/provider/provider.dart';
 import 'package:bridze/screen/diagnosis.dart';
 import 'package:bridze/screen/home.dart';
 import 'package:bridze/screen/login.dart';
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
 void main() {
   runApp(
-    const MyApp(),
+    ChangeNotifierProvider(
+      create: (context) => TotalScoreProvider(),
+      child: const MyApp(),
+    ),
   );
 }
 
