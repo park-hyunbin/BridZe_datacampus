@@ -73,7 +73,7 @@ class _DiagnosisKid142PageState extends State<DiagnosisKid142Page> {
                       ),
                       const SizedBox(height: 30),
                       const Text(
-                        "화가난 표정을 지어봐 ~",
+                        "왜 그렇게 생각했어 ?",
                         style: TextStyle(
                           fontSize: 40,
                           fontFamily: 'BMJUA',
@@ -103,7 +103,7 @@ class _DiagnosisKid142PageState extends State<DiagnosisKid142Page> {
                             ),
                             const SizedBox(width: 10),
                             const Text(
-                              "왜 그렇게 생각했어 ?",
+                              "아이의 표정을 녹화중입니다",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'BMJUA',

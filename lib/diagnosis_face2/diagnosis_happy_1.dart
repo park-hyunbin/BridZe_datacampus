@@ -1,5 +1,5 @@
 import 'package:bridze/diagnosis_face2/diagnosis_happy_2.dart';
-import 'package:bridze/widgets/audio_happy.dart';
+import 'package:bridze/widgets/audio_happy1.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisHappy1Page extends StatefulWidget {
@@ -10,7 +10,7 @@ class DiagnosisHappy1Page extends StatefulWidget {
 }
 
 class _DiagnosisHappy1PageState extends State<DiagnosisHappy1Page> {
-  AudioHappy myAudioPlayer = AudioHappy();
+  AudioHappy1 myAudioPlayer = AudioHappy1();
 
   bool isPlaying = false;
 
@@ -62,31 +62,29 @@ class _DiagnosisHappy1PageState extends State<DiagnosisHappy1Page> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/happy.png',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 40, top: 30),
-                  child: Text(
-                    "안녕 ! 나는 행복한 표정이야 !",
-                    style: TextStyle(
-                      fontSize: 40,
-                      fontFamily: 'BMJUA',
-                      color: Color(0xff000000),
+              const SizedBox(height: 100),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      'assets/images/happy.png',
                     ),
                   ),
-                ),
+                  const SizedBox(height: 30),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "안녕 ! 나는 행복한 표정이야 !",
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontFamily: 'BMJUA',
+                        color: Color(0xff000000),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Expanded(
                 child: Align(
