@@ -1,4 +1,4 @@
-import 'package:bridze/widgets/audio_kid_13.dart';
+import 'package:bridze/widgets/audio_angry_2.dart';
 import 'package:bridze/diagnosis_face2/diagnosis_angry_3.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ class DiagnosisAngry2Page extends StatefulWidget {
 }
 
 class _DiagnosisAngry2PageState extends State<DiagnosisAngry2Page> {
-  AudioKid13 myAudioPlayer = AudioKid13();
+  AudioAngry2 myAudioPlayer = AudioAngry2();
   bool isPlaying = false;
 
   @override

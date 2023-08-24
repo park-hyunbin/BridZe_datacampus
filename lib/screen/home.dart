@@ -66,7 +66,7 @@ class HomeScreenState extends State<HomeScreen> {
               child: Text("평가 과정 안내",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
-                    fontSize: 70,
+                    fontSize: 50,
                   )),
             ),
             Padding(

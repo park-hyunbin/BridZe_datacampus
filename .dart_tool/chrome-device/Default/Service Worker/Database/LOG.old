@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 2023/08/23-21:19:58.900 55dc Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.c7ce8eb5\flutter_tools_chrome_device.287e7ed2\Default\Service Worker\Database/MANIFEST-000001
 2023/08/23-21:19:58.901 55dc Recovering log #3
 2023/08/23-21:19:58.901 55dc Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.c7ce8eb5\flutter_tools_chrome_device.287e7ed2\Default\Service Worker\Database/000003.log 
+=======
+<<<<<<< Updated upstream
+2023/08/23-21:04:47.846 51b8 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.464e1b21\flutter_tools_chrome_device.7ec17f96\Default\Service Worker\Database/MANIFEST-000001
+2023/08/23-21:04:47.846 51b8 Recovering log #3
+2023/08/23-21:04:47.847 51b8 Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.464e1b21\flutter_tools_chrome_device.7ec17f96\Default\Service Worker\Database/000003.log 
+=======
+2023/08/23-20:12:59.553 6b07 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.t50OV1/flutter_tools_chrome_device.ocqZKb/Default/Service Worker/Database/MANIFEST-000001
+2023/08/23-20:12:59.553 6b07 Recovering log #3
+2023/08/23-20:12:59.553 6b07 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.t50OV1/flutter_tools_chrome_device.ocqZKb/Default/Service Worker/Database/000003.log 
+>>>>>>> Stashed changes
+>>>>>>> 7206710f0c1b1a7c86b9e46dafed135c5c57f9b7
