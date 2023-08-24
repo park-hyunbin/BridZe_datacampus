@@ -90,9 +90,7 @@ class DiagnosisKid20Page extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiagnosisHappy1Page(
-                              avrScore: '',
-                            ),
+                            builder: (context) => const DiagnosisHappy1Page(),
                           ),
                         );
                       },
