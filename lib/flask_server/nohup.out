@@ -1,5 +1,0 @@
-from: can't read /var/mail/flask
-/workspace/wpqkf/application.py: 2: /workspace/wpqkf/application.py: import: not found
-from: can't read /var/mail/werkzeug.utils
-/workspace/wpqkf/application.py: 4: /workspace/wpqkf/application.py: import: not found
-/workspace/wpqkf/application.py: 7: /workspace/wpqkf/application.py: Syntax error: "(" unexpected
