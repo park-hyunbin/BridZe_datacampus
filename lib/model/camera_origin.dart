@@ -1,3 +1,6 @@
+// camera package의 예제를 변형한 파일
+// picture.dart와 video.part의 원형이 되는 파일로 이후 파일 업데이트를 위해 남겨두었습니다.
+
 // Copyright 2013 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
