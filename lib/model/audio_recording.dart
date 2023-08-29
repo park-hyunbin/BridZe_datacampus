@@ -1,5 +1,9 @@
-import 'dart:convert';
+// 음성 녹음, 재생 및 변환 기능을 제공하는 위젯입니다.
+// 녹음된 음성은 FLAC 형식으로 저장됩니다.
+// 저장된 음성을 서버로 업로드합니다.
+// stt 모델의 결과를 받아 다시 출력합니다.
 
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:record/record.dart';
@@ -33,6 +37,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     super.dispose();
   }
 
+  // 녹음 시작 함수
   Future<void> startRecording() async {
     try {
       if (await audioRecord.hasPermission()) {
@@ -48,6 +53,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     }
   }
 
+  // 녹음 중지 함수
   Future<void> stopRecording() async {
     try {
       String? path = await audioRecord.stop();
@@ -60,6 +66,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     }
   }
 
+  // 음성 파일 업로드 및 변환 함수
   Future<void> audioupload() async {
     try {
       http.Response aresponse = await http.get(
@@ -99,6 +106,7 @@ class AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     }
   }
 
+  // 음성 파일 재생 함수
   Future<void> playRecording() async {
     try {
       Source urlSource = UrlSource(audioPath);

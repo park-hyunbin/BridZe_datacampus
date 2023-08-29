@@ -1,3 +1,7 @@
+// Score2 위젯은 초기값과 번호를 이용하여 API 요청을 보내고 결과를 처리하며, UI를 업데이트합니다.
+// fetchdata 함수는 API 요청을 처리하고 결과를 화면에 반영하며 저장합니다.
+// fetchavg 함수는 평균 결과를 가져오는 API 요청을 처리합니다.
+
 import 'package:bridze/chart/chart_parent.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -7,7 +11,7 @@ class Score2 extends StatefulWidget {
   final String initialValue;
   final int number;
 
-  // 생성자로 받아온 초기값에 따라 crr로 비교할 글이 달라짐.
+  // 생성자로 받아온 초기값에 따라 crr로 비교할 글이 정해집니다.
   const Score2({Key? key, required this.initialValue, required this.number})
       : super(key: key);
 
@@ -30,7 +34,7 @@ class Score2State extends State<Score2> {
         'https://daitso.run.goorm.site/crr/$number?query=$value'; // API 요청 주소 설정
   }
 
-  // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신된다.
+  // API 요청을 보내고 결과를 처리하는 함수, 이 함수가 실행되면 현 위젯의 crrScore 값이 갱신됩니다.
   void fetchdata(String url) async {
     http.Response response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
@@ -38,7 +42,7 @@ class Score2State extends State<Score2> {
         crrScore = response.body;
       });
 
-      // Save avrScore to SharedPreferences
+      // SharedPreferences에 avrScore을 저장합니다.
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('globalcrrScore', crrScore);
 
@@ -57,6 +61,7 @@ class Score2State extends State<Score2> {
     }
   }
 
+  // API 요청을 보내고 평균 결과를 처리하는 함수
   void fetchavg() async {
     http.Response response =
         await http.get(Uri.parse('https://daitso.run.goorm.site/crr/average'));
@@ -65,7 +70,7 @@ class Score2State extends State<Score2> {
         crrScore = response.body;
       });
 
-      // Save avrScore to SharedPreferences
+      // SharedPreferences에 avrScore을 저장합니다.
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('globalcrrScore', crrScore);
     } else {
@@ -95,7 +100,7 @@ class Score2State extends State<Score2> {
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: 'BMJUA',
-                color: Colors.white, // Change the text color as needed
+                color: Colors.white,
               ),
             ),
           ),
