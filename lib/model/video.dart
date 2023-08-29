@@ -1,6 +1,4 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// 이 코드에서는 비디오 녹화와 관련된 작업을 수행합니다.
 
 import 'dart:async';
 import 'package:camera/camera.dart';
@@ -8,11 +6,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'upload.dart';
 
-/// Camera example home widget.
 class Video extends StatefulWidget {
   final int number;
 
-  /// Default Constructor
+  // Video 위젯 생성자
   const Video({super.key, required this.number});
 
   @override
@@ -21,8 +18,8 @@ class Video extends StatefulWidget {
   }
 }
 
+// 카메라 오류 로그 출력 함수
 void _logError(String code, String? message) {
-  // ignore: avoid_print
   print('Error: $code${message == null ? '' : '\nError Message: $message'}');
 }
 
@@ -41,11 +38,13 @@ class _VideoState extends State<Video>
     initStateAsync();
   }
 
+  // 비동기로 initState 처리
   void initStateAsync() async {
     WidgetsBinding.instance.addObserver(this);
     initializeCamera();
   }
 
+  // 카메라 초기화 함수
   void initializeCamera() async {
     try {
       WidgetsFlutterBinding.ensureInitialized();
@@ -64,10 +63,8 @@ class _VideoState extends State<Video>
       if (e is CameraException) {
         switch (e.code) {
           case 'CameraAccessDenied':
-            // Handle access errors here.
             break;
           default:
-            // Handle other errors here.
             break;
         }
       }
@@ -76,19 +73,19 @@ class _VideoState extends State<Video>
 
   @override
   void dispose() {
-    //WidgetsBinding.instance.removeObserver(this);
     controller?.dispose();
     super.dispose();
   }
 
+  // 카메라 전환 버튼 처리
   void onCameraTogglePressed() {
     if (controller!.value.isRecordingVideo) {
-      onStopButtonPressed(); // Stop recording before turning off the camera
+      onStopButtonPressed();
     }
     if (videoFile != null) {
       videoupload(videoFile, number!);
     }
-    controller!.dispose(); // Turn off the camera
+    controller!.dispose();
     setState(() {
       controller = null;
       videoFile = null;
@@ -129,11 +126,7 @@ class _VideoState extends State<Video>
     );
   }
 
-  /// Display the preview from the camera (or a message if the preview is not available).
-
-  /// Display the thumbnail of the captured image or video.
-
-  /// Display the control bar with buttons to take pictures and record videos.
+  // 촬영 버튼 레이아웃
   Widget _captureControlRowWidget() {
     final CameraController cameraController = controller!;
 
@@ -155,7 +148,6 @@ class _VideoState extends State<Video>
                   cameraController.value.isRecordingVideo
               ? () {
                   onStopButtonPressed();
-                  //onCameraTogglePressed(); // Replace with the actual name of your second function
                 }
               : null,
         ),
@@ -170,15 +162,16 @@ class _VideoState extends State<Video>
     );
   }
 
-  /// Display a row of toggle to select the camera (or a message if no camera is available).
-
+  // 타임스탬프 생성 함수
   String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
 
+  // 스낵바 메시지 출력 함수
   void showInSnackBar(String message) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(message)));
   }
 
+  // 새로운 카메라 선택
   Future<void> onNewCameraSelected(CameraDescription cameraDescription) async {
     if (controller != null) {
       return controller?.setDescription(cameraDescription);
@@ -187,6 +180,7 @@ class _VideoState extends State<Video>
     }
   }
 
+  // 카메라 컨트롤러 초기화 함수
   Future<void> _initializeCameraController(
       CameraDescription cameraDescription) async {
     final CameraController cameraController = CameraController(
@@ -198,7 +192,6 @@ class _VideoState extends State<Video>
 
     controller = cameraController;
 
-    // If the controller is updated then update the UI.
     cameraController.addListener(() {
       if (mounted) {
         setState(() {});
@@ -217,22 +210,18 @@ class _VideoState extends State<Video>
           showInSnackBar('You have denied camera access.');
           break;
         case 'CameraAccessDeniedWithoutPrompt':
-          // iOS only
           showInSnackBar('Please go to Settings app to enable camera access.');
           break;
         case 'CameraAccessRestricted':
-          // iOS only
           showInSnackBar('Camera access is restricted.');
           break;
         case 'AudioAccessDenied':
           showInSnackBar('You have denied audio access.');
           break;
         case 'AudioAccessDeniedWithoutPrompt':
-          // iOS only
           showInSnackBar('Please go to Settings app to enable audio access.');
           break;
         case 'AudioAccessRestricted':
-          // iOS only
           showInSnackBar('Audio access is restricted.');
           break;
         default:
@@ -246,11 +235,13 @@ class _VideoState extends State<Video>
     }
   }
 
+  // 오디오 모드 변경 처리
   void onAudioModeButtonPressed() {
     enableAudio = !enableAudio;
     onNewCameraSelected(controller!.description);
   }
 
+  // 비디오 녹화 시작 처리
   void onVideoRecordButtonPressed() {
     startVideoRecording().then((_) {
       if (mounted) {
@@ -259,6 +250,7 @@ class _VideoState extends State<Video>
     });
   }
 
+  // 비디오 녹화 중지 처리
   void onStopButtonPressed() {
     stopVideoRecording().then((XFile? file) {
       if (mounted) {
@@ -271,6 +263,7 @@ class _VideoState extends State<Video>
     });
   }
 
+  // 비디오 녹화 시작 함수
   Future<void> startVideoRecording() async {
     final CameraController cameraController = controller!;
 
@@ -280,7 +273,6 @@ class _VideoState extends State<Video>
     }
 
     if (cameraController.value.isRecordingVideo) {
-      // A recording is already started, do nothing.
       return;
     }
 
@@ -292,6 +284,7 @@ class _VideoState extends State<Video>
     }
   }
 
+  // 비디오 녹화 중지 함수
   Future<XFile?> stopVideoRecording() async {
     final CameraController cameraController = controller!;
 
@@ -307,27 +300,9 @@ class _VideoState extends State<Video>
     }
   }
 
+  // 카메라 예외 메시지 출력 함수
   void _showCameraException(CameraException e) {
     _logError(e.code, e.description);
     showInSnackBar('Error: ${e.code}\n${e.description}');
   }
-}
-
-/// CameraApp is the Main Application.
-class CameraApp extends StatelessWidget {
-  /// Default Constructor
-  const CameraApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Video(
-        number: 1,
-      ),
-    );
-  }
-}
-
-void main() {
-  runApp(const CameraApp());
 }

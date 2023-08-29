@@ -1,6 +1,4 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// 이 코드에서는 사진 촬영과 관련된 작업을 수행합니다.
 
 import 'dart:async';
 import 'package:camera/camera.dart';
@@ -8,9 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'upload.dart';
 
-/// Camera example home widget.
 class picture extends StatefulWidget {
-  /// Default Constructor
   const picture({super.key});
 
   @override
@@ -19,8 +15,8 @@ class picture extends StatefulWidget {
   }
 }
 
+// 카메라 오류 로그 출력 함수
 void _logError(String code, String? message) {
-  // ignore: avoid_print
   print('Error: $code${message == null ? '' : '\nError Message: $message'}');
 }
 
@@ -41,11 +37,13 @@ class _pictureState extends State<picture>
     initStateAsync();
   }
 
+  // 비동기로 initState 처리
   void initStateAsync() async {
     WidgetsBinding.instance.addObserver(this);
     initializeCamera();
   }
 
+  // 카메라 초기화 함수
   void initializeCamera() async {
     try {
       WidgetsFlutterBinding.ensureInitialized();
@@ -64,10 +62,8 @@ class _pictureState extends State<picture>
       if (e is CameraException) {
         switch (e.code) {
           case 'CameraAccessDenied':
-            // Handle access errors here.
             break;
           default:
-            // Handle other errors here.
             break;
         }
       }
@@ -76,18 +72,17 @@ class _pictureState extends State<picture>
 
   @override
   void dispose() {
-    //WidgetsBinding.instance.removeObserver(this);
     pictureTimer?.cancel();
     controller?.dispose();
     super.dispose();
   }
 
+  // 사진 촬영 타이머 시작
   void startPictureTimer() {
     int picturesTaken = 0;
 
     pictureTimer = Timer.periodic(const Duration(milliseconds: 500), (timer) {
       if (picturesTaken < 10) {
-        // You can adjust the number of pictures to be taken (10 in this case)
         takePicture().then((XFile? file) {
           if (mounted && file != null) {
             setState(() {
@@ -100,7 +95,6 @@ class _pictureState extends State<picture>
         });
         picturesTaken++;
       } else {
-        // Stop the timer after taking the desired number of pictures
         timer.cancel();
         setState(() {
           isTakingPictures = false;
@@ -143,11 +137,7 @@ class _pictureState extends State<picture>
     );
   }
 
-  /// Display the preview from the camera (or a message if the preview is not available).
-
-  /// Display the thumbnail of the captured image or video.
-
-  /// Display the control bar with buttons to take pictures and record videos.
+  // 사진 촬영 버튼 레이아웃
   Widget _captureControlRowWidget() {
     final CameraController cameraController = controller!;
 
@@ -172,15 +162,15 @@ class _pictureState extends State<picture>
     );
   }
 
-  /// Display a row of toggle to select the camera (or a message if no camera is available).
-
   String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
 
+  // 스낵바 메시지 출력 함수
   void showInSnackBar(String message) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(message)));
   }
 
+  // 새로운 카메라 선택
   Future<void> onNewCameraSelected(CameraDescription cameraDescription) async {
     if (controller != null) {
       return controller?.setDescription(cameraDescription);
@@ -189,6 +179,7 @@ class _pictureState extends State<picture>
     }
   }
 
+  // 카메라 컨트롤러 초기화 함수
   Future<void> _initializeCameraController(
       CameraDescription cameraDescription) async {
     final CameraController cameraController = CameraController(
@@ -200,7 +191,6 @@ class _pictureState extends State<picture>
 
     controller = cameraController;
 
-    // If the controller is updated then update the UI.
     cameraController.addListener(() {
       if (mounted) {
         setState(() {});
@@ -219,22 +209,18 @@ class _pictureState extends State<picture>
           showInSnackBar('You have denied camera access.');
           break;
         case 'CameraAccessDeniedWithoutPrompt':
-          // iOS only
           showInSnackBar('Please go to Settings app to enable camera access.');
           break;
         case 'CameraAccessRestricted':
-          // iOS only
           showInSnackBar('Camera access is restricted.');
           break;
         case 'AudioAccessDenied':
           showInSnackBar('You have denied audio access.');
           break;
         case 'AudioAccessDeniedWithoutPrompt':
-          // iOS only
           showInSnackBar('Please go to Settings app to enable audio access.');
           break;
         case 'AudioAccessRestricted':
-          // iOS only
           showInSnackBar('Audio access is restricted.');
           break;
         default:
@@ -248,6 +234,7 @@ class _pictureState extends State<picture>
     }
   }
 
+  // 사진 촬영 버튼이 눌렸을 때 호출
   void onTakePictureButtonPressed() {
     takePicture().then((XFile? file) {
       if (mounted) {
@@ -261,11 +248,13 @@ class _pictureState extends State<picture>
     });
   }
 
+  // 오디오 모드 버튼이 눌렸을 때 호출
   void onAudioModeButtonPressed() {
     enableAudio = !enableAudio;
     onNewCameraSelected(controller!.description);
   }
 
+  // 사진 촬영 함수
   Future<XFile?> takePicture() async {
     final CameraController? cameraController = controller;
     if (cameraController == null || !cameraController.value.isInitialized) {
@@ -274,7 +263,6 @@ class _pictureState extends State<picture>
     }
 
     if (cameraController.value.isTakingPicture) {
-      // A capture is already pending, do nothing.
       return null;
     }
 
@@ -287,27 +275,9 @@ class _pictureState extends State<picture>
     }
   }
 
+  // 카메라 예외 메시지 출력 함수
   void _showCameraException(CameraException e) {
     _logError(e.code, e.description);
     showInSnackBar('Error: ${e.code}\n${e.description}');
   }
-}
-
-/// CameraApp is the Main Application.
-class CameraApp extends StatelessWidget {
-  /// Default Constructor
-  const CameraApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: picture(),
-      ),
-    );
-  }
-}
-
-void main() {
-  runApp(const CameraApp());
 }

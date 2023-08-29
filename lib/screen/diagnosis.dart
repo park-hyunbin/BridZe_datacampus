@@ -5,7 +5,6 @@ import 'package:bridze/screen/login2.dart';
 import 'package:bridze/widgets/containerbutton.dart';
 import 'package:bridze/widgets/imagebutton.dart';
 import 'package:flutter/material.dart';
-import '../model/connection.dart';
 
 class DiagnosisScreen extends StatelessWidget {
   const DiagnosisScreen({Key? key}) : super(key: key);
@@ -148,7 +147,6 @@ class DiagnosisScreen extends StatelessWidget {
                                     builder: (context) =>
                                         const DiagnosisMother1Page()),
                               );
-                              const ConnectionPage();
                             },
                             isParentButton: true),
                       ),
