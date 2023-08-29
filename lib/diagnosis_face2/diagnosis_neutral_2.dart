@@ -1,5 +1,5 @@
-import 'package:bridze/widgets/audio_kid_13.dart';
 import 'package:bridze/diagnosis_face2/diagnosis_neutral_3.dart';
+import 'package:bridze/widgets/audio_neutral.dart';
 import 'package:flutter/material.dart';
 
 class DiagnosisNeutral2Page extends StatefulWidget {
@@ -10,7 +10,7 @@ class DiagnosisNeutral2Page extends StatefulWidget {
 }
 
 class _DiagnosisNeutral2PageState extends State<DiagnosisNeutral2Page> {
-  AudioKid13 myAudioPlayer = AudioKid13();
+  AudioNeutral myAudioPlayer = AudioNeutral();
   bool isPlaying = false;
 
   @override
