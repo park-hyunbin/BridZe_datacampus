@@ -1,3 +1,6 @@
+// 이전에 '왜 그렇게 설명헀어?' 페이지에서 녹화한 영상을 다시 보여줍니다.
+// 각 3개의 비디오를 재생하고 일시정지할 수 있으며, 하단의 네비게이션 바를 사용하여 원하는 비디오를 선택할 수 있습니다.
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -9,16 +12,21 @@ class VideoApp extends StatefulWidget {
 }
 
 class _VideoAppState extends State<VideoApp> {
+  // 비디오 플레이어 컨트롤러 리스트
   late List<VideoPlayerController> _controllers;
+  // 현재 선택된 비디오 인덱스
   late int _currentIndex;
 
   @override
   void initState() {
     super.initState();
+    // 비디오 플레이어 컨트롤러 초기화
     _controllers = _initializeVideoControllers();
+    // 초기 선택 인덱스 설정
     _currentIndex = 0;
   }
 
+  // 비디오 플레이어 컨트롤러 초기화 및 비디오 URL 설정
   List<VideoPlayerController> _initializeVideoControllers() {
     return [
       VideoPlayerController.networkUrl(
