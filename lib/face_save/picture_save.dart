@@ -1,3 +1,5 @@
+// 이전에 감정 따라하기에서 촬영한 사진들을 보여줍니다.
+
 import 'package:bridze/face_save/video_save.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -11,13 +13,14 @@ class PictureSave extends StatefulWidget {
 
 class _PictureSaveState extends State<PictureSave> {
   List<String> serverUrls = [
-    'https://daitso.run.goorm.site/download/image?emotion=happy',
-    'https://daitso.run.goorm.site/download/image?emotion=angry',
-    'https://daitso.run.goorm.site/download/image?emotion=sad',
-    'https://daitso.run.goorm.site/download/image?emotion=fear',
-    'https://daitso.run.goorm.site/download/image?emotion=neutral',
+    'https://daitso.run.goorm.site/download/image?emotion=happy', // 행복한 감정 이미지 URL
+    'https://daitso.run.goorm.site/download/image?emotion=angry', // 화난 감정 이미지 URL
+    'https://daitso.run.goorm.site/download/image?emotion=sad', // 슬픈 감정 이미지 URL
+    'https://daitso.run.goorm.site/download/image?emotion=fear', // 두려운 감정 이미지 URL
+    'https://daitso.run.goorm.site/download/image?emotion=neutral', // 중립적인 감정 이미지 URL
   ];
 
+  // 이미지 리스트 초기화
   List<Image> images = List.filled(5, Image.network(''));
 
   @override
@@ -26,6 +29,7 @@ class _PictureSaveState extends State<PictureSave> {
     _fetchImages();
   }
 
+  // 서버로부터 이미지들을 가져오는 함수
   Future<void> _fetchImages() async {
     for (int i = 0; i < serverUrls.length; i++) {
       try {
@@ -103,7 +107,7 @@ class _PictureSaveState extends State<PictureSave> {
                             width: 2.0,
                           ),
                         ),
-                        child: images[0],
+                        child: images[0], // 행복한 감정 이미지 출력
                       ),
                     ),
                     const SizedBox(width: 40),
@@ -118,7 +122,7 @@ class _PictureSaveState extends State<PictureSave> {
                             width: 2.0,
                           ),
                         ),
-                        child: images[1],
+                        child: images[1], // 화난 감정 이미지 출력
                       ),
                     ),
                     const SizedBox(
@@ -135,7 +139,7 @@ class _PictureSaveState extends State<PictureSave> {
                             width: 2.0,
                           ),
                         ),
-                        child: images[2],
+                        child: images[2], // 슬픈 감정 이미지 출력
                       ),
                     ),
                   ],
@@ -158,7 +162,7 @@ class _PictureSaveState extends State<PictureSave> {
                           width: 2.0,
                         ),
                       ),
-                      child: images[3],
+                      child: images[3], // 두려운 감정 이미지 출력
                     ),
                   ),
                   const SizedBox(width: 40),
@@ -173,7 +177,7 @@ class _PictureSaveState extends State<PictureSave> {
                           width: 2.0,
                         ),
                       ),
-                      child: images[4],
+                      child: images[4], // 중립적인 감정 이미지 출력
                     ),
                   ),
                 ],

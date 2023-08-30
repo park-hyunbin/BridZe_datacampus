@@ -1,6 +1,6 @@
 import 'package:bridze/screen/diagnosis_5/diagnosis_kid_5_3.dart';
 import 'package:flutter/material.dart';
-import '../../model/audio_test.dart';
+import '../../model/audio_recording.dart';
 import '../../model/avr_save.dart';
 
 class FiveRead2Page extends StatefulWidget {
