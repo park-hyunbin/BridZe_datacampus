@@ -199,5 +199,5 @@ final Map<String, List<String>> citiesByProvince = {
     '산청군',
     '의령군'
   ],
-  '제주특별자치도': ['제주시', '서귀포시'],
+  '제주특별자치도': ['제주시'],
 };

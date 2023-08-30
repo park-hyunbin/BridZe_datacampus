@@ -1,5 +1,6 @@
-import 'package:bridze/list/gangdong.dart';
-import 'package:bridze/list/gunsan.dart';
+import 'package:bridze/list/donghae_2.dart';
+import 'package:bridze/list/gangdong_1.dart';
+import 'package:bridze/list/gunsan_1.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   List<Widget> carouselItems = [];
   Widget GunsanCarousel = CityCarousel(cities: gunsan);
   Widget GangdongCarousel = CityCarousel(cities: gangdong);
+  Widget DonghaeCarousel = CityCarousel(cities: donghae);
 
   @override
   Widget build(BuildContext context) {
@@ -93,6 +95,7 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                             '전라남도',
                             '경상북도',
                             '경상남도',
+                            '제주특별자치도',
                           ].map<DropdownMenuItem<String>>((String value) {
                             return DropdownMenuItem<String>(
                               value: value,
@@ -156,6 +159,8 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                       GunsanCarousel
                     else if (selectedCity == '강동구')
                       GangdongCarousel
+                    else if (selectedCity == '동해시')
+                      DonghaeCarousel
                     else
                       CarouselSlider(
                         options: CarouselOptions(

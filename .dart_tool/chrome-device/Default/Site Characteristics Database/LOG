@@ -1,56 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-2023/08/23-21:11:10.321 649c Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.d06a4d6f\flutter_tools_chrome_device.70b19afa\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/23-21:11:10.322 649c Recovering log #38
-2023/08/23-21:11:10.322 649c Reusing old log C:\Users\Noah\AppData\Local\Temp\flutter_tools.d06a4d6f\flutter_tools_chrome_device.70b19afa\Default\Site Characteristics Database/000038.log 
-2023/08/23-21:11:10.322 649c Delete type=2 #3
-2023/08/23-21:11:10.322 649c Delete type=0 #3
-2023/08/23-21:11:10.322 649c Delete type=2 #12
-2023/08/23-21:11:10.322 649c Delete type=0 #15
-2023/08/23-21:11:10.322 649c Delete type=2 #17
-2023/08/23-21:11:10.322 649c Delete type=0 #26
-2023/08/23-21:11:10.322 649c Delete type=2 #27
-2023/08/23-21:11:10.322 649c Delete type=2 #33
-=======
-2023/08/23-20:23:51.178 6a07 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.BqLICD/flutter_tools_chrome_device.coQ2UT/Default/Site Characteristics Database/MANIFEST-000001
-2023/08/23-20:23:51.178 6a07 Recovering log #26
-2023/08/23-20:23:51.178 6a07 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.BqLICD/flutter_tools_chrome_device.coQ2UT/Default/Site Characteristics Database/000026.log 
-2023/08/23-20:23:51.178 6a07 Delete type=0 #15
-2023/08/23-20:23:51.178 6a07 Delete type=0 #3
-2023/08/23-20:23:51.178 6a07 Delete type=2 #33
-2023/08/23-20:23:51.178 6a07 Delete type=2 #27
->>>>>>> Stashed changes
-=======
-2023/08/23-21:29:27.358 838 Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.e51bef2e\flutter_tools_chrome_device.ace7b0f0\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/23-21:29:27.359 838 Recovering log #38
-2023/08/23-21:29:27.359 838 Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.e51bef2e\flutter_tools_chrome_device.ace7b0f0\Default\Site Characteristics Database/000038.log 
-2023/08/23-21:29:27.360 838 Delete type=2 #3
-2023/08/23-21:29:27.360 838 Delete type=0 #3
-2023/08/23-21:29:27.360 838 Delete type=2 #12
-2023/08/23-21:29:27.360 838 Delete type=0 #15
-2023/08/23-21:29:27.360 838 Delete type=2 #17
-2023/08/23-21:29:27.360 838 Delete type=0 #26
-2023/08/23-21:29:27.360 838 Delete type=2 #27
-2023/08/23-21:29:27.360 838 Delete type=2 #33
->>>>>>> Stashed changes
-=======
-2023/08/29-16:51:04.681 1c60 Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.a52dbb51\flutter_tools_chrome_device.88465342\Default\Site Characteristics Database/MANIFEST-000001
-2023/08/29-16:51:04.682 58b8 Compacting 13@0 + 0@1 files
-2023/08/29-16:51:04.689 58b8 Generated table #50@0: 5 keys, 385 bytes
-2023/08/29-16:51:04.689 58b8 Compacted 13@0 + 0@1 files => 385 bytes
-2023/08/29-16:51:04.691 58b8 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/08/29-16:51:04.692 58b8 Delete type=2 #3
-2023/08/29-16:51:04.692 58b8 Delete type=2 #12
-2023/08/29-16:51:04.692 58b8 Delete type=2 #17
-2023/08/29-16:51:04.692 58b8 Delete type=2 #27
-2023/08/29-16:51:04.692 58b8 Delete type=2 #33
-2023/08/29-16:51:04.692 58b8 Delete type=2 #39
-2023/08/29-16:51:04.692 58b8 Delete type=2 #41
-2023/08/29-16:51:04.693 58b8 Delete type=2 #42
-2023/08/29-16:51:04.693 58b8 Delete type=2 #43
-2023/08/29-16:51:04.693 58b8 Delete type=2 #44
-2023/08/29-16:51:04.693 58b8 Delete type=2 #45
-2023/08/29-16:51:04.693 58b8 Delete type=2 #46
-2023/08/29-16:51:04.693 58b8 Delete type=2 #47
->>>>>>> main
+2023/08/30-04:21:08.773 39bc Reusing MANIFEST C:\Users\seokj\AppData\Local\Temp\flutter_tools.252e4f01\flutter_tools_chrome_device.d0295310\Default\Site Characteristics Database/MANIFEST-000001
+2023/08/30-04:21:08.774 39bc Recovering log #3
+2023/08/30-04:21:08.774 39bc Level-0 table #52: started
+2023/08/30-04:21:08.776 39bc Level-0 table #52: 226 bytes OK
+2023/08/30-04:21:08.776 39bc Recovering log #15
+2023/08/30-04:21:08.777 39bc Level-0 table #53: started
+2023/08/30-04:21:08.779 39bc Level-0 table #53: 508 bytes OK
+2023/08/30-04:21:08.779 39bc Recovering log #26
+2023/08/30-04:21:08.779 39bc Level-0 table #54: started
+2023/08/30-04:21:08.781 39bc Level-0 table #54: 386 bytes OK
+2023/08/30-04:21:08.781 39bc Recovering log #38
+2023/08/30-04:21:08.781 39bc Level-0 table #55: started
+2023/08/30-04:21:08.783 39bc Level-0 table #55: 406 bytes OK
+2023/08/30-04:21:08.783 39bc Recovering log #49
+2023/08/30-04:21:08.783 39bc Reusing old log C:\Users\seokj\AppData\Local\Temp\flutter_tools.252e4f01\flutter_tools_chrome_device.d0295310\Default\Site Characteristics Database/000049.log 
+2023/08/30-04:21:08.784 39bc Delete type=2 #3
+2023/08/30-04:21:08.784 39bc Delete type=0 #3
+2023/08/30-04:21:08.784 39bc Delete type=2 #12
+2023/08/30-04:21:08.784 39bc Delete type=0 #15
+2023/08/30-04:21:08.784 39bc Delete type=2 #17
+2023/08/30-04:21:08.784 39bc Delete type=0 #26
+2023/08/30-04:21:08.784 39bc Delete type=2 #27
+2023/08/30-04:21:08.785 39bc Delete type=2 #33
+2023/08/30-04:21:08.785 39bc Delete type=0 #38
+2023/08/30-04:21:08.785 39bc Delete type=2 #39
+2023/08/30-04:21:08.785 39bc Delete type=2 #41
+2023/08/30-04:21:08.785 39bc Delete type=2 #42
+2023/08/30-04:21:08.785 39bc Delete type=2 #43
+2023/08/30-04:21:08.787 39bc Compacting 4@0 + 1@1 files
+2023/08/30-04:21:08.797 39bc Generated table #56@0: 5 keys, 385 bytes
+2023/08/30-04:21:08.797 39bc Compacted 4@0 + 1@1 files => 385 bytes
+2023/08/30-04:21:08.798 39bc compacted to: files[ 0 1 0 0 0 0 0 ]
+2023/08/30-04:21:08.798 39bc Delete type=2 #50
+2023/08/30-04:21:08.798 39bc Delete type=2 #52
+2023/08/30-04:21:08.798 39bc Delete type=2 #53
+2023/08/30-04:21:08.798 39bc Delete type=2 #54
+2023/08/30-04:21:08.799 39bc Delete type=2 #55
