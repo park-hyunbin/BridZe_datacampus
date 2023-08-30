@@ -1,9 +1,11 @@
 import 'package:bridze/list/gangdong.dart';
 import 'package:bridze/list/gunsan.dart';
+import 'package:bridze/provider/institution_recommended.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/list/city.dart';
+import 'package:provider/provider.dart';
 
 class InstitutionRecommend extends StatefulWidget {
   const InstitutionRecommend({Key? key}) : super(key: key);
@@ -164,6 +166,16 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                         ),
                         items: carouselItems,
                       ),
+                    const SizedBox(height: 30),
+                    Text(
+                      Provider.of<AppData>(context)
+                          .recommendation, // recommendation 사용
+                      style: const TextStyle(
+                        fontFamily: 'BMJUA',
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
               ],

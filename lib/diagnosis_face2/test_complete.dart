@@ -1,5 +1,5 @@
 import 'package:bridze/chart/chart_face.dart';
-import 'package:bridze/provider/provider.dart';
+import 'package:bridze/provider/face_evaluation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

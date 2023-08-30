@@ -66,13 +66,21 @@ class LanguagePageState extends State<LanguagePage> {
   void calculateEvaluation() {
     double score = double.tryParse(avrScore) ?? 0.0;
     if (score >= 100) {
-      evaluation = '상';
+      setState(() {
+        evaluation = '상';
+      });
     } else if (score >= 88) {
-      evaluation = '상';
+      setState(() {
+        evaluation = '상';
+      });
     } else if (score > 69) {
-      evaluation = '중';
+      setState(() {
+        evaluation = '중';
+      });
     } else {
-      evaluation = '하';
+      setState(() {
+        evaluation = '하';
+      });
     }
   }
 

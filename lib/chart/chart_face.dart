@@ -1,5 +1,5 @@
 import 'package:bridze/face_save/picture_save.dart';
-import 'package:bridze/provider/provider.dart';
+import 'package:bridze/provider/face_evaluation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -47,7 +47,7 @@ class _FacePageState extends State<FacePage> {
   late TooltipBehavior _tooltip;
   double relationshipScore = 0.0; // Initialize the relationshipScore
 
-  String serverUrl = 'https://daitso.run.goorm.site//download/chart/image';
+  String serverUrl = 'https://daitso.run.goorm.site/download/chart/image';
   Image? image;
 
   Future<void> _fetchImage() async {

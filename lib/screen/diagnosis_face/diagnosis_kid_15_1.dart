@@ -1,4 +1,4 @@
-import 'package:bridze/provider/provider.dart';
+import 'package:bridze/provider/face_evaluation.dart';
 import 'package:bridze/screen/diagnosis_face/diagnosis_kid_15_2.dart';
 import 'package:bridze/widgets/audio_kid_4.dart';
 import 'package:flutter/material.dart';

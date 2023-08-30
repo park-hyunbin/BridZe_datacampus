@@ -1,15 +1,20 @@
-import 'package:bridze/provider/provider.dart';
+import 'package:bridze/provider/face_evaluation.dart';
+import 'package:bridze/provider/institution_recommended.dart';
 import 'package:bridze/screen/diagnosis.dart';
 import 'package:bridze/screen/home.dart';
 import 'package:bridze/screen/login.dart';
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => TotalScoreProvider(),
+    MultiProvider(
+      // MultiProvider로 여러 Provider 관리
+      providers: [
+        ChangeNotifierProvider(
+            create: (context) => TotalScoreProvider()), // 기존 Provider
+        ChangeNotifierProvider(create: (context) => AppData()), // 새로운 Provider
+      ],
       child: const MyApp(),
     ),
   );
