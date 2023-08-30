@@ -1,3 +1,8 @@
-2023/08/24-13:47:50.533 2c03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.BWyH1M/flutter_tools_chrome_device.g8u1PM/Default/Session Storage/MANIFEST-000001
-2023/08/24-13:47:50.534 2c03 Recovering log #3
-2023/08/24-13:47:50.536 2c03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.BWyH1M/flutter_tools_chrome_device.g8u1PM/Default/Session Storage/000003.log 
+<<<<<<< HEAD
+2023/08/30-13:43:06.581 5403 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jE2SWU/flutter_tools_chrome_device.ZZacyR/Default/Session Storage/MANIFEST-000001
+2023/08/30-13:43:06.595 5403 Recovering log #3
+2023/08/30-13:43:06.596 5403 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.jE2SWU/flutter_tools_chrome_device.ZZacyR/Default/Session Storage/000003.log 
+=======
+2023/08/29-16:51:04.781 1d1c Creating DB C:\Users\Noah\AppData\Local\Temp\flutter_tools.a52dbb51\flutter_tools_chrome_device.88465342\Default\Session Storage since it was missing.
+2023/08/29-16:51:04.808 1d1c Reusing MANIFEST C:\Users\Noah\AppData\Local\Temp\flutter_tools.a52dbb51\flutter_tools_chrome_device.88465342\Default\Session Storage/MANIFEST-000001
+>>>>>>> main

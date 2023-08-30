@@ -29,3 +29,4 @@ class TotalScoreProvider with ChangeNotifier {
     return scaledTotal > 100 ? 100 : scaledTotal; // Cap the score at 100
   }
 }
+

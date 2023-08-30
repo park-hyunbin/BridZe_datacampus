@@ -1,11 +1,10 @@
-import 'package:bridze/list/gangdong.dart';
-import 'package:bridze/list/gunsan.dart';
-import 'package:bridze/provider/institution_recommended.dart';
+import 'package:bridze/list/gangdong_1.dart';
+import 'package:bridze/list/gunsan_1.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/list/city.dart';
-import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InstitutionRecommend extends StatefulWidget {
   const InstitutionRecommend({Key? key}) : super(key: key);
@@ -20,6 +19,32 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   List<Widget> carouselItems = [];
   Widget GunsanCarousel = CityCarousel(cities: gunsan);
   Widget GangdongCarousel = CityCarousel(cities: gangdong);
+  String evaluation = '';
+  String recommendation = '';
+
+  @override
+  void initState() {
+    super.initState();
+    loadEvaluation();
+  }
+
+  void loadEvaluation() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String storedEvaluation = prefs.getString('evaluation') ?? 'default_value';
+
+    setState(() {
+      evaluation = storedEvaluation;
+      determineRecommendation();
+    });
+  }
+
+  void determineRecommendation() {
+    if (evaluation == '상') {
+      recommendation = '비대면 프로그램을 추천합니다!';
+    } else {
+      recommendation = '언어 기관 선택을 추천합니다!';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +81,22 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
                 const Text(
                   "도/시 와  시/군 을 선택해주세요",
                   style: TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 35,
                     color: Color(0xFF96B9DB),
+                  ),
+                ),
+                const SizedBox(height: 25),
+                Text(
+                  recommendation,
+                  style: const TextStyle(
+                    fontFamily: 'BMJUA',
+                    fontSize: 20,
+                    color: Colors.black,
                   ),
                 ),
                 const SizedBox(height: 50),
@@ -166,16 +200,6 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                         ),
                         items: carouselItems,
                       ),
-                    const SizedBox(height: 30),
-                    Text(
-                      Provider.of<AppData>(context)
-                          .recommendation, // recommendation 사용
-                      style: const TextStyle(
-                        fontFamily: 'BMJUA',
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),
-                    ),
                   ],
                 ),
               ],
