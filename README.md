@@ -1,6 +1,6 @@
-# bridze
+# 다문화가정 아이들을 세상으로 잇다, BridZe
 
-A new Flutter project.
+## 베트남 다문화 아이들의 언어 및 정서 평가, 기관 연결 플랫폼
 
 ## Getting Started
 
