@@ -2,6 +2,7 @@ import 'package:bridze/face_save/picture_save.dart';
 import 'package:bridze/provider/face_evaluation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:http/http.dart' as http;
 
@@ -46,6 +47,7 @@ class _FacePageState extends State<FacePage> {
   late List<_ChartData> data;
   late TooltipBehavior _tooltip;
   double relationshipScore = 0.0; // Initialize the relationshipScore
+  String evaluation2 = '';
 
   String serverUrl = 'https://daitso.run.goorm.site/download/chart/image';
   Image? image;
@@ -68,9 +70,9 @@ class _FacePageState extends State<FacePage> {
   @override
   void initState() {
     super.initState();
-
     // Provider를 통해 관계 점수를 가져옵니다.
     relationshipScore = context.read<TotalScoreProvider>().relationshipScore;
+    calculateEvaluation2(context.read<TotalScoreProvider>());
 
     data = [
       _ChartData(
@@ -87,6 +89,30 @@ class _FacePageState extends State<FacePage> {
     _tooltip = TooltipBehavior(enable: true);
 
     _fetchImage();
+  }
+
+  Future<void> calculateEvaluation2(TotalScoreProvider provider) async {
+    double relationshipScore = provider.relationshipScore;
+
+    if (relationshipScore >= 75) {
+      setState(() {
+        evaluation2 = '상';
+      });
+    } else if (relationshipScore >= 50) {
+      setState(() {
+        evaluation2 = '중상';
+      });
+    } else if (relationshipScore >= 25) {
+      setState(() {
+        evaluation2 = '중하';
+      });
+    } else {
+      setState(() {
+        evaluation2 = '하';
+      });
+    }
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('evaluation2', evaluation2);
   }
 
   @override
@@ -223,12 +249,13 @@ class _FacePageState extends State<FacePage> {
                         borderRadius: BorderRadius.circular(20.0),
                         color: const Color.fromRGBO(229, 193, 197, 1.0),
                       ),
-                      child: const Center(
+                      child: Center(
                         child: Text(
-                          '유대관계 평가 : 중하',
-                          style: TextStyle(
+                          '유대관계 평가 : $evaluation2',
+                          style: const TextStyle(
                             fontFamily: 'BMJUA',
                             fontSize: 30,
+                            color: Colors.black,
                           ),
                         ),
                       ),

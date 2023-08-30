@@ -63,7 +63,7 @@ class LanguagePageState extends State<LanguagePage> {
     _tooltip = TooltipBehavior(enable: true);
   }
 
-  void calculateEvaluation() {
+  Future<void> calculateEvaluation() async {
     double score = double.tryParse(avrScore) ?? 0.0;
     if (score >= 100) {
       setState(() {
@@ -82,6 +82,8 @@ class LanguagePageState extends State<LanguagePage> {
         evaluation = '하';
       });
     }
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('evaluation', evaluation);
   }
 
   @override

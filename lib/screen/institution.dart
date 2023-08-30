@@ -1,4 +1,5 @@
 import 'package:bridze/list/gangdong_1.dart';
+import 'package:bridze/list/gangwon/donghae_1.dart';
 import 'package:bridze/list/gunsan_1.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -19,30 +20,49 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   List<Widget> carouselItems = [];
   Widget GunsanCarousel = CityCarousel(cities: gunsan);
   Widget GangdongCarousel = CityCarousel(cities: gangdong);
+  Widget DongHaeCarousel = CityCarousel(cities: donghae);
+
   String evaluation = '';
   String recommendation = '';
+  String recommendation2 = '';
+  String evaluation2 = '';
 
   @override
   void initState() {
     super.initState();
-    loadEvaluation();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      loadEvaluation();
+    });
   }
 
   void loadEvaluation() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String storedEvaluation = prefs.getString('evaluation') ?? 'default_value';
+    String storedEvaluation2 =
+        prefs.getString('evaluation2') ?? 'default_value';
+
+    print('Stored Evaluation: $storedEvaluation');
+    print('Stored Evaluation2: $storedEvaluation2');
 
     setState(() {
       evaluation = storedEvaluation;
+      evaluation2 = storedEvaluation2;
       determineRecommendation();
     });
   }
 
   void determineRecommendation() {
-    if (evaluation == '상') {
+    if ((evaluation == '상' || evaluation == '중') &&
+        (evaluation2 == '상' || evaluation2 == '중상')) {
       recommendation = '비대면 프로그램을 추천합니다!';
-    } else {
+    } else if ((evaluation == '상' || evaluation == '중') &&
+        (evaluation2 == '하' || evaluation2 == '중하')) {
+      recommendation = '정서 기관 선택을 추천합니다!';
+    } else if ((evaluation == '하' &&
+        (evaluation2 == '상' || evaluation2 == '중상'))) {
       recommendation = '언어 기관 선택을 추천합니다!';
+    } else {
+      recommendation = '기관을 선택해주세요';
     }
   }
 
@@ -90,16 +110,16 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                     color: Color(0xFF96B9DB),
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 20),
                 Text(
                   recommendation,
                   style: const TextStyle(
                     fontFamily: 'BMJUA',
                     fontSize: 20,
-                    color: Colors.black,
+                    color: Color(0xFFe73333),
                   ),
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
