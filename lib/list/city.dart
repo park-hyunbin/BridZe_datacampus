@@ -71,7 +71,7 @@ final Map<String, List<String>> citiesByProvince = {
     '홍천군',
     '횡성군',
     '영월군',
-    '평찬군',
+    '평창군',
     '정선군',
     '철원군',
     '화천군',

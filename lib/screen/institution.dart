@@ -16,12 +16,16 @@ import 'package:bridze/list/gangwon/hongcheon_2.dart';
 import 'package:bridze/list/gunsan_1.dart';
 import 'package:bridze/list/gyeonggi/ansan_1.dart';
 import 'package:bridze/list/gyeonggi/ansan_2.dart';
+import 'package:bridze/list/north_chungcheong/eumseong_1.dart';
+import 'package:bridze/list/north_chungcheong/jecheon_1.dart';
+import 'package:bridze/list/north_chungcheong/jecheon_2.dart';
+import 'package:bridze/list/north_chungcheong/jeungpyeong_1.dart';
+import 'package:bridze/list/seoul/gangnam_1.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/list/city.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../list/gunsan_2.dart';
 
 class InstitutionRecommend extends StatefulWidget {
@@ -58,6 +62,12 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   Widget AnsanCarousel2 = CityCarousel(cities: ansan2);
   Widget InjeCarousel = CityCarousel(cities: inje1);
   Widget InjeCarousel2 = CityCarousel(cities: inje2);
+  Widget GangnamCarousel = CityCarousel(cities: gangnam1);
+  Widget GangnamCarousel2 = CityCarousel(cities: gangnam2);
+  Widget EumseongCarousel = CityCarousel(cities: Eumseong);
+  Widget JecheonCarousel = CityCarousel(cities: jecheon1);
+  Widget JecheonCarousel2 = CityCarousel(cities: jecheon2);
+  Widget JeungpyeongCarousel = CityCarousel(cities: jeungpyeong1);
 
   String evaluation = '';
   String recommendation = '';
@@ -247,8 +257,8 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                   children: [
                     if ((recommendation == '언어 기관 선택을 추천합니다!' &&
                         selectedCity == '군산시'))
-                      GunsanCarousel
-                    else if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                      GunsanCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
                             recommendation == '기관을 선택해주세요') &&
                         selectedCity == '군산시')
                       GunsanCarousel2,
@@ -302,6 +312,9 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                             recommendation == '기관을 선택해주세요') &&
                         selectedCity == '홍천군')
                       HongcheonCarousel2,
+                    if (selectedCity == '화천군' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      HwacheonCarousel,
                     if (selectedCity == '인제군' &&
                         recommendation == '언어 기관 선택을 추천합니다!')
                       InjeCarousel,
@@ -309,6 +322,13 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                             recommendation == '기관을 선택해주세요') &&
                         selectedCity == '인제군')
                       InjeCarousel2,
+                    if (selectedCity == '강남구' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      GangnamCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '강남구')
+                      GangnamCarousel2,
                     if (selectedCity == '안산시' &&
                         recommendation == '언어 기관 선택을 추천합니다!')
                       AnsanCarousel,
@@ -316,6 +336,16 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                             recommendation == '기관을 선택해주세요') &&
                         selectedCity == '안산시')
                       AnsanCarousel2,
+                    if (selectedCity == '음성군' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      EumseongCarousel,
+                    if (selectedCity == '제천시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      JecheonCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '제천시')
+                      JecheonCarousel2,
                     CarouselSlider(
                       options: CarouselOptions(
                         height: 50,
