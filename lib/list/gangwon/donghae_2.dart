@@ -1,10 +1,9 @@
 import 'package:bridze/widgets/institution.dart';
 
-final List<Institution> donghae = [
+final List<Institution> donghae2 = [
   Institution(
-    name:
-        '강원 동해시에는 심리 상담 기관이 없습니다.\n다른 가까운 지역을 선택하여 추천받으시거나\n비대면 프로그램 추천을 통해 전문가와 연결이 가능합니다 :)',
-    phoneNumber: '',
+    name: '강원 동해시에는 심리 상담 기관이 없습니다.\n',
+    phoneNumber: '다른 가까운 지역을 선택하여 추천받으시거나\n비대면 프로그램 추천을 통해 전문가와 연결이 가능합니다 :)',
     imagePath: '',
     address: '',
   ),

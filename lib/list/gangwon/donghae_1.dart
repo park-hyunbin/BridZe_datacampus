@@ -1,6 +1,6 @@
 import 'package:bridze/widgets/institution.dart';
 
-final List<Institution> donghae = [
+final List<Institution> donghae1 = [
   Institution(
     name: '동해중앙언어클리닉',
     phoneNumber: '033-575-7272',
@@ -12,11 +12,5 @@ final List<Institution> donghae = [
     phoneNumber: '0507-1318-0575',
     imagePath: '',
     address: '강원 동해시 천곡로 59 천일서점 2층',
-  ),
-  Institution(
-    name: '근처 기관이 적습니다. 더 많은 기관의 추천을 원하시면 다른 지역을 선택해주세요 :)',
-    phoneNumber: '',
-    imagePath: '',
-    address: '',
   ),
 ];

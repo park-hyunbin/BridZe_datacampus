@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class CityCarousel extends StatelessWidget {
+  @override
   final List<Institution> cities;
 
   const CityCarousel({Key? key, required this.cities}) : super(key: key);

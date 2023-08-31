@@ -1,6 +1,6 @@
 import '../widgets/institution.dart';
 
-final List<Institution> gunsan = [
+final List<Institution> gunsan2 = [
   Institution(
     name: '군산 언어심리센터',
     phoneNumber: '063-464-7120',

@@ -1,17 +1,12 @@
-2023/08/30-18:19:08.592 14a03 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.o1Du3g/flutter_tools_chrome_device.CMkOZW/Default/Site Characteristics Database/MANIFEST-000001
-2023/08/30-18:19:08.593 14a03 Recovering log #49
-2023/08/30-18:19:08.593 14a03 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.o1Du3g/flutter_tools_chrome_device.CMkOZW/Default/Site Characteristics Database/000049.log 
-2023/08/30-18:19:08.593 14a03 Delete type=0 #38
-2023/08/30-18:19:08.593 14a03 Delete type=0 #15
-2023/08/30-18:19:08.593 14a03 Delete type=0 #3
-2023/08/30-18:19:08.593 14a03 Delete type=2 #17
-2023/08/30-18:19:08.593 14a03 Delete type=2 #3
-2023/08/30-18:19:08.593 14a03 Delete type=2 #12
-2023/08/30-18:19:08.593 14a03 Delete type=2 #39
-2023/08/30-18:19:08.593 14a03 Delete type=2 #33
-2023/08/30-18:19:08.593 14a03 Delete type=2 #27
-2023/08/30-18:19:08.593 14a03 Delete type=0 #26
-2023/08/30-18:19:08.593 14a03 Delete type=2 #43
-2023/08/30-18:19:08.593 14a03 Delete type=2 #42
-2023/08/30-18:19:08.593 14a03 Delete type=2 #41
-2023/08/30-18:19:08.593 14a03 Delete type=2 #50
+2023/08/31-12:44:02.969 6c07 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Z7996P/flutter_tools_chrome_device.B4ddj0/Default/Site Characteristics Database/MANIFEST-000001
+2023/08/31-12:44:02.969 6c07 Recovering log #3
+2023/08/31-12:44:02.970 6c07 Level-0 table #3: started
+2023/08/31-12:44:02.973 6c07 Level-0 table #3: 191 bytes OK
+2023/08/31-12:44:02.973 6c07 Recovering log #38
+2023/08/31-12:44:02.973 6c07 Level-0 table #4: started
+2023/08/31-12:44:02.990 6c07 Level-0 table #4: 547 bytes OK
+2023/08/31-12:44:02.990 6c07 Recovering log #49
+2023/08/31-12:44:02.992 6c07 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.Z7996P/flutter_tools_chrome_device.B4ddj0/Default/Site Characteristics Database/000049.log 
+2023/08/31-12:44:03.027 6c07 Delete type=0 #38
+2023/08/31-12:44:03.027 6c07 Delete type=0 #3
+2023/08/31-12:44:03.027 6c07 Delete type=2 #56
