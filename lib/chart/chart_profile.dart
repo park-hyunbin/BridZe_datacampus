@@ -1,14 +1,8 @@
+import 'package:bridze/chart/chart_face.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/chart/chart_language.dart';
 import 'package:bridze/chart/chart_parent.dart';
-
-void main() {
-  runApp(const ProfileApp(
-    avrScore: '',
-    crrScore: '',
-  ));
-}
 
 class ProfileApp extends StatefulWidget {
   final String avrScore;
@@ -69,6 +63,7 @@ class _MyPageViewState extends State<MyPageView> {
         children: const [
           ChartApp(),
           ChartApp2(),
+          ChartFaceApp(),
         ],
       ),
     );
