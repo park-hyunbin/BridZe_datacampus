@@ -55,8 +55,8 @@ class LanguagePage2State extends State<LanguagePage2> {
     setState(() {
       data = [
         ChartData(
-          '한국인 부모님 점수',
-          75,
+          '성인 베트남인 점수',
+          90,
           Color(int.parse('96B9DB', radix: 16)).withOpacity(1.0),
         ),
         ChartData(
