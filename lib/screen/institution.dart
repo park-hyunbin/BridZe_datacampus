@@ -59,6 +59,21 @@ import 'package:bridze/list/gyeonggi/yangpyeong_1.dart';
 import 'package:bridze/list/gyeonggi/yangpyeong_2.dart';
 import 'package:bridze/list/gyeonggi/yongin_1.dart';
 import 'package:bridze/list/gyeonggi/yongin_2.dart';
+import 'package:bridze/list/north_chungcheong/boryeong_1.dart';
+import 'package:bridze/list/north_chungcheong/cheongju_1.dart';
+import 'package:bridze/list/north_chungcheong/cheongju_2.dart';
+import 'package:bridze/list/north_chungcheong/chungju_1.dart';
+import 'package:bridze/list/north_chungcheong/chungju_2.dart';
+import 'package:bridze/list/south_chungcheong/asan_1.dart';
+import 'package:bridze/list/south_chungcheong/asan_2.dart';
+import 'package:bridze/list/south_chungcheong/cheonan_1.dart';
+import 'package:bridze/list/south_chungcheong/cheonan_2.dart';
+import 'package:bridze/list/south_chungcheong/dangjin_1.dart';
+import 'package:bridze/list/south_chungcheong/dangjin_2.dart';
+import 'package:bridze/list/south_chungcheong/nonsan_1.dart';
+import 'package:bridze/list/south_chungcheong/nonsan_2.dart';
+import 'package:bridze/list/south_chungcheong/seosan_1.dart';
+import 'package:bridze/list/north_chungcheong/yesan_1.dart';
 import 'package:bridze/list/seoul/dobong_1.dart';
 import 'package:bridze/list/seoul/dobong_2.dart';
 import 'package:bridze/list/seoul/dongdaemun_1.dart';
@@ -118,6 +133,7 @@ import 'package:bridze/list/seoul/yangcheon_2.dart';
 import 'package:bridze/list/seoul/yeongdeungpo_1.dart';
 import 'package:bridze/list/seoul/yeongdeungpo_2.dart';
 import 'package:bridze/list/seoul/yongsan_2.dart';
+
 import 'package:bridze/list/south_jeolla/gwangju_1.dart';
 import 'package:bridze/list/south_jeolla/gwangju_2.dart';
 import 'package:bridze/widgets/carousel.dart';
@@ -266,6 +282,24 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
   Widget yangpyeongCarousel2 = CityCarousel(cities: yangpyeong2);
   Widget yonginCarousel = CityCarousel(cities: yongin1);
   Widget yonginCarousel2 = CityCarousel(cities: yongin2);
+  Widget asanCarousel = CityCarousel(cities: asan1);
+  Widget asanCarousel2 = CityCarousel(cities: asan2);
+  Widget boryeongCarousel = CityCarousel(cities: boryeong1);
+  Widget suwonCarousel1 = CityCarousel(cities: suwon2);
+  Widget cheonanCarousel = CityCarousel(cities: cheonan1);
+  Widget cheonanCarousel2 = CityCarousel(cities: cheonan2);
+  Widget cheongjuCarousel = CityCarousel(cities: cheongju1);
+  Widget cheongjuCarousel2 = CityCarousel(cities: cheongju2);
+  Widget chungjuCarousel = CityCarousel(cities: chungju1);
+  Widget chungjuCarousel2 = CityCarousel(cities: chungju2);
+  Widget dangjinCarousel = CityCarousel(cities: dangjin1);
+  Widget dangjinCarousel2 = CityCarousel(cities: dangjin2);
+  Widget gongjuCarousel = CityCarousel(cities: gongju1);
+  Widget gongjuCarousel2 = CityCarousel(cities: gongju2);
+  Widget nonsanCarousel = CityCarousel(cities: nonsan1);
+  Widget nonsanCarousel2 = CityCarousel(cities: nonsan2);
+  Widget seosanCarousel = CityCarousel(cities: seosan1);
+  Widget yesanCarousel2 = CityCarousel(cities: yesan1);
 
   String evaluation = '';
   String recommendation = '';
@@ -1018,6 +1052,48 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
                             recommendation == '기관을 선택해주세요') &&
                         selectedCity == '제천시')
                       JecheonCarousel2,
+                    if (selectedCity == '아산시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      asanCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '아산시')
+                      asanCarousel2,
+                    if (selectedCity == '천안시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      cheonanCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '천안시')
+                      cheonanCarousel2,
+                    if (selectedCity == '청주시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      cheongjuCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '청주시')
+                      cheongjuCarousel2,
+                    if (selectedCity == '충주시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      chungjuCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '충주시')
+                      chungjuCarousel2,
+                    if (selectedCity == '공주시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      gongjuCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '공주시')
+                      gongjuCarousel2,
+                    if (selectedCity == '당진시' &&
+                        recommendation == '언어 기관 선택을 추천합니다!')
+                      dangjinCarousel,
+                    if ((recommendation == '정서 기관 선택을 추천합니다!' ||
+                            recommendation == '기관을 선택해주세요') &&
+                        selectedCity == '당진시')
+                      dangjinCarousel2,
                     CarouselSlider(
                       options: CarouselOptions(
                         height: 50,

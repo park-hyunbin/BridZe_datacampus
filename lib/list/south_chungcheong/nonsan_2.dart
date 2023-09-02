@@ -1,6 +1,6 @@
 import 'package:bridze/widgets/institution.dart';
 
-final List<Institution> nonsna2 = [
+final List<Institution> nonsan2 = [
   Institution(
     name: '마음샘 아동가족상담센터 논산점',
     phoneNumber: '0507-1382-8884',
