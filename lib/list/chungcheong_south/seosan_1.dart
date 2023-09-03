@@ -4,7 +4,7 @@ final List<Institution> seosan1 = [
   Institution(
     name: '해맑은아동발달센터',
     phoneNumber: '041-668-6575',
-    imagePath: '',
+    imagePath: 'assets/images/1.png',
     address: '충남 서산시 중앙로 115 동래빌딩 5층',
   ),
   Institution(
@@ -17,6 +17,6 @@ final List<Institution> seosan1 = [
     name: '바른아동발달연구소',
     phoneNumber: '0507-1418-7893',
     imagePath: '',
-    address: '충남 서산시 동서1로 69 바른아동발달연구소 4층',
+    address: '충남 서산시 동서1로 69 4층',
   ),
 ];
