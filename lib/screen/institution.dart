@@ -1,5 +1,3 @@
-import 'package:bridze/list/gangdong_1.dart';
-import 'package:bridze/list/gangdong_2.dart';
 import 'package:bridze/list/gangwon/cheorwon_1.dart';
 import 'package:bridze/list/gangwon/cheorwon_2.dart';
 import 'package:bridze/list/gangwon/chuncheon_1.dart';
@@ -84,6 +82,8 @@ import 'package:bridze/list/seoul/eunpyeong_1.dart';
 import 'package:bridze/list/seoul/eunpyeong_2.dart';
 import 'package:bridze/list/seoul/gangbuk_1.dart';
 import 'package:bridze/list/seoul/gangbuk_2.dart';
+import 'package:bridze/list/seoul/gangdong_1.dart';
+import 'package:bridze/list/seoul/gangdong_2.dart';
 import 'package:bridze/list/seoul/gangnam_1.dart';
 import 'package:bridze/list/seoul/gangnam_2.dart';
 import 'package:bridze/list/seoul/gangseo_1.dart';
@@ -159,7 +159,7 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
 
   Widget GunsanCarousel = CityCarousel(cities: gunsan);
   Widget GunsanCarousel2 = CityCarousel(cities: gunsan2);
-  Widget GangdongCarousel = CityCarousel(cities: gangdong);
+  Widget GangdongCarousel = CityCarousel(cities: gangdong1);
   Widget GangdongCarousel2 = CityCarousel(cities: gangdong2);
   Widget CheorwonCarousel = CityCarousel(cities: cheorwon1);
   Widget CheorwonCarousel2 = CityCarousel(cities: cheorwon2);
