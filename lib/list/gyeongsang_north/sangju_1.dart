@@ -13,10 +13,4 @@ final List<Institution> sangju1 = [
     imagePath: 'assets/images/sangju2.png',
     address: '경북 상주시 남산1길 82 1층',
   ),
-  Institution(
-    name: '근처 기관이 적습니다. 더 많은 기관의 추천을 원하시면 다른 지역을 선택해주세요 :)',
-    phoneNumber: '',
-    imagePath: '',
-    address: '',
-  ),
 ];

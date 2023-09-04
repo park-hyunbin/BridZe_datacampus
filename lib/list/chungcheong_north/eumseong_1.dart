@@ -1,6 +1,6 @@
 import 'package:bridze/widgets/institution.dart';
 
-final List<Institution> Eumseong = [
+final List<Institution> eumseong1 = [
   Institution(
     name: '정언어심리센터',
     phoneNumber: '043-878-8771',

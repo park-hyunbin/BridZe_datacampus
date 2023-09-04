@@ -13,10 +13,4 @@ final List<Institution> uljin2 = [
     imagePath: 'assets/images/uljin5.png',
     address: '경북 울진군 북면 울진북로 2206 1층',
   ),
-  Institution(
-    name: '근처 기관이 적습니다. 더 많은 기관의 추천을 원하시면 다른 지역을 선택해주세요 :)',
-    phoneNumber: '',
-    imagePath: '',
-    address: '',
-  ),
 ];
