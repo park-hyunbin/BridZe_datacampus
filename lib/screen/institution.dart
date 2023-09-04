@@ -134,8 +134,8 @@ import 'package:bridze/list/seoul/yeongdeungpo_1.dart';
 import 'package:bridze/list/seoul/yeongdeungpo_2.dart';
 import 'package:bridze/list/seoul/yongsan_2.dart';
 
-import 'package:bridze/list/south_jeolla/gwangju_1.dart';
-import 'package:bridze/list/south_jeolla/gwangju_2.dart';
+import 'package:bridze/list/jeolla_south/gwangju_1.dart';
+import 'package:bridze/list/jeolla_south/gwangju_2.dart';
 import 'package:bridze/widgets/carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
