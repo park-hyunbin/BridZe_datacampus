@@ -55,7 +55,7 @@ class LanguagePageState extends State<LanguagePage> {
         const Color.fromRGBO(254, 202, 202, 1.0),
       ),
       ChartData(
-        '아린이점수',
+        '아동 점수',
         parsedScore,
         const Color.fromARGB(255, 241, 133, 145),
       ),
@@ -118,7 +118,7 @@ class LanguagePageState extends State<LanguagePage> {
               child: Column(
                 children: [
                   Text(
-                    '아린이의 언어평가 결과',
+                    '언어평가 결과',
                     style: TextStyle(
                       fontFamily: 'BMJUA',
                       fontSize: 50,
