@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+//언어 부모님 평가 차트 페이지입니다.
 class ChartApp2 extends StatelessWidget {
   const ChartApp2({Key? key}) : super(key: key);
 
