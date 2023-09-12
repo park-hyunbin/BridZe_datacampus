@@ -171,7 +171,7 @@ import 'package:bridze/list/gangwon/sokcho_2.dart';
 import 'package:bridze/list/gangwon/taebaek_1.dart';
 import 'package:bridze/list/gangwon/wonju_1.dart';
 import 'package:bridze/list/gangwon/wonju_2.dart';
-import 'package:bridze/list/gunsan_1.dart';
+import 'package:bridze/list/jeolla_north/gunsan_1.dart';
 import 'package:bridze/list/chungcheong_south/gongju_1.dart';
 import 'package:bridze/list/chungcheong_south/gongju_2.dart';
 import 'package:bridze/list/chungcheong_north/jecheon_1.dart';
@@ -213,7 +213,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:bridze/list/city.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../list/gunsan_2.dart';
+import '../list/jeolla_north/gunsan_2.dart';
 import '../list/seoul/seongdong_1.dart';
 
 class InstitutionRecommend extends StatefulWidget {
@@ -229,7 +229,7 @@ class InstitutionRecommendState extends State<InstitutionRecommend> {
 
   List<Widget> carouselItems = [];
 
-  Widget GunsanCarousel = CityCarousel(cities: gunsan);
+  Widget GunsanCarousel = CityCarousel(cities: gunsan1);
   Widget GunsanCarousel2 = CityCarousel(cities: gunsan2);
   Widget GangdongCarousel = CityCarousel(cities: gangdong1);
   Widget GangdongCarousel2 = CityCarousel(cities: gangdong2);
